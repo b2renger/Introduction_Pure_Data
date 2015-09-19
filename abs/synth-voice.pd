@@ -1,0 +1,57 @@
+#N canvas 0 0 450 300 10;
+#X obj -1059 168 *~;
+#X obj -1059 142 osc~ 440;
+#X obj -1059 115 mtof;
+#X obj -1059 65 inlet;
+#X obj -1058 238 outlet~;
+#N canvas 371 73 762 575 ad-env~ 0;
+#X obj 31 -91 inlet;
+#X obj 29 362 outlet~;
+#X text 127 362 ... et une sortie audio;
+#X obj 30 332 line~;
+#X text 133 273 cette objet va mettre deux valeur dans une liste;
+#X text 134 288 (cible et durée en ms);
+#X text 133 332 un objet permettant de générer une rampe;
+#X text 97 44 Objet permettant de forcer l'ordre d'actualisation des
+objets \, nous y reviendrons quand nous parlerons synthétiseurs.;
+#X obj 99 183 delay;
+#X text 74 -91 Il vous faudra une entrée data \, de type bang pour
+activer l'enveloppe;
+#X text 186 109 Vous pouvez utiliser un objet [f] pour stocker un valeur
+: entrer une valeur à droite \, et utiliser un bang pour faire passer
+la valeur à la sortie de l'objet. (Pensez à consulter l'aide) Nous
+y reviendrons quand nous parlerons des compteurs et cela réfère à
+la notion d'entrée chaude et d'entrée froide ...;
+#X obj 112 -43 inlet attack-time;
+#X obj 179 -7 inlet decay-time;
+#X msg 436 376 1 \$1;
+#X msg 482 377 0 \$1;
+#X obj 425 353 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 423 327 déplacer le carré gris pour décourvir un indice
+;
+#X text 423 417 nb : le carré est gui de type canvas;
+#X msg 30 240 1 \$1;
+#X msg 99 234 0 \$1;
+#X obj 31 57 t b b;
+#X obj 30 124 f 1500;
+#X obj 99 208 f 5000;
+#X connect 0 0 20 0;
+#X connect 3 0 1 0;
+#X connect 8 0 22 0;
+#X connect 11 0 21 1;
+#X connect 12 0 22 1;
+#X connect 18 0 3 0;
+#X connect 19 0 3 0;
+#X connect 20 0 8 0;
+#X connect 20 1 21 0;
+#X connect 21 0 18 0;
+#X connect 21 0 8 1;
+#X connect 22 0 19 0;
+#X restore -985 144 pd ad-env~;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 0 5 0;
+#X connect 5 0 0 1;

@@ -1,0 +1,245 @@
+#N canvas 17 -18 1349 696 10;
+#X obj 25 215 cnv 15 400 100 empty empty azerty_routing 20 30 0 20
+-260097 -66577 0;
+#X obj 256 1 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 33 267 route 113 115 101 100 114 102 103 121 104 117 106 105
+107 108 112 109;
+#X obj 576 297 route 27;
+#X obj 576 316 route 1;
+#X obj 576 337 b;
+#X obj 576 356 0;
+#X text 584 278 escape;
+#X obj 467 167 v \$1-velocity;
+#X obj 487 147 v \$1-pitchshift;
+#X obj 467 13 loadbang;
+#X obj 467 35 100;
+#X obj 485 632 outlet;
+#X obj 485 593 r pdkb-\$1-out;
+#N canvas 0 25 799 543 tot-stuff 0;
+#X obj 29 10 inlet;
+#X obj 93 506 outlet;
+#X msg 29 32 capture \$1;
+#X obj 29 53 tot keyboard-\$1;
+#X obj 87 77 route key;
+#X obj 93 280 unpack f f f;
+#X obj 93 339 pack f f;
+#X obj 93 301 t b f;
+#X obj 93 320 f;
+#X obj 87 125 list split 1;
+#X obj 87 99 t l l;
+#X obj 93 255 list;
+#X obj 121 171 route symbol;
+#X obj 121 148 list split 1;
+#X obj 93 231 b;
+#X obj 276 190 select Up Down Left Right;
+#X obj 276 212 v \$1-velocity;
+#X obj 349 252 v \$1-pitchshift;
+#X obj 312 232 v \$1-velocity;
+#X obj 386 273 v \$1-pitchshift;
+#X obj 276 167 route symbol;
+#X obj 276 144 list split 1;
+#X obj 276 121 route 1;
+#X obj 555 122 route 1 0;
+#X obj 555 145 list split 1;
+#X obj 580 168 list split 1;
+#X obj 580 190 sel Shift_L Shift_R;
+#X obj 276 313 + 1;
+#X obj 312 333 - 1;
+#X obj 349 353 - 1;
+#X obj 386 373 + 1;
+#X obj 552 325 1;
+#X obj 591 292 10;
+#X obj 541 281 12;
+#X obj 276 447 s \$1-to-velocity;
+#X obj 349 422 s \$1-to-pitchshift;
+#X obj 166 482 outlet keynumber;
+#X obj 555 213 sel Shift_L Shift_R Alt_L;
+#X obj 653 245 s \$1-all-notes-off;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 2 4 0;
+#X connect 4 0 10 0;
+#X connect 4 0 22 0;
+#X connect 4 0 23 0;
+#X connect 5 0 7 0;
+#X connect 5 1 8 1;
+#X connect 5 1 36 0;
+#X connect 6 0 1 0;
+#X connect 7 0 8 0;
+#X connect 7 1 6 1;
+#X connect 8 0 6 0;
+#X connect 9 1 13 0;
+#X connect 10 0 9 0;
+#X connect 10 1 11 1;
+#X connect 11 0 5 0;
+#X connect 12 1 14 0;
+#X connect 13 0 12 0;
+#X connect 14 0 11 0;
+#X connect 15 0 16 0;
+#X connect 15 1 18 0;
+#X connect 15 2 17 0;
+#X connect 15 3 19 0;
+#X connect 16 0 27 0;
+#X connect 17 0 29 0;
+#X connect 18 0 28 0;
+#X connect 19 0 30 0;
+#X connect 20 0 15 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 24 0;
+#X connect 23 1 25 0;
+#X connect 24 0 37 0;
+#X connect 25 0 26 0;
+#X connect 26 0 31 0;
+#X connect 26 1 31 0;
+#X connect 27 0 34 0;
+#X connect 28 0 34 0;
+#X connect 29 0 35 0;
+#X connect 30 0 35 0;
+#X connect 31 0 27 1;
+#X connect 31 0 28 1;
+#X connect 31 0 29 1;
+#X connect 31 0 30 1;
+#X connect 32 0 27 1;
+#X connect 32 0 28 1;
+#X connect 33 0 29 1;
+#X connect 33 0 30 1;
+#X connect 37 0 32 0;
+#X connect 37 0 33 0;
+#X connect 37 1 32 0;
+#X connect 37 1 33 0;
+#X connect 37 2 38 0;
+#X restore 33 174 pd tot-stuff;
+#X floatatom 102 195 5 0 0 1 key_number - -;
+#X obj 467 57 s \$1-to-velocity;
+#X obj 2 105 cnv 15 200 60 empty empty virtual_keyboard_window 10 12
+0 14 -204786 -66577 0;
+#N canvas 0 25 588 276 keyboard-\$1 0;
+#X obj 101 101 cnv 15 255 80 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X obj 108 125 cnv 15 15 50 empty \$1-B0 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 133 125 cnv 15 15 50 empty \$1-C1 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 158 125 cnv 15 15 50 empty \$1-D1 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 183 125 cnv 15 15 50 empty \$1-E1 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 208 125 cnv 15 15 50 empty \$1-F1 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 233 125 cnv 15 15 50 empty \$1-G1 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 258 125 cnv 15 15 50 empty \$1-A1 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 283 125 cnv 15 15 50 empty \$1-B1 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 308 125 cnv 15 15 50 empty \$1-C2 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 333 125 cnv 15 15 50 empty \$1-D2 empty 20 12 0 14 -262144 -262144
+0;
+#X obj 147 115 cnv 12 12 40 empty \$1-Db1 empty 20 12 0 14 -1 -262144
+0;
+#X obj 172 115 cnv 12 12 40 empty \$1-Eb1 empty 20 12 0 14 -1 -262144
+0;
+#X obj 222 115 cnv 12 12 40 empty \$1-Gb1 empty 20 12 0 14 -1 -262144
+0;
+#X obj 247 115 cnv 12 12 40 empty \$1-Ab1 empty 20 12 0 14 -1 -262144
+0;
+#X obj 272 115 cnv 12 12 40 empty \$1-Bb1 empty 20 12 0 14 -1 -262144
+0;
+#X obj 322 115 cnv 12 12 40 empty \$1-Db2 empty 20 12 0 14 -1 -262144
+0;
+#X floatatom 358 113 5 0 0 1 pitchshift #1-to-pitchshift #1-from-pitchshift
+;
+#X floatatom 358 133 5 0 0 1 velocity #1-to-velocity #1-from-velocity
+;
+#X floatatom 358 153 5 0 0 1 note #1-to-note #1-from-note;
+#X coords 0 -1 1 1 355 82 1 100 100;
+#X restore 0 18 pd keyboard-\$1;
+#X obj 539 381 s \$1-all-notes-off;
+#X obj 467 103 r \$1-from-velocity;
+#X obj 487 127 r \$1-from-pitchshift;
+#X obj 350 347 z-pdkb-note \$1-D2 0 29 \$1;
+#X obj 342 369 z-pdkb-makenote \$1 pdkb-\$1-out 74;
+#X obj 329 387 z-pdkb-note \$1-Db2 -1 29 \$1;
+#X obj 322 409 z-pdkb-makenote \$1 pdkb-\$1-out 73;
+#X obj 308 427 z-pdkb-note \$1-C2 0 29 \$1;
+#X obj 302 449 z-pdkb-makenote \$1 pdkb-\$1-out 72;
+#X obj 287 469 z-pdkb-note \$1-B1 0 29 \$1;
+#X obj 282 489 z-pdkb-makenote \$1 pdkb-\$1-out 71;
+#X obj 266 509 z-pdkb-note \$1-Bb1 -1 29 \$1;
+#X obj 252 529 z-pdkb-makenote \$1 pdkb-\$1-out 70;
+#X obj 242 550 z-pdkb-note \$1-A1 0 29 \$1;
+#X obj 234 569 z-pdkb-makenote \$1 pdkb-\$1-out 69;
+#X obj 223 589 z-pdkb-note \$1-Ab1 -1 29 \$1;
+#X obj 214 609 z-pdkb-makenote \$1 pdkb-\$1-out 68;
+#X obj 202 629 z-pdkb-note \$1-G1 0 29 \$1;
+#X obj 194 649 z-pdkb-makenote \$1 pdkb-\$1-out 67;
+#X obj 181 669 z-pdkb-note \$1-Gb1 -1 29 \$1;
+#X obj 174 689 z-pdkb-makenote \$1 pdkb-\$1-out 66;
+#X obj 160 710 z-pdkb-note \$1-F1 0 29 \$1;
+#X obj 154 729 z-pdkb-makenote \$1 pdkb-\$1-out 65;
+#X obj 138 750 z-pdkb-note \$1-E1 0 29 \$1;
+#X obj 134 769 z-pdkb-makenote \$1 pdkb-\$1-out 64;
+#X obj 117 793 z-pdkb-note \$1-Eb1 -1 29 \$1;
+#X obj 109 814 z-pdkb-makenote \$1 pdkb-\$1-out 63;
+#X obj 96 834 z-pdkb-note \$1-D1 0 29 \$1;
+#X obj 89 854 z-pdkb-makenote \$1 pdkb-\$1-out 62;
+#X obj 75 874 z-pdkb-note \$1-Db1 -1 29 \$1;
+#X obj 69 894 z-pdkb-makenote \$1 pdkb-\$1-out 61;
+#X obj 54 914 z-pdkb-note \$1-C1 0 29 \$1;
+#X obj 39 934 z-pdkb-makenote \$1 pdkb-\$1-out 60;
+#X obj 33 954 z-pdkb-note \$1-B0 0 29 \$1;
+#X obj 19 974 z-pdkb-makenote \$1 pdkb-\$1-out 59;
+#X text 276 0 on/off;
+#X floatatom 687 607 5 0 0 0 - - -;
+#X obj 581 633 s \$1-to-note;
+#X connect 1 0 14 0;
+#X connect 2 0 52 0;
+#X connect 2 0 53 0;
+#X connect 2 1 50 0;
+#X connect 2 1 51 0;
+#X connect 2 2 48 0;
+#X connect 2 2 49 0;
+#X connect 2 3 46 0;
+#X connect 2 3 47 0;
+#X connect 2 4 44 0;
+#X connect 2 4 45 0;
+#X connect 2 5 42 0;
+#X connect 2 5 43 0;
+#X connect 2 6 40 0;
+#X connect 2 6 41 0;
+#X connect 2 7 38 0;
+#X connect 2 7 39 0;
+#X connect 2 8 36 0;
+#X connect 2 8 37 0;
+#X connect 2 9 34 0;
+#X connect 2 9 35 0;
+#X connect 2 10 32 0;
+#X connect 2 10 33 0;
+#X connect 2 11 30 0;
+#X connect 2 11 31 0;
+#X connect 2 12 28 0;
+#X connect 2 12 29 0;
+#X connect 2 13 26 0;
+#X connect 2 13 27 0;
+#X connect 2 14 24 0;
+#X connect 2 14 25 0;
+#X connect 2 15 22 0;
+#X connect 2 15 23 0;
+#X connect 2 16 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 19 0;
+#X connect 6 0 1 0;
+#X connect 10 0 11 0;
+#X connect 11 0 16 0;
+#X connect 13 0 12 0;
+#X connect 13 0 56 0;
+#X connect 14 0 2 0;
+#X connect 14 1 15 0;
+#X connect 20 0 8 0;
+#X connect 21 0 9 0;
+#X coords 0 -1 1 1 355 100 1 0 0;

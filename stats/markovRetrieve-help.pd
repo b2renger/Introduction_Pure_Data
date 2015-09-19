@@ -1,0 +1,46 @@
+#N canvas 188 22 616 449 10;
+#X floatatom 53 225 5 0 0 0 - - -;
+#X floatatom 341 278 5 0 0 0 - - -;
+#X obj 53 144 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 53 167 metro 500;
+#X obj 242 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 341 255 random 45;
+#X floatatom 104 141 5 0 0 0 - - -;
+#X obj 126 161 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 7 2 cnv 15 600 60 empty empty markovRetrieve 20 12 0 14 -233017
+-66577 0;
+#X text 454 39 2013 Gilberto Bernardes;
+#X obj 341 302 MarkovStore \$0-testMarkovSyms 4;
+#X obj 53 192 MarkovRetrieve \$0-testMarkovSyms;
+#X text 262 221 Stuck!;
+#N canvas 342 318 494 344 META 0;
+#X text 12 45 LICENSE GPL v3;
+#X text 12 219 RELEASE_DATE 2013;
+#X text 12 199 WEBSITE https://sites.google.com/site/eargram/;
+#X text 12 179 AUTHOR Gilberto Bernardes;
+#X text 12 25 KEYWORDS;
+#X text 12 97 INLET_0 float reset;
+#X text 12 159 LIBRARY earGram_abs;
+#X text 12 120 OUTLET_0 float (average);
+#X text 13 140 OUTLET_1 float (nr of occurences);
+#X text 12 65 DESCRIPTION generates random numbers based on a transition
+probability table;
+#X restore 559 423 pd META;
+#X text 339 164 -- create first a table --;
+#X obj 341 231 until;
+#X msg 341 208 100;
+#X text 24 31 generates random numbers based on a transition probability
+table;
+#X connect 1 0 10 0;
+#X connect 2 0 3 0;
+#X connect 3 0 11 0;
+#X connect 5 0 1 0;
+#X connect 6 0 3 1;
+#X connect 7 0 11 0;
+#X connect 11 0 0 0;
+#X connect 11 1 4 0;
+#X connect 15 0 5 0;
+#X connect 16 0 15 0;

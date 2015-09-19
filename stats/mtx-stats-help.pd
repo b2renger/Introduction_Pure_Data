@@ -1,0 +1,97 @@
+#N canvas 188 22 823 676 10;
+#X msg 69 105 reset;
+#X obj 83 140 bng 15 250 50 0 empty empty calculate 17 7 0 10 -262144
+-1 -1;
+#X floatatom 111 160 5 0 0 0 - - -;
+#X obj 69 558 list prepend set;
+#X obj 69 582 list trim;
+#X obj 69 236 mtx-stats 4;
+#X msg 512 170 1 4 5 6;
+#X msg 454 170 2 7 9 9;
+#X msg 391 170 9 5 4 2;
+#X obj 132 278 list prepend set;
+#X obj 132 302 list trim;
+#X msg 111 184 nrColls \$1;
+#X obj 111 381 list prepend set;
+#X obj 111 405 list trim;
+#X obj 90 469 list prepend set;
+#X obj 90 493 list trim;
+#X msg 132 325 0.2 3.2;
+#X msg 111 428 6.16 38.16;
+#X msg 90 516 7.7 47.7;
+#X msg 69 605 2.77489 6.90652;
+#X msg 392 219 1 6 \, -1 -7 \, 2 12 \, 3 2 \, -4 3;
+#N canvas 765 95 507 678 algorithmDescription 0;
+#X text 133 245 variance = M2/(n-1);
+#X text 133 279 variance_n = M2/n;
+#X text 161 209 M2 = M2 + delta*(x-mean);
+#X text 161 193 mean = mean + delta/n;
+#X text 161 177 delta = x - mean;
+#X text 161 161 n = n + 1;
+#X text 136 139 for x in data:;
+#X text 115 39 def online_variance(data):;
+#X text 138 73 mean = 0;
+#X text 138 88 M2 = 0;
+#X text 138 58 n = 0;
+#X text 133 262 std = sqrt(variance);
+#X text 135 304 return (std \, variance \, variance_n);
+#X text 41 383 Donald E. Knuth (1998). The Art of Computer Programming
+\, volume 2: Seminumerical Algorithms \, 3rd edn. \, p. 232 Boston:
+Addison-Wesley.;
+#X text 43 463 B. P. Welford (1962)."Note on a method for calculating
+corrected sums of squares and products". Technometrics 4(3):419420.
+;
+#X text 40 549 taken from:;
+#X text 41 568 http://en.wikipedia.org/wiki/Algorithms_for_calculating_variance
+;
+#X text 42 353 algorithm due to:;
+#X text 44 437 that cites:;
+#X text 18 15 pseudo-code algorithm for stats;
+#X obj 118 640 stats;
+#X text 40 617 see also:;
+#X obj 43 641 list-stats;
+#X restore 667 75 pd algorithmDescription;
+#X obj 11 8 cnv 15 800 60 empty empty mtxStats 20 12 0 14 -233017 -66577
+0;
+#X text 653 47 2013 Gilberto Bernardes;
+#X text 41 607 std;
+#X text 18 516 variance;
+#X text 6 427 variance/n;
+#X text 34 322 mean;
+#N canvas 636 514 494 344 META 0;
+#X text 12 45 LICENSE GPL v3;
+#X text 12 260 RELEASE_DATE 2013;
+#X text 12 240 WEBSITE https://sites.google.com/site/eargram/;
+#X text 12 220 AUTHOR Gilberto Bernardes;
+#X text 12 25 KEYWORDS;
+#X text 12 200 LIBRARY earGram_abs;
+#X text 12 114 OUTLET_0 float (std);
+#X text 13 134 OUTLET_1 float (variance);
+#X text 14 154 OUTLET_2 float (variance/n);
+#X text 15 174 OUTLET_3 float (mean);
+#X text 12 95 INLET_0 float bang reset nrColls;
+#X text 12 65 DESCRIPTION calculates basic stratics of a stream of
+a matrix;
+#X restore 765 649 pd META;
+#X text 19 49 calculates basic stratics of a stream of a matrix;
+#X text 188 182 (This should reset???);
+#X connect 0 0 5 0;
+#X connect 1 0 5 0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 4 0 19 0;
+#X connect 5 0 3 0;
+#X connect 5 1 14 0;
+#X connect 5 2 12 0;
+#X connect 5 3 9 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 16 0;
+#X connect 11 0 5 0;
+#X connect 12 0 13 0;
+#X connect 13 0 17 0;
+#X connect 14 0 15 0;
+#X connect 15 0 18 0;
+#X connect 20 0 5 0;

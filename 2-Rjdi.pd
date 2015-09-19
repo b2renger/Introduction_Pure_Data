@@ -1,0 +1,96 @@
+#N struct 1916-symarray float x array symbols 1916-sym;
+#N struct 1916-sym symbol name float on;
+#N struct 1926-symarray float x array symbols 1926-sym;
+#N struct 1926-sym symbol name float on;
+#N canvas 278 0 667 679 10;
+#X declare -lib cyclone;
+#X text 16 9 Rjdj est une librairie qui a été developpée pour faciliter
+la création de patchs musicaux pour l'application iOS et Android éponyme.
+;
+#X text 19 135 Dans leur dossier les fichiers dont les noms commencent
+par;
+#X text 32 152 a_ concernent l'analyse audio;
+#X text 32 169 c_ les élements de controle (enveloppes etc);
+#X text 16 96 Certaines de ces abstractions sont cependant spécifiques
+aux plateformes mobiles ...;
+#X obj 55 529 rj/c_lfo-help;
+#X obj 55 622 rj/c_multipass-help;
+#X obj 55 644 rj/c_patternchange-help;
+#X obj 56 666 rj/c_seqplay-help;
+#X obj 56 688 rj/c_taptap-help;
+#X text 33 186 e_ des effets audio ... à découvrir !;
+#X text 34 202 g_ des éléments de gui;
+#X text 35 220 m_ éléments de mapping;
+#X obj 56 723 rj/m_autoscale-help;
+#X obj 57 776 rj/m_beat2ms-help;
+#X obj 57 848 rj/m_chorddict-help;
+#X obj 57 870 rj/m_markovanal-help;
+#X obj 56 745 rj/m_scale-help;
+#X obj 183 797 rj/m_ms2sm-help;
+#X obj 57 820 rj/m_bpm2ms-help;
+#X obj 183 775 rj/m_ms2beat-help;
+#X obj 57 798 rj/m_sm2ms-help;
+#X obj 57 901 rj/m_thresholds-help;
+#X obj 57 927 rj/m_speedlimit-help;
+#X text 34 235 s_ des synthés à découvrir;
+#X text 34 254 u_ des utilitaires;
+#X text 17 60 Malheureusement l'application a disparue sur iOS \, mais
+la collection d'abstraction est très riche et très utile.;
+#X text 27 280 Voici une vue d'ensemble de la collection :;
+#X text 27 412 Et une sélection d'abstractions par catégories \,
+sauf les synthés et effets que je vous laisse découvrir par vous
+même :;
+#X text 27 315 J'utilise de manière quasi exclusive le sampler provenant
+de rjdj car il est simplet et très souple d'utilisation :;
+#X obj 57 1031 rj/u_sigm-help;
+#X text 288 381 lire des fichiers stereo;
+#X text 285 358 lire des fichiers mono;
+#X text 240 466 <- détection d'onset;
+#X text 239 505 <- bus audio pour simplifier les envois et réceptions
+;
+#X text 241 529 <- un lfo (data) avec différents formes d'ondes;
+#X text 240 556 <- fade audio entre deux signaux;
+#X text 240 577 <- chaines de markov;
+#X text 239 598 <- morphing entre 3 sources audio;
+#X text 240 620 <- probabilités de passer un message;
+#X text 241 644 <- transformation de motifs mélodiques;
+#X text 241 664 <- travailler avec des fichiers midi;
+#X text 240 685 <- un séquenceur à motifs rythmiques;
+#X text 243 717 <- mapping automatique d'un flux de données;
+#X text 244 736 <- mapping d'un flux de données;
+#X text 329 793 conversion d'échelles de temps;
+#X obj 315 775 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 315 820 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 243 848 <- dictionnaire d'accords;
+#X text 244 871 <- analyse de markov sur un flux de données;
+#X text 241 903 <- détection de croisements de seuils;
+#X text 240 928 <- limiter la vitesse d'un flux de message entrant
+;
+#X text 243 961 <- fader par messages;
+#X text 245 987 <- transformer un synthé monophonique en polyphonique
+!!;
+#X text 238 1054 <- transformer un effet monophonique en polyphonique
+!!;
+#X text 245 1010 <- enregistrer;
+#X text 242 1032 <- fonction sigmoid;
+#X obj 23 -35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 23 -16 switch~;
+#X text 58 -40 <- clicker pour activer les calculs dsp dans ce sous
+patch;
+#X obj 349 280 rj/OVERVIEW;
+#X obj 136 358 rj/s_playtable-help;
+#X obj 136 382 rj/s_playtable2-help;
+#X obj 54 468 rj/a_onset-help;
+#X obj 55 505 rj/c_bus-help;
+#X obj 55 553 rj/c_cpfade-help;
+#X obj 55 576 rj/c_markov-help;
+#X obj 55 599 rj/c_mfade3-help;
+#X obj 57 962 rj/u_fade-help;
+#X obj 57 985 rj/u_makepoly-help;
+#X obj 57 1008 rj/u_record-help;
+#X obj 57 1054 rj/u_stereo-help;
+#X connect 46 0 47 0;
+#X connect 57 0 58 0;

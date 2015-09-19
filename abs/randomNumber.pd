@@ -1,0 +1,13 @@
+#N canvas 468 63 637 427 10;
+#X obj 53 141 inlet;
+#X obj 53 218 + \$1;
+#X obj 53 257 outlet;
+#X text 102 137 on attend un bang en entrée;
+#X text 157 178 on génère un nombre aléatoire entre 0 et \$2 (notre
+second argument);
+#X text 97 217 on ajoute \$1;
+#X obj 53 183 random \$2;
+#X text 111 255 on sort un entier compris entre \$1 et \$2+\$1;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 6 0 1 0;

@@ -1,0 +1,25 @@
+#N canvas 0 22 513 305 10;
+#X obj 27 163 list-euclid;
+#X msg 27 131 2 3 4 5 6;
+#X msg 101 131 3 4 5 6 7;
+#X floatatom 27 195 5 0 0 0 - - -;
+#N canvas 648 411 494 344 META 0;
+#X text 12 45 LICENSE GPL v3;
+#X text 12 203 RELEASE_DATE 2013;
+#X text 12 184 WEBSITE https://sites.google.com/site/eargram/;
+#X text 12 165 AUTHOR Gilberto Bernardes;
+#X text 12 146 LIBRARY earGram_abs;
+#X text 12 92 INLET_0 list;
+#X text 12 110 INLET_1 list;
+#X text 12 64 DESCRIPTION computes the euclidian distance between two
+lists;
+#X text 13 127 OUTLET_0 float (euclidian distance);
+#X restore 457 272 pd META;
+#X obj 8 11 cnv 15 500 60 empty empty list-euclid 20 12 0 14 -233017
+-66577 0;
+#X text 360 53 2013 Gilberto Bernardes;
+#X text 25 53 computes the euclidian distance between two lists;
+#X text 26 69 note: the lists must have the same size;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;

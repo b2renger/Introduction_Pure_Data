@@ -1,0 +1,14 @@
+#N canvas 182 22 517 278 10;
+#X obj 28 135 list-permute;
+#X obj 7 5 cnv 15 500 60 empty empty list-permut 20 12 0 14 -233017
+-66577 0;
+#X text 355 45 2013 Gilberto Bernardes;
+#X msg 28 110 1 2 3 4 5 6 7 8 9;
+#X obj 28 160 list prepend set;
+#X obj 28 185 list trim;
+#X msg 28 210 2 5 9 8 3 6 7 4 1;
+#X text 15 71 permuts randomly the elemts of a list;
+#X connect 0 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;

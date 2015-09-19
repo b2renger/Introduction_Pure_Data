@@ -1,0 +1,5 @@
+#N canvas 265 61 450 300 10;
+#X obj 71 31 inlet;
+#X obj 72 178 outlet;
+#X text 66 90 un abstraction qui ne fait rien \, avec une entrée et
+une sortie;

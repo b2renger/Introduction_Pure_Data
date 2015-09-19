@@ -1,0 +1,43 @@
+#N canvas 140 22 515 435 10;
+#X floatatom 116 328 15 0 0 1 std - -;
+#X floatatom 133 302 15 0 0 1 variance - -;
+#X floatatom 150 274 15 0 0 1 variance_n - -;
+#X floatatom 167 248 15 0 0 1 mean - -;
+#X obj 6 8 cnv 15 500 60 empty empty runningStats 20 12 0 14 -233017
+-66577 0;
+#N canvas 495 306 494 344 META 0;
+#X text 12 45 LICENSE GPL v3;
+#X text 12 284 RELEASE_DATE 2013;
+#X text 12 264 WEBSITE https://sites.google.com/site/eargram/;
+#X text 12 244 AUTHOR Gilberto Bernardes;
+#X text 12 25 KEYWORDS;
+#X text 12 224 LIBRARY earGram_abs;
+#X text 12 114 OUTLET_0 float (std);
+#X text 13 134 OUTLET_1 float (variance);
+#X text 14 154 OUTLET_2 float (variance/n);
+#X text 15 174 OUTLET_3 float (mean);
+#X text 16 194 OUTLET_4 float (nr of occurrences);
+#X text 12 65 DESCRIPTION calculates basic stratics of a stream of
+floats continuously;
+#X text 12 95 INLET_0 float reset;
+#X restore 454 406 pd META;
+#X msg 216 183 reset;
+#X obj 116 149 random 100;
+#X obj 116 125 metro 200;
+#X floatatom 116 174 5 0 0 0 - - -;
+#X obj 116 100 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 21 47 calculates basic statistics of a stream of floats;
+#X floatatom 185 225 15 0 0 1 n - -;
+#X obj 116 200 runningStats;
+#X text 356 47 2013 Gilberto Bernardes;
+#X connect 6 0 13 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 13 0;
+#X connect 10 0 8 0;
+#X connect 13 0 0 0;
+#X connect 13 1 1 0;
+#X connect 13 2 2 0;
+#X connect 13 3 3 0;
+#X connect 13 4 12 0;

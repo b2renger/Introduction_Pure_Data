@@ -1,0 +1,24 @@
+#N canvas 0 22 520 303 10;
+#X msg 32 135 3 4 9 1 0 4;
+#X floatatom 32 214 5 0 0 0 - - -;
+#X floatatom 101 214 5 0 0 0 - - -;
+#X obj 6 9 cnv 15 500 60 empty empty list-minimum 20 12 0 14 -233017
+-66577 0;
+#X text 357 48 2013 Gilberto Bernardes;
+#N canvas 648 411 494 344 META 0;
+#X text 12 45 LICENSE GPL v3;
+#X text 12 203 RELEASE_DATE 2013;
+#X text 12 184 WEBSITE https://sites.google.com/site/eargram/;
+#X text 12 165 AUTHOR Gilberto Bernardes;
+#X text 12 146 LIBRARY earGram_abs;
+#X text 12 92 INLET_0 list;
+#X text 12 64 DESCRIPTION reports minimum element of a list (value
+and index);
+#X text 12 110 OUTLET_0 float /minimum value);
+#X text 13 127 OUTLET_1 float (index of minimum value);
+#X restore 452 268 pd META;
+#X text 23 47 reports minimum element of a list (value and index);
+#X obj 32 169 list-minimum;
+#X connect 0 0 7 0;
+#X connect 7 0 1 0;
+#X connect 7 1 2 0;

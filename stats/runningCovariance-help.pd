@@ -1,0 +1,48 @@
+#N canvas 156 26 612 461 10;
+#X msg 334 236 clear;
+#X msg 230 156 2 2;
+#X msg 213 127 10 20;
+#X msg 257 217 4 5;
+#X msg 246 187 2 3;
+#X obj 192 253 runningCovariance;
+#X msg 192 98 3 4 \, 1 4 \, 3 8 \, 9 8;
+#X obj 80 421 covariance;
+#X text 14 421 see also:;
+#N canvas 917 234 494 344 META 0;
+#X text 12 45 LICENSE GPL v3;
+#X text 12 248 RELEASE_DATE 2013;
+#X text 12 228 WEBSITE https://sites.google.com/site/eargram/;
+#X text 12 208 AUTHOR Gilberto Bernardes;
+#X text 12 25 KEYWORDS;
+#X text 12 188 LIBRARY earGram_abs;
+#X text 12 65 DESCRIPTION calculates the covariance between sets of
+point;
+#X text 12 86 INLET_0 list clear;
+#X text 12 105 OUTLET_0 float (covariance);
+#X text 13 125 OUTLET_1 float (mean of x);
+#X text 14 145 OUTLET_2 float (mean of y);
+#X text 14 166 OUTLET_3 float (nr of occurrences);
+#X restore 554 432 pd META;
+#X obj 4 5 cnv 15 600 60 empty empty runningCovariance 20 12 0 14 -233017
+-66577 0;
+#X text 454 43 2013 Gilberto Bernardes;
+#X floatatom 192 366 15 0 0 0 - - -;
+#X floatatom 225 343 15 0 0 0 - - -;
+#X floatatom 258 319 15 0 0 0 - - -;
+#X floatatom 291 296 15 0 0 0 - - -;
+#X text 389 294 nr of occurences;
+#X text 356 320 mean of y;
+#X text 326 343 mean of x;
+#X text 291 367 covariance;
+#X text 23 42 calculates the covariance between sets of point continuously
+;
+#X connect 0 0 5 0;
+#X connect 1 0 5 0;
+#X connect 2 0 5 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 12 0;
+#X connect 5 1 13 0;
+#X connect 5 2 14 0;
+#X connect 5 3 15 0;
+#X connect 6 0 5 0;

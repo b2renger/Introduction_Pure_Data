@@ -1,0 +1,12 @@
+#N canvas 0 0 292 288 10;
+#X obj 10 9 inlet~;
+#X obj 10 116 outlet~;
+#X obj 10 53 *~ 64;
+#X obj 10 74 +~ 256;
+#X obj 10 30 clip~ -0.9 0.9;
+#X obj 10 96 tabread4~ tanh;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 1 0;

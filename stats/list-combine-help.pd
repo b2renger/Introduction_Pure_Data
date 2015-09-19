@@ -1,0 +1,16 @@
+#N canvas 29 22 514 385 10;
+#X obj 5 5 cnv 15 500 60 empty empty list-combine 20 12 0 14 -233017
+-66577 0;
+#X text 323 46 (c) 2012 Gilberto Bernardes;
+#X floatatom 93 217 5 0 0 1 nrElements(K) - -;
+#X msg 24 156 1 2 3 4 5;
+#X obj 24 297 print;
+#X obj 24 252 list-combine;
+#X obj 61 297 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 91 153 sets of elements to combine (n);
+#X text 14 71 Makes all combinations of k elements from the set n;
+#X connect 2 0 5 1;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 5 1 6 0;

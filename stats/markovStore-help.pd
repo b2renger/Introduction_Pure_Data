@@ -1,0 +1,57 @@
+#N canvas 21 171 613 446 10;
+#X floatatom 54 355 5 0 0 0 - - -;
+#X msg 260 184 clear;
+#X floatatom 186 172 5 0 0 0 - - -;
+#X msg 309 183 read;
+#X msg 360 182 write;
+#X obj 54 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 54 297 metro 500;
+#X obj 225 352 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 186 104 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 186 149 random 45;
+#X obj 186 125 metro 40;
+#X floatatom 105 271 5 0 0 0 - - -;
+#X text 245 351 Stuck! Reset;
+#X obj 127 291 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 186 236 MarkovStore testMarkovSyms 4;
+#X obj 7 2 cnv 15 600 60 empty empty markovStore 20 12 0 14 -233017
+-66577 0;
+#X obj 54 322 MarkovRetrieve testMarkovSyms;
+#X text 457 39 2013 Gilberto Bernardes;
+#N canvas 457 369 494 344 META 0;
+#X text 12 45 LICENSE GPL v3;
+#X text 12 177 RELEASE_DATE 2013;
+#X text 12 157 WEBSITE https://sites.google.com/site/eargram/;
+#X text 12 137 AUTHOR Gilberto Bernardes;
+#X text 12 25 KEYWORDS;
+#X text 12 117 LIBRARY earGram_abs;
+#X text 12 95 INLET_0 float clear read write;
+#X text 12 65 DESCRIPTION creates a transition probability table that
+serves as basis of a Markov chain algorithm;
+#X restore 555 420 pd META;
+#X msg 410 183 order \$1;
+#X floatatom 410 157 5 0 0 0 - - -;
+#X text 420 235 arg:;
+#X text 420 256 order;
+#X text 22 30 creates a transition probability table that serves as
+basis of a Markov chain algorithm;
+#X text 41 246 -- interacts with: --;
+#X connect 1 0 14 0;
+#X connect 2 0 14 0;
+#X connect 3 0 14 0;
+#X connect 4 0 14 0;
+#X connect 5 0 6 0;
+#X connect 6 0 16 0;
+#X connect 8 0 10 0;
+#X connect 9 0 2 0;
+#X connect 10 0 9 0;
+#X connect 11 0 6 1;
+#X connect 13 0 16 0;
+#X connect 16 0 0 0;
+#X connect 16 1 7 0;
+#X connect 19 0 14 0;
+#X connect 20 0 19 0;
