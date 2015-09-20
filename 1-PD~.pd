@@ -1,9 +1,9 @@
-#N canvas 65 82 675 679 12;
+#N canvas 65 87 675 679 12;
 #X declare -path abs;
 #X text 178 35 <- ceci est un sous-patch. Il est possible de double
 clicker dessus pour voir ce qui est à l'intérieur. Celui-ci est vide
 car je n'ai rien mis à l'intérieur.;
-#N canvas 683 50 667 679 commentaires 0;
+#N canvas 680 82 667 679 commentaires 0;
 #X text 14 9 - on ajoute des commentaires en allant dans le menu "Put"
 et en choisissant "comment" (on peut aussi faire la combinaison de
 touche CTRL+5 - ou Pomme+5 sous mac);
@@ -18,7 +18,7 @@ partie blanche du patch.;
 #X text 83 356 comment;
 #X restore 37 81 pd commentaires;
 #X text 179 81 <- voir des infos sur les commentaires;
-#N canvas 683 50 667 679 modes 0;
+#N canvas 680 82 667 679 modes 0;
 #X obj 41 369 osc~;
 #X text 119 347 ceci est un objet : en mode play vous ne pouvez pas
 interagir directement avec lui \, en mode edit vous pouvez le sélectionner
@@ -50,7 +50,7 @@ eux c'est à dire de faire passer des valeurs ou des signaux audio.
 #X restore 37 110 pd modes;
 #X text 179 108 <- le mode edit et le mode play pour bien commencer
 ;
-#N canvas 683 50 667 679 objets 0;
+#N canvas 680 82 667 679 objets 0;
 #X text -255 2 On crée un objet un allant dans le menu "Put" et en
 choisissant "objet" ou en utilisant la combinaison de touches CTRL+1
 ou Pomme+1.;
@@ -162,7 +162,7 @@ pour faire apparaitre le caractère.;
 #X restore 37 195 pd IO~;
 #X text 179 192 <- les entrées audio("inlet~") et les sorties audio
 ("outlet~");
-#N canvas 648 50 667 679 souspatch2 0;
+#N canvas 645 82 667 679 souspatch2 0;
 #X text 13 -142 On peut créer une entrée ou une sortie en créeant
 un objet de manière classique et en tapants comme nom "inlet" \, "outlet"
 \, "inlet~" \, "outlet~";
@@ -270,7 +270,7 @@ patch;
 #X text 256 449 <- un simple contrôle de volume;
 #X text 256 480 <- quelques nouveaux objet pour produire du son;
 #X obj 6 41 cnv 15 25 25 empty empty 1 5 12 0 20 -1 -262144 0;
-#N canvas 265 58 450 300 souspatch 0;
+#N canvas 262 82 450 300 souspatch 0;
 #X restore 37 43 pd souspatch;
 #X obj 6 78 cnv 15 25 25 empty empty 2 5 12 0 20 -1 -262144 0;
 #X obj 6 107 cnv 15 25 25 empty empty 3 5 12 0 20 -1 -262144 0;
@@ -559,31 +559,6 @@ patch;
 #X connect 12 0 11 0;
 #X connect 30 0 31 0;
 #X restore 37 594 pd mon_premier_synthetiseur;
-#N canvas 677 87 667 679 ressources 0;
-#X text 88 493 http://www.woldhek.eu/anton/?p=657;
-#X text 86 444 https://sites.google.com/site/eargram/download;
-#X text 88 278 http://obiwannabe.co.uk/tutorials/html/tutorials_main.html
-;
-#X text 90 321 http://forum.pdpatchrepo.info/topic/1877/diy2-effects-sample-players-synths-and-sound-synthesis
-;
-#X text 84 66 * Pd vanilla official home pages http://www-crca.ucsd.edu/~msp/software.html
-;
-#X text 85 109 * Pd community pages http://puredata.info/ et http://puredata.hurleur.com/
-;
-#X text 85 157 * Forum francophone codelab : http://codelab.fr/;
-#X text 87 187 * Browser d'aide intégré à Pure Data (une mine d'informations)
-;
-#X text 87 262 * Andy Farnell;
-#X text 88 301 * DIY2 by hardoff;
-#X text 88 361 * mmb by maelstrom (coeff biquad / band limited oscillators)
-: https://github.com/dotmmb/mmb;
-#X text 89 402 * rjdj : https://github.com/rjdj/rjlib;
-#X text 85 428 * Synthèse concatenative;
-#X text 87 474 * Challenge 'a patch a day';
-#X text 87 234 * Iohannes kriedler : http://www.pd-tutorial.com/;
-#X restore 1 1390 pd ressources;
-#X obj 2 1081 cnv 15 649 25 empty empty Plus 5 12 0 20 -1 -262144 0
-;
 #N canvas 683 50 667 679 effets_simples 0;
 #X obj 27 418 rzero~;
 #X obj 28 450 rpole~;
@@ -715,7 +690,7 @@ patch;
 #X connect 27 0 21 1;
 #X connect 36 0 37 0;
 #X restore 36 755 pd effets_simples;
-#N canvas 683 50 667 679 sortie_audio~ 0;
+#N canvas 680 82 667 679 sortie_audio~ 0;
 #X obj 41 243 dac~;
 #X text 40 147 la sortie audio s'appelle "dac~" pour la créer on créer
 un objet nommé "dac~";
@@ -856,29 +831,82 @@ et 1 ...;
 #X connect 16 0 17 0;
 #X restore 36 449 pd controle_du_volume~;
 #X obj 6 504 cnv 15 25 25 empty empty 5 5 12 0 20 -1 -262144 0;
-#N canvas 683 50 667 679 visualiser 0;
+#N canvas 699 87 667 679 visualiser 0;
 #X text -888 6 Il est très simple de visualiser un signal à tout
 moment. Pour rappel les signaux audio de sortie que l'on attend seront
 compris entre -1 et 1;
 #X obj -484 259 tabwrite~;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array array1 512 float 5;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0;
+#A 0 0.690141 0.646796 0.596868 0.54086 0.479332 0.412927 0.34232 0.268227
+0.191396 0.112617 0.0326925 -0.0475656 -0.12734 -0.205814 -0.282194
+-0.355701 -0.425589 -0.491131 -0.551674 -0.606601 -0.655355 -0.697425
+-0.732388 -0.759896 -0.77967 -0.791502 -0.795258 -0.79092 -0.778533
+-0.758221 -0.730169 -0.694683 -0.652127 -0.602933 -0.547592 -0.486669
+-0.420793 -0.350634 -0.276904 -0.200347 -0.121752 -0.0419183 0.0383432
+0.118214 0.196879 0.27354 0.347418 0.417756 0.483833 0.544984 0.600589
+0.650082 0.692938 0.728738 0.757122 0.7778 0.790548 0.795236 0.791831
+0.780366 0.760955 0.733776 0.69913 0.657368 0.608914 0.554248 0.493937
+0.428598 0.358897 0.285538 0.209267 0.130867 0.0511344 -0.0291196 -0.109076
+-0.187922 -0.264854 -0.339091 -0.409871 -0.476473 -0.538225 -0.594498
+-0.644719 -0.688359 -0.724993 -0.754247 -0.775826 -0.789488 -0.795107
+-0.792635 -0.782095 -0.763585 -0.737286 -0.703485 -0.662523 -0.614817
+-0.560833 -0.501141 -0.43635 -0.367116 -0.294138 -0.218163 -0.139968
+-0.0603478 0.0198879 0.0999204 0.178935 0.256128 0.330715 0.401928
+0.469046 0.53139 0.588325 0.639266 0.683687 0.721148 0.75127 0.773746
+0.788321 0.794872 0.793332 0.783718 0.766111 0.740696 0.707743 0.667586
+0.620629 0.567339 0.508276 0.444039 0.375282 0.302694 0.227025 0.149046
+0.069549 -0.0106576 -0.090755 -0.169928 -0.247371 -0.322298 -0.393934
+-0.461559 -0.524486 -0.582076 -0.63373 -0.678924 -0.717209 -0.748193
+-0.771558 -0.787049 -0.794529 -0.793923 -0.785236 -0.768535 -0.744008
+-0.711908 -0.672562 -0.62636 -0.573772 -0.515345 -0.451672 -0.3834
+-0.311214 -0.235861 -0.158108 -0.078745 0.00142186 0.0815734 0.160894
+0.238577 0.313832 0.385884 0.454007 0.517509 0.575746 0.628105 0.674069
+0.713171 0.745015 0.769265 0.785671 0.79408 0.794407 0.786647 0.770855
+0.747218 0.715975 0.677445 0.632005 0.580125 0.522341 0.459241 0.391461
+0.319688 0.244662 0.167145 0.0879265 0.00780998 -0.0723848 -0.151842
+-0.229755 -0.305327 -0.377785 -0.446397 -0.510466 -0.569339 -0.622399
+-0.669124 -0.709039 -0.741737 -0.766869 -0.784187 -0.793524 -0.794784
+-0.787948 -0.773072 -0.750329 -0.719948 -0.68224 -0.637567 -0.586403
+-0.529271 -0.466751 -0.399473 -0.328122 -0.253433 -0.176164 -0.0970998
+-0.0170447 0.0631825 0.142767 0.220899 0.296778 0.369632 0.438724 0.503351
+0.56285 0.616607 0.664088 0.70481 0.738359 0.764369 0.782598 0.792861
+0.795055 0.789142 0.775184 0.753338 0.723823 0.686937 0.64304 0.592599
+0.536126 0.474196 0.407427 0.336509 0.262167 0.185155 0.106256 0.0262732
+-0.0539758 -0.133676 -0.212016 -0.288192 -0.361433 -0.430995 -0.496171
+-0.556288 -0.610735 -0.658965 -0.700488 -0.734878 -0.761768 -0.780904
+-0.792092 -0.795219 -0.790231 -0.777194 -0.756246 -0.727602 -0.691542
+-0.64843 -0.598718 -0.542913 -0.48158 -0.415331 -0.344854 -0.270869
+-0.194125 -0.115401 -0.035502 0.0447577 0.124562 0.2031 0.279564 0.353182
+0.423205 0.488921 0.549649 0.604777 0.65375 0.69607 0.731295 0.759063
+0.779105 0.791217 0.795275 0.791213 0.779097 0.759052 0.731282 0.696052
+0.65373 0.604754 0.549623 0.488893 0.423174 0.35315 0.279531 0.203065
+0.124527 0.0447221 -0.0355377 -0.115437 -0.19416 -0.270902 -0.344887
+-0.415361 -0.481609 -0.542939 -0.598742 -0.648451 -0.69156 -0.727616
+-0.756257 -0.777201 -0.790235 -0.795219 -0.792089 -0.780897 -0.761758
+-0.734865 -0.700471 -0.658945 -0.610712 -0.556263 -0.496143 -0.430965
+-0.361401 -0.288159 -0.211982 -0.13364 -0.0539402 0.0263088 0.106291
+0.18519 0.2622 0.336542 0.407458 0.474225 0.536153 0.592623 0.643061
+0.686956 0.723838 0.753349 0.775192 0.789146 0.795056 0.792858 0.782592
+0.764359 0.738345 0.704793 0.664068 0.616585 0.562825 0.503323 0.438694
+0.3696 0.296744 0.220864 0.142732 0.063147 -0.0170804 -0.0971353 -0.176199
+-0.253467 -0.328155 -0.399504 -0.46678 -0.529297 -0.586427 -0.637588
+-0.682258 -0.719963 -0.75034 -0.773081 -0.787952 -0.794786 -0.793522
+-0.784181 -0.76686 -0.741724 -0.709023 -0.669105 -0.622377 -0.569314
+-0.510438 -0.446367 -0.377754 -0.305294 -0.229721 -0.151807 -0.0723493
+0.00784565 0.0879619 0.16718 0.244696 0.31972 0.391492 0.45927 0.522368
+0.580149 0.632026 0.677464 0.715991 0.74723 0.770864 0.786652 0.794409
+0.794078 0.785665 0.769256 0.745002 0.713155 0.67405 0.628084 0.575721
+0.517482 0.453978 0.385852 0.313799 0.238543 0.160859 0.0815379 0.00138619
+-0.0787805 -0.158143 -0.235895 -0.311247 -0.383432 -0.451701 -0.515372
+-0.573797 -0.626383 -0.672581 -0.711924 -0.74402 -0.768544 -0.785242
+-0.793925 -0.794528 -0.787044 -0.771549 -0.748181 -0.717193 -0.678906
+-0.633708 -0.582052 -0.524459 -0.46153 -0.393903 -0.322266 -0.247337
+-0.169893 -0.0907196 -0.0106219 0.0695846 0.149081 0.227059 0.302727
+0.375313 0.444068 0.508303 0.567364 0.620652 0.667605 0.707759 0.740709
+0.766121 0.783724 0.793334 0.794871 0.788316 0.773738 0.751258 0.721133
+0.683669 0.639245 0.588301 0.531363 0.469017 0.401897 0.330683 0.256094
+0.1789 0.0998851 0.0198523 -0.0603833 -0.140003 -0.218197;
 #X coords 0 1 511 -1 160 100 1 0 0;
 #X restore -818 129 graph;
 #X text -889 53 Pour cela nous pouvons utiliser un tableau (menu ajouter
@@ -896,16 +924,16 @@ suffit de préciser dans quelle table on veut dessiner et à quel rythme
 -1 -1;
 #X obj -834 511 tabwrite~ array1;
 #X obj -683 458 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj -669 508 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -832 378 osc~ 600;
 #X obj -683 482 metro 100;
 #X obj -829 359 hsl 128 15 0 2000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 4500 1;
 #X obj -833 424 *~;
 #X obj -797 409 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 10100 1;
 #X text -686 353 contrôle de fréquence;
 #X text -660 406 contrôle de volume;
 #X text -655 430 cliquer pour représenter à l'instant t;
@@ -918,7 +946,7 @@ logique \, qui est vrai au moment ou il est cliqué;
 #X text -803 575 est un métronome càd un objet qui sortira des bangs
 toutes les x millisecondes;
 #X obj -886 -37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj -886 -18 switch~;
 #X text -851 -42 <- clicker pour activer les calculs dsp dans ce sous
 patch;
@@ -932,7 +960,7 @@ patch;
 #X connect 15 0 14 1;
 #X connect 24 0 25 0;
 #X restore 37 507 pd visualiser;
-#N canvas 683 50 667 679 send_et_receive 0;
+#N canvas 680 82 667 679 send_et_receive 0;
 #X text 31 19 Au lieu de tirer des cables on peut utiliser des objets
 dédiés [send] et [receive];
 #X obj 46 98 send valeur;
@@ -1067,7 +1095,7 @@ pc n'est pas trop bas);
 #X obj 6 533 cnv 15 25 25 empty empty 6 5 12 0 20 -1 -262144 0;
 #X obj 6 562 cnv 15 25 25 empty empty 7 5 12 0 20 -1 -262144 0;
 #X text 256 568 <- la fameuse enveloppe adsr;
-#N canvas 683 50 667 679 abstractions 0;
+#N canvas 677 82 667 686 abstractions 0;
 #X text -1175 15 Une abstraction est un patch pure-data enregistré
 séparément et qui peut donc être utilisé comme objet à part entière
 pour peut qu'on ait défini des entrées et des sorties.;
@@ -1104,7 +1132,7 @@ un nombre aléatoire dans un "range" spécifié par des arguments;
 #X restore 36 257 pd abstractions;
 #X obj 1 722 cnv 15 649 25 empty empty Boite_à_outils 5 12 0 20 -1
 -262144 0;
-#N canvas 683 50 667 679 synthese_sonore_avec_expr~ 0;
+#N canvas 680 82 667 679 synthese_sonore_avec_expr~ 0;
 #N canvas 683 50 667 679 pulse_width_modulation 0;
 #X obj 46 142 expr~ $v1> $v2;
 #X obj 49 21 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
@@ -1515,7 +1543,7 @@ patch;
 #X connect 7 0 2 0;
 #X connect 19 0 20 0;
 #X restore 37 624 pd synthetiseur_polyphonique;
-#N canvas 683 50 667 679 tracking_micro 0;
+#N canvas 680 82 667 679 tracking_micro 0;
 #X obj 40 -277 adc~;
 #N canvas 683 50 667 679 pitch_tracking_fiddle 0;
 #X obj 407 204 unpack;
@@ -1661,7 +1689,7 @@ patch;
 #X connect 14 0 13 1;
 #X connect 16 0 17 0;
 #X restore 36 1053 pd tracking_micro;
-#N canvas 683 50 667 679 entrée_chaudes_froides 0;
+#N canvas 700 82 667 679 entrée_chaudes_froides 0;
 #X text 11 10 Dans le cadre d'un langage de programmation basé sur
 l'évenementiel \, il est nécessaire de pouvoir évaluer le résultat
 produit par une boite à tout moment.;
@@ -1814,7 +1842,7 @@ patch;
 #X restore 64 814 pd synthese_additive;
 #X obj 6 811 cnv 15 50 25 empty empty 2-1 6 12 0 20 -1 -262144 0;
 #X obj 6 842 cnv 15 50 25 empty empty 2-2 6 12 0 20 -1 -262144 0;
-#N canvas 683 50 667 679 synthese_soustractive 0;
+#N canvas 680 82 667 679 synthese_soustractive 0;
 #X obj 26 224 dac~;
 #X text 20 3 Le principe est de sculpter des sons dans une masse de
 bruit blanc.;
@@ -3905,7 +3933,7 @@ patch;
 #X connect 42 0 43 0;
 #X restore 62 937 pd waveshaping;
 #X obj 6 934 cnv 15 50 25 empty empty 2-5 6 12 0 20 -1 -262144 0;
-#N canvas 683 50 667 679 fm_by_wavetable 0;
+#N canvas 680 82 667 679 fm_by_wavetable 0;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array pitchmod14 8195 float 1;
 #A 0 -0.796951 -0.796951 -0.796951 -0.796951 -0.796951 -0.796951 -0.796951
@@ -5282,16 +5310,3 @@ patch;
 #X restore 63 994 pd drumkit;
 #X obj 6 963 cnv 15 50 25 empty empty 2-6 6 12 0 20 -1 -262144 0;
 #X obj 6 992 cnv 15 50 25 empty empty 2-7 6 12 0 20 -1 -262144 0;
-#X text 12 1111 2-Rjdj.pd : une présentation de l'excellente collection
-d'abstraction rjdj.;
-#X text 10 1149 Contenu des sous dossiers :;
-#X text 10 1175 /abs : abstractions constuites pour le cours compatible
-vanilla. Necessaire pour 1-PD~.pd;
-#X text 12 1266 /list-abs : abstractions permettant de gérer des listes
-de données comptatibles vanilla;
-#X text 12 1306 /rj : collection d'abstractions de l'appli rjdj compatibles
-vanilla. Necessaire pour 2-Rjdj.pd;
-#X text 10 1342 /stats : collection d'abstractions pour faire des statistiques
-(moyennes \, variances \, k-means etc.);
-#X text 8 1215 /Andy-SoundEffects : patches de synthèse sonore d'Andy
-Farnell;
