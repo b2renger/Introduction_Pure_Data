@@ -1,4 +1,4 @@
-#N canvas 65 82 675 679 12;
+#N canvas 65 87 675 679 12;
 #X declare -path abs;
 #X text 178 35 <- ceci est un sous-patch. Il est possible de double
 clicker dessus pour voir ce qui est à l'intérieur. Celui-ci est vide
@@ -284,7 +284,7 @@ audio (utile dans des cas bien précis);
 #X obj 5 418 cnv 15 25 25 empty empty 2 5 12 0 20 -1 -262144 0;
 #X obj 5 446 cnv 15 25 25 empty empty 3 5 12 0 20 -1 -262144 0;
 #X obj 5 475 cnv 15 25 25 empty empty 4 5 12 0 20 -1 -262144 0;
-#N canvas 683 50 667 679 tempo 0;
+#N canvas 680 82 667 679 tempo 0;
 #X text 13 10 Afin d'obtenir une base de temps utilisable pour la création
 musicale \, nous pouvons utiliser l'objet [metro] \, il prend un argument
 qui sera le temps en millisecondes entre deux bangs émis à la sortie
@@ -829,7 +829,7 @@ et 1 ...;
 #X connect 16 0 17 0;
 #X restore 36 449 pd controle_du_volume~;
 #X obj 6 504 cnv 15 25 25 empty empty 5 5 12 0 20 -1 -262144 0;
-#N canvas 693 97 667 679 visualiser 1;
+#N canvas 690 102 667 679 visualiser 0;
 #X text -888 6 Il est très simple de visualiser un signal à tout
 moment. Pour rappel les signaux audio de sortie que l'on attend seront
 compris entre -1 et 1;
@@ -998,7 +998,7 @@ l'aide de l'objet [value];
 #X connect 21 0 17 0;
 #X restore 36 287 pd send_et_receive;
 #X text 256 508 <- oscilloscope;
-#N canvas 671 82 667 679 enveloppe_adsr 0;
+#N canvas 668 87 667 679 enveloppe_adsr 1;
 #X text -1188 3 L'enveloppe ADSR signifie;
 #X text -1165 23 Attack = temps nécessaire au son pour atteindre son
 amplitude maximale;
@@ -1006,28 +1006,28 @@ amplitude maximale;
 \, la phase de sustain.;
 #X text -1164 112 Release = temps d'extinction u son;
 #X text -1165 91 Sustain = maintien du son au même niveau;
-#X text -1177 336 En réalité \, si A \, D \, et R sont exprimés
+#X text -1177 388 En réalité \, si A \, D \, et R sont exprimés
 en ms \, S doit être exprimé en en pourcentage \, de plus il doit
 être possible de spécifier la valeur de ce pic .;
-#X text -1177 384 Heureusement le navigateur d'aide est là pour nous
+#X text -1177 436 Heureusement le navigateur d'aide est là pour nous
 aider : CTRL + B \, nous ouvre cette aide.;
-#X text -1177 415 Naviguez dans la première colone : choisir Pure
+#X text -1177 467 Naviguez dans la première colone : choisir Pure
 Data \, puis 3.audio.examples et double cliquez sur adsr;
 #X text -1179 129 A l'aide de l'objet [delay] et de l'objet [line~]
 vous devriez à ce stade être capable de construire une enveloppe
 se rapprochant de l'enveloppe adsr en plus simple : une enveloppe "ad"
 ;
-#X text -1178 453 Créez un nouveau document Pure-Data et copiez/collez
+#X text -1178 505 Créez un nouveau document Pure-Data et copiez/collez
 l'intégralité de l'exmple à l'intérieur. Enfin sauvegardez sous
 le nom adsr dans votre répértoire de travail;
 #X obj -1141 273 *~;
 #X obj -1141 300 dac~;
 #X obj -1142 206 osc~ 440;
-#X text -1176 503 Remarquez l'utilisation des arguments ! (\$1 \, \$2
+#X text -1176 555 Remarquez l'utilisation des arguments ! (\$1 \, \$2
 etc... l'explication est tout en bas) c'est un des avantages principaux
 d'un abstraction par rapport à un sous patch;
-#X obj -1179 579 abs/adsr 0.5 50 10 25 100;
-#X text -983 598 A la création j'ai spécifié : 0.5 pour la valeur
+#X obj -1179 631 abs/adsr 0.5 50 10 25 100;
+#X text -983 650 A la création j'ai spécifié : 0.5 pour la valeur
 cible \, 50 ms pour A \, 10 ms pour D \, 25% de S \, et 100 ms pour
 R.;
 #X obj -1180 -35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -1035,9 +1035,9 @@ R.;
 #X obj -1180 -16 switch~;
 #X text -1145 -40 <- clicker pour activer les calculs dsp dans ce sous
 patch;
-#X obj -1039 187 cnv 15 500 140 empty empty empty 20 12 0 14 -258113
+#X obj -1039 187 cnv 15 500 180 empty empty empty 20 12 0 14 -258113
 -66577 0;
-#N canvas 371 73 762 575 ad-env~ 0;
+#N canvas 368 82 762 575 ad-env~ 0;
 #X obj 31 -91 inlet;
 #X obj 36 362 outlet~;
 #X text 102 360 ... et une sortie audio;
@@ -1062,7 +1062,7 @@ la notion d'entrée chaude et d'entrée froide ...;
 #X obj 31 57 t b b b;
 #X msg 436 376 1 \$1;
 #X msg 482 377 0 \$1;
-#X obj 430 349 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 425 350 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 423 327 déplacer le carré gris pour décourvir un indice
 ;
@@ -1075,14 +1075,17 @@ la notion d'entrée chaude et d'entrée froide ...;
 -1 -1;
 #X floatatom -998 203 5 0 0 0 - - -, f 5;
 #X floatatom -952 204 5 0 0 0 - - -, f 5;
+#X text -984 614 J'ai enregistré le document dans un dossier dans
+mon répertoire de travail nommé "abs";
+#X text -1178 685 Dans cette abstraction l'objectif est de comprendre
+comment la durée du sustain est spécifiée.;
 #X text -1027 255 complétez ce sous-patch \, donnez des valeurs à
-l'attaque et au decay \, puis cliquer sur le bang : vous devriez entendre
+l'attaque et au decay \, puis cliquez sur le bang : vous devriez entendre
 un son ! (si le dsp est en route et que le volume général de votre
 pc n'est pas trop bas);
-#X text -984 562 J'ai enregistré le document dans un dossier dans
-mon répertoire de travail nommé "abs";
-#X text -1178 633 Dans cette abstraction l'objectif est de comprendre
-comment la durée du sustain est spécifiée.;
+#X text -1029 318 On veut une enveloppe qui va monter jusqu'à 1 dans
+le temps spécifé par la deuxième entrée (attack) et descendre à
+0 dans le temps spécifié par la troisième entrée (decay).;
 #X connect 10 0 11 0;
 #X connect 10 0 11 1;
 #X connect 12 0 10 0;
@@ -1134,7 +1137,7 @@ sortir des valeurs comprises entre 20 et 120;
 #X restore 36 257 pd abstractions;
 #X obj 1 722 cnv 15 649 25 empty empty Boite_à_outils 5 12 0 20 -1
 -262144 0;
-#N canvas 677 82 667 686 synthese_sonore_avec_expr~ 0;
+#N canvas 674 87 667 686 synthese_sonore_avec_expr~ 0;
 #N canvas 683 50 667 679 pulse_width_modulation 0;
 #X obj 46 142 expr~ $v1> $v2;
 #X obj 49 21 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
@@ -1458,7 +1461,7 @@ expr~;
 en synthèse sonore \, avec cette méthode permettant de construire
 des enveloppes complexes à partir d'expressions régulières;
 #X obj -159 -123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj -159 -104 switch~;
 #X text -124 -128 <- clicker pour activer les calculs dsp dans ce sous
 patch;
@@ -1549,7 +1552,7 @@ patch;
 #X connect 7 0 2 0;
 #X connect 19 0 20 0;
 #X restore 37 624 pd synthetiseur_polyphonique;
-#N canvas 677 87 667 679 tracking_micro 0;
+#N canvas 674 92 667 679 tracking_micro 0;
 #X obj 40 -277 adc~;
 #N canvas 680 82 667 679 pitch_tracking_fiddle 0;
 #X obj 407 204 unpack;
