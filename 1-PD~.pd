@@ -1,4 +1,4 @@
-#N canvas 65 92 675 679 12;
+#N canvas 65 82 675 679 12;
 #X declare -path abs;
 #X text 178 35 <- ceci est un sous-patch. Il est possible de double
 clicker dessus pour voir ce qui est à l'intérieur. Celui-ci est vide
@@ -234,36 +234,34 @@ données;
 #X restore 37 226 pd souspatch2;
 #X text 178 228 <- retour sur les sous patchs et les entrée sorties.
 ;
-#N canvas 683 50 667 679 sources~ 0;
-#X obj -844 172 phasor~ 440;
-#X obj -844 207 noise~;
-#X obj -843 272 adc~;
-#X text -729 170 le phasor~ fonctionne de la même façon que l'oscillateur
+#N canvas 674 92 667 679 sources~ 0;
+#X obj 29 172 phasor~ 440;
+#X obj 29 207 noise~;
+#X obj 30 272 adc~;
+#X text 144 170 le phasor~ fonctionne de la même façon que l'oscillateur
 ;
-#X text -773 208 le noise~ génère un bruit blanc.;
-#X text -772 270 n'est pas vraiment une source \, mais permet d'avoir
+#X text 100 208 le noise~ génère un bruit blanc.;
+#X text 101 270 n'est pas vraiment une source \, mais permet d'avoir
 accès au micro \, le signal qui en sort vient directement du micro
 de votre ordinateur ou d'un micro extérieur.;
-#X text -851 87 Il existe d'autres sources \, essayer de reconstuire
+#X text 24 419 le mieux étant d'essayer de ne pas faire trop de copier/coller
+\, et de se souvenir ce qu'on a fait précédement \, bien entendu.
+;
+#X text 26 364 Nous verrons plus tard qu'il est assez facile de créer
+de nouvelles sources.;
+#X obj 31 330 sig~ 16;
+#X obj 26 17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 26 36 switch~;
+#X text 61 12 <- clicker pour activer les calculs dsp dans ce sous
+patch;
+#X text 22 87 Il existe d'autres sources \, essayez de reconstuire
 un patch similaire à celui de la chaine audio ci-dessous dans un sous-patch
 mais utilisant un autre source et en ajoutant un controle de volume
 avec slider;
-#X text -849 419 le mieux étant d'essayer de ne pas faire trop de
-copier/coller \, et de se souvenir ce qu'on a fait précédement \,
-bien entendu.;
-#X text -847 364 Nous verrons plus tard qu'il est assez facile de créer
-de nouvelles sources.;
-#X obj -842 330 sig~ 16;
-#X text -770 328 génère un valeur numérique continue à sample rate
-audio;
-#X obj -844 236 pink~;
-#X text -773 237 génère un bruit rose/;
-#X obj -847 17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj -847 36 switch~;
-#X text -812 12 <- clicker pour activer les calculs dsp dans ce sous
-patch;
-#X connect 13 0 14 0;
+#X text 103 328 génère un valeur numérique continue à sample rate
+audio (utile dans des cas bien précis);
+#X connect 9 0 10 0;
 #X restore 36 478 pd sources~;
 #X text 255 392 <- le DAC~ ou la sortie audio;
 #X text 255 419 <- le flux audio \, de la source aux hp;
@@ -439,7 +437,7 @@ patch;
 #X connect 29 0 21 1;
 #X connect 30 0 31 0;
 #X restore 36 682 pd sequenceurs;
-#N canvas 680 82 667 679 enveloppes 0;
+#N canvas 677 87 667 679 enveloppes 0;
 #X obj -741 178 line~;
 #X obj -535 251 vline~;
 #X obj -884 128 line;
@@ -559,7 +557,7 @@ patch;
 #X connect 12 0 11 0;
 #X connect 30 0 31 0;
 #X restore 37 594 pd mon_premier_synthetiseur;
-#N canvas 683 50 667 679 effets_simples 0;
+#N canvas 680 82 667 679 effets_simples 0;
 #X obj 27 418 rzero~;
 #X obj 28 450 rpole~;
 #X obj 70 64 lop~;
@@ -690,7 +688,7 @@ patch;
 #X connect 27 0 21 1;
 #X connect 36 0 37 0;
 #X restore 36 755 pd effets_simples;
-#N canvas 680 82 667 679 sortie_audio~ 0;
+#N canvas 674 92 667 679 sortie_audio~ 0;
 #X obj 41 243 dac~;
 #X text 40 147 la sortie audio s'appelle "dac~" pour la créer on créer
 un objet nommé "dac~";
@@ -710,7 +708,7 @@ activé. Vous pouvez tester l'audio à tout moment en allant dans "Média"
 -> "TEST AUDIO AND MIDI" et changer les GUI de la partie commentée
 "TEST TONES";
 #X restore 36 392 pd sortie_audio~;
-#N canvas 683 50 667 679 chaine_audio~ 0;
+#N canvas 677 87 667 679 chaine_audio~ 0;
 #X obj 185 317 osc~ 440;
 #X obj 185 572 dac~;
 #X floatatom 185 272 8 0 0 0 - - -, f 8;
@@ -780,7 +778,7 @@ patch;
 #X connect 17 0 18 0;
 #X connect 27 0 28 0;
 #X restore 36 421 pd chaine_audio~;
-#N canvas 683 50 667 679 controle_du_volume~ 0;
+#N canvas 677 87 667 679 controle_du_volume~ 0;
 #X text 26 32 Le traitement du signal permet d'agi sur un des signaux
 fondamentaux que l'on a vu à l'aide de différentes opérations.;
 #X obj 70 116 osc~ 440;
@@ -831,7 +829,7 @@ et 1 ...;
 #X connect 16 0 17 0;
 #X restore 36 449 pd controle_du_volume~;
 #X obj 6 504 cnv 15 25 25 empty empty 5 5 12 0 20 -1 -262144 0;
-#N canvas 699 87 667 679 visualiser 0;
+#N canvas 693 97 667 679 visualiser 1;
 #X text -888 6 Il est très simple de visualiser un signal à tout
 moment. Pour rappel les signaux audio de sortie que l'on attend seront
 compris entre -1 et 1;
@@ -1000,7 +998,7 @@ l'aide de l'objet [value];
 #X connect 21 0 17 0;
 #X restore 36 287 pd send_et_receive;
 #X text 256 508 <- oscilloscope;
-#N canvas 677 87 667 679 enveloppe_adsr 0;
+#N canvas 671 82 667 679 enveloppe_adsr 0;
 #X text -1188 3 L'enveloppe ADSR signifie;
 #X text -1165 23 Attack = temps nécessaire au son pour atteindre son
 amplitude maximale;
@@ -1029,9 +1027,7 @@ le nom adsr dans votre répértoire de travail;
 etc... l'explication est tout en bas) c'est un des avantages principaux
 d'un abstraction par rapport à un sous patch;
 #X obj -1179 579 abs/adsr 0.5 50 10 25 100;
-#X text -958 558 J'ai enregistré le document un niveau sous mon répertoire
-de travail dans un dossier nommé "abs";
-#X text -958 591 A la création j'ai spécifié : 0.5 pour la valeur
+#X text -983 598 A la création j'ai spécifié : 0.5 pour la valeur
 cible \, 50 ms pour A \, 10 ms pour D \, 25% de S \, et 100 ms pour
 R.;
 #X obj -1180 -35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -1083,19 +1079,23 @@ la notion d'entrée chaude et d'entrée froide ...;
 l'attaque et au decay \, puis cliquer sur le bang : vous devriez entendre
 un son ! (si le dsp est en route et que le volume général de votre
 pc n'est pas trop bas);
+#X text -984 562 J'ai enregistré le document dans un dossier dans
+mon répertoire de travail nommé "abs";
+#X text -1178 633 Dans cette abstraction l'objectif est de comprendre
+comment la durée du sustain est spécifiée.;
 #X connect 10 0 11 0;
 #X connect 10 0 11 1;
 #X connect 12 0 10 0;
-#X connect 17 0 18 0;
-#X connect 21 0 10 1;
-#X connect 22 0 21 0;
-#X connect 23 0 21 1;
-#X connect 24 0 21 2;
+#X connect 16 0 17 0;
+#X connect 20 0 10 1;
+#X connect 21 0 20 0;
+#X connect 22 0 20 1;
+#X connect 23 0 20 2;
 #X restore 37 565 pd enveloppe_adsr;
 #X obj 6 533 cnv 15 25 25 empty empty 6 5 12 0 20 -1 -262144 0;
 #X obj 6 562 cnv 15 25 25 empty empty 7 5 12 0 20 -1 -262144 0;
 #X text 256 568 <- la fameuse enveloppe adsr;
-#N canvas 674 87 667 686 abstractions 1;
+#N canvas 674 87 667 686 abstractions 0;
 #X text -1175 15 Une abstraction est un patch pure-data enregistré
 séparément et qui peut donc être utilisé comme objet à part entière
 pour peut qu'on ait défini des entrées et des sorties.;
@@ -1134,7 +1134,7 @@ sortir des valeurs comprises entre 20 et 120;
 #X restore 36 257 pd abstractions;
 #X obj 1 722 cnv 15 649 25 empty empty Boite_à_outils 5 12 0 20 -1
 -262144 0;
-#N canvas 680 82 667 679 synthese_sonore_avec_expr~ 0;
+#N canvas 677 82 667 686 synthese_sonore_avec_expr~ 0;
 #N canvas 683 50 667 679 pulse_width_modulation 0;
 #X obj 46 142 expr~ $v1> $v2;
 #X obj 49 21 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
@@ -1313,9 +1313,8 @@ et dans un but de synthèse sonore.;
 expr~;
 #X obj -139 284 expr~ floor ($v1*$v2 \, 0);
 #X obj 25 260 sig~ 16;
-#X floatatom -126 335 5 0 0 0 - - -, f 5;
+#X floatatom -126 352 5 0 0 0 - - -, f 5;
 #X obj -139 259 phasor~ 0.1;
-#X obj -139 309 unsig~ 20;
 #X obj -136 241 hsl 128 15 0 0.6 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 112 273 vline~;
@@ -1325,8 +1324,7 @@ expr~;
 #X msg 112 250 0 \, 1 500;
 #X obj 112 297 expr~ floor ($v1*$v2 \, 0);
 #X obj 276 273 sig~ 16;
-#X floatatom 125 348 5 0 0 0 - - -, f 5;
-#X obj 112 322 unsig~ 20;
+#X floatatom 125 360 5 0 0 0 - - -, f 5;
 #X obj -36 527 dac~;
 #N canvas 683 50 667 679 elliptic2 0;
 #X obj -403 31 expr~ if($v1==0 \, 1 \, if ($v1==3 \, 0.5 \, if ($v1==7
@@ -1460,32 +1458,38 @@ expr~;
 en synthèse sonore \, avec cette méthode permettant de construire
 des enveloppes complexes à partir d'expressions régulières;
 #X obj -159 -123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj -159 -104 switch~;
 #X text -124 -128 <- clicker pour activer les calculs dsp dans ce sous
 patch;
-#X connect 12 0 16 0;
+#X obj -139 326 snapshot~;
+#X obj 112 334 snapshot~;
+#X obj 194 335 bang~;
+#X obj -30 320 bang~;
+#X connect 12 0 35 0;
 #X connect 13 0 12 1;
 #X connect 15 0 12 0;
-#X connect 16 0 14 0;
-#X connect 17 0 15 0;
-#X connect 18 0 22 0;
+#X connect 16 0 15 0;
+#X connect 17 0 21 0;
+#X connect 18 0 19 0;
 #X connect 19 0 20 0;
-#X connect 20 0 21 0;
-#X connect 21 0 18 0;
-#X connect 22 0 25 0;
-#X connect 23 0 22 1;
+#X connect 20 0 17 0;
+#X connect 21 0 36 0;
+#X connect 22 0 21 1;
 #X connect 25 0 24 0;
-#X connect 27 0 26 0;
-#X connect 27 0 26 1;
-#X connect 28 0 27 0;
+#X connect 25 0 24 1;
+#X connect 26 0 25 0;
+#X connect 27 0 28 0;
+#X connect 28 0 24 0;
+#X connect 28 0 24 1;
 #X connect 29 0 30 0;
-#X connect 30 0 26 0;
-#X connect 30 0 26 1;
-#X connect 31 0 32 0;
-#X connect 32 0 26 0;
-#X connect 32 0 26 1;
-#X connect 34 0 35 0;
+#X connect 30 0 24 0;
+#X connect 30 0 24 1;
+#X connect 32 0 33 0;
+#X connect 35 0 14 0;
+#X connect 36 0 23 0;
+#X connect 37 0 36 0;
+#X connect 38 0 35 0;
 #X restore 37 1025 pd synthese_sonore_avec_expr~;
 #X obj 6 254 cnv 15 25 25 empty empty 8 5 12 0 20 -1 -262144 0;
 #X text 179 257 <- sous-patchs vs abstractions.;
@@ -1545,9 +1549,9 @@ patch;
 #X connect 7 0 2 0;
 #X connect 19 0 20 0;
 #X restore 37 624 pd synthetiseur_polyphonique;
-#N canvas 680 82 667 679 tracking_micro 0;
+#N canvas 677 87 667 679 tracking_micro 0;
 #X obj 40 -277 adc~;
-#N canvas 683 50 667 679 pitch_tracking_fiddle 0;
+#N canvas 680 82 667 679 pitch_tracking_fiddle 0;
 #X obj 407 204 unpack;
 #X floatatom 407 254 0 0 0 0 - - -;
 #X floatatom 421 231 0 0 0 0 - - -;
@@ -1621,7 +1625,7 @@ audio;
 #X obj 148 -172 *~;
 #X obj 166 -189 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
-#N canvas 683 50 667 679 attack_tracking_bonk 0;
+#N canvas 680 82 667 679 attack_tracking_bonk 0;
 #X obj 48 238 bonk~;
 #X msg 140 122 print;
 #N canvas 683 50 667 679 templates 0;
@@ -1740,7 +1744,7 @@ si l'entrée chaude est activée.;
 #X text 256 651 <- temps musical;
 #X text 257 678 <- un premier séquenceur;
 #X obj 6 752 cnv 15 25 25 empty empty 1 6 12 0 20 -1 -262144 0;
-#N canvas 231 110 263 211 synthese_sonore 0;
+#N canvas 228 143 263 211 synthese_sonore 0;
 #X restore 37 784 pd synthese_sonore;
 #X obj 6 781 cnv 15 25 25 empty empty 2 6 12 0 20 -1 -262144 0;
 #X text 287 1053 <- entrée audio et analyse;
@@ -1748,7 +1752,7 @@ si l'entrée chaude est activée.;
 #X obj 6 1021 cnv 15 25 25 empty empty 3 6 12 0 20 -1 -262144 0;
 #X text 286 1027 <- une approche supplémentaire.;
 #X obj 6 1049 cnv 15 25 25 empty empty 4 6 12 0 20 -1 -262144 0;
-#N canvas 683 50 667 679 synthese_additive 0;
+#N canvas 677 87 667 679 synthese_additive 0;
 #X floatatom 41 448 5 0 0 0 - - -, f 5;
 #X obj 40 631 dac~;
 #X msg 462 529 0 0 0 0 0 0 0 0 0 0;
@@ -1948,7 +1952,7 @@ banques de filtres :;
 #X connect 35 0 34 0;
 #X connect 36 0 37 0;
 #X restore 63 845 pd synthese_soustractive;
-#N canvas 683 50 667 679 synthese_fm 0;
+#N canvas 680 82 667 679 synthese_fm 0;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array array5 512 float 5;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -5170,7 +5174,7 @@ patch;
 #X connect 27 0 28 0;
 #X connect 30 0 31 0;
 #X restore 62 965 pd fm_by_wavetable;
-#N canvas 65 82 1301 686 drumkit 0;
+#N canvas 65 87 1301 686 drumkit 0;
 #X obj 77 13 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 78 68 f 0;
@@ -5225,7 +5229,7 @@ abstraction du drumkit en essayant de reconnaitre les techniques de
 synthèse utilisées.;
 #X text 12 503 Moses permet de construire des chaines de markov et
 des arbres de décisions basés sur des probabilités;
-#X text 15 539 il accepte un nombre en entrée \, si ce nombre est
+#X text 12 539 il accepte un nombre en entrée \, si ce nombre est
 supérieur à l'arugment fournit alors il sera passé à la sortie
 de droite \, sinon il sera passé à la sortie de gauche.;
 #X obj 78 36 metro 200;

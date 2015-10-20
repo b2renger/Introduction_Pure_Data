@@ -1,4 +1,4 @@
-#N canvas 0 0 450 300 10;
+#N canvas 65 54 1301 714 10;
 #X obj 115 121 inlet;
 #X obj 445 161 inlet;
 #X text 111 96 trigger;
@@ -8,7 +8,7 @@
 #X obj 176 299 pack 0 \$2;
 #X obj 502 161 inlet;
 #X obj 448 291 del \$2;
-#X obj 468 439 line~;
+#X obj 512 534 line~;
 #X obj 472 314 f \$4;
 #X obj 511 389 pack 0 \$3;
 #X obj 564 161 inlet;
@@ -18,7 +18,7 @@
 #X obj 622 316 pack 0 \$5;
 #X text 445 139 level;
 #X obj 511 365 * \$1;
-#X obj 468 464 outlet~;
+#X obj 512 559 outlet~;
 #X text 112 388 and pack with;
 #X text 113 408 attack time;
 #X text 41 136 if zero;
