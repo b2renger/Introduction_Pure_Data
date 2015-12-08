@@ -1,6 +1,6 @@
-#N canvas 63 0 365 203 10;
+#N canvas 65 87 365 280 10;
 #X declare -path z_bellvoice_abs;
-#X obj 150 78 declare -path z_bellvoice_abs;
+#X obj 5 -121 declare -path z_bellvoice_abs;
 #N canvas 237 101 750 425 (subpatch) 0;
 #X obj 5 31 cnv 15 330 115 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -19,20 +19,20 @@
 #X obj 302 414 outlet~;
 #X obj 179 8 bng 15 250 50 0 empty empty preset_pannel 20 8 0 10 -262144
 -1 -1;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X obj 57 74 pack f f f f f f;
 #X obj 5 3 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1 -1
 ;
-#X obj 31 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 221 256;
-#X obj 77 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 12.7 256;
-#X obj 123 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 509 256;
-#X obj 174 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 31 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 134 256;
+#X obj 77 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.7 256;
+#X obj 123 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 456 256;
+#X obj 174 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 40 256;
-#X obj 220 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 4407 256;
+#X obj 220 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 5000 256;
 #X obj 89 -57 unpack f f f f f;
 #X obj 47 -43 t b f;
 #X msg 60 102 set \$2 \$3 \$4 \$5 \$6;
@@ -58,19 +58,19 @@
 #X connect 11 0 7 0;
 #X coords 0 1 100 -1 270 22 1 0 0;
 #X restore 54 34 graph;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X obj 57 74 pack f f f f f f;
 #X obj 5 3 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1 -1
 ;
-#X obj 31 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 932 256;
-#X obj 77 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.3 256;
-#X obj 123 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 31 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 932 256;
+#X obj 77 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.3 256;
+#X obj 123 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 1111 256;
-#X obj 174 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 174 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 100 256;
-#X obj 220 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 220 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 4000 256;
 #X obj 89 -57 unpack f f f f f;
 #X obj 47 -43 t b f;
@@ -97,19 +97,19 @@
 #X connect 12 0 7 0;
 #X coords 0 1 100 -1 270 22 1 0 0;
 #X restore 54 59 graph;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X obj 57 74 pack f f f f f f;
 #X obj 5 3 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1 -1
 ;
-#X obj 31 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 698 256;
-#X obj 77 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.5 256;
-#X obj 123 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 31 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 698 256;
+#X obj 77 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.5 256;
+#X obj 123 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 210 256;
-#X obj 174 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 174 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 2300 256;
-#X obj 220 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 220 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 3000 256;
 #X obj 89 -57 unpack f f f f f;
 #X obj 47 -43 t b f;
@@ -136,19 +136,19 @@
 #X connect 12 0 7 0;
 #X coords 0 1 100 -1 270 22 1 0 0;
 #X restore 54 84 graph;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X obj 57 74 pack f f f f f f;
 #X obj 5 3 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1 -1
 ;
-#X obj 31 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1457 256;
-#X obj 77 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.7 256;
-#X obj 123 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 31 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 1457 256;
+#X obj 77 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.7 256;
+#X obj 123 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 2200 256;
-#X obj 174 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 300 256;
-#X obj 220 4 nbx 4 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+#X obj 174 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 3 256;
+#X obj 220 4 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 2000 256;
 #X obj 89 -57 unpack f f f f f;
 #X obj 47 -43 t b f;
@@ -181,7 +181,7 @@
 #X text 5 110 Voice 4;
 #X msg 405 24 vis 1;
 #N canvas 727 77 450 300 bell-presets 0;
-#N canvas 0 0 450 300 default 0;
+#N canvas 0 50 450 300 default 0;
 #X obj 87 13 inlet;
 #X obj 100 74 t b b b b;
 #X msg 177 167 1457 0.7 2200 3 2000;
@@ -205,7 +205,7 @@
 #X obj 52 54 bng 20 250 50 0 empty empty Load 25 8 0 10 -262144 -1
 -1;
 #N canvas 200 54 450 300 template 0;
-#N canvas 0 0 450 300 supress_me_to_secure 0;
+#N canvas 0 50 450 300 supress_me_to_secure 0;
 #X obj 29 42 r from-voice1;
 #X obj 129 40 r from-voice2;
 #X obj 220 40 r from-voice3;
@@ -277,30 +277,13 @@
 #X restore 6 -80 graph;
 #X obj 6 -96 cnv 15 340 15 empty empty Bells-separated-voices 0 8 0
 12 -1 -257985 0;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 1 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 29 1 nbx 3 20 0 16 0 0 empty empty Bus -25 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Bus%d;
-#X connect 0 0 10 0;
+#X obj 6 111 *~;
+#X obj 6 133 dac~;
+#X obj 22 92 lop~ 10;
+#X obj 22 75 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
 #X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore 6 76 graph;
-#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 3 1;
+#X connect 6 0 5 0;

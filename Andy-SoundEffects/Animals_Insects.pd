@@ -1,5 +1,5 @@
-#N canvas 0 22 396 258 10;
-#N canvas 0 -12 1366 696 (subpatch) 0;
+#N canvas 65 82 396 304 10;
+#N canvas 0 50 1366 696 (subpatch) 0;
 #X obj 1 16 cnv 15 160 105 empty empty empty 0 8 0 12 -204786 -4034
 0;
 #X obj 1 1 cnv 15 344 15 empty empty Animals-Insects 0 8 0 12 -1 -4034
@@ -12,7 +12,7 @@
 0;
 #X obj 164 124 cnv 15 160 75 empty empty empty 0 8 0 12 -203904 -4034
 0;
-#N canvas 0 22 538 497 chirper 0;
+#N canvas 0 50 538 497 chirper 0;
 #X obj 222 357 *~;
 #X obj 222 260 cos~;
 #X obj 222 238 +~ 0.25;
@@ -48,7 +48,7 @@
 #X connect 14 0 16 0;
 #X connect 15 0 14 1;
 #X restore 724 389 pd chirper;
-#N canvas 0 22 772 704 mosquito 0;
+#N canvas 0 50 772 704 mosquito 0;
 #X obj 157 329 phasor~ 600;
 #X obj 247 329 phasor~ 600;
 #X obj 248 304 +~;
@@ -64,7 +64,7 @@
 #X obj 226 143 lop~ 0.2;
 #X obj 341 256 noise~;
 #X obj 343 347 clip~ 0 1;
-#X obj 343 323 *~ 1e+009;
+#X obj 343 323 *~ 1e+09;
 #X obj 342 278 lop~ 0.2;
 #X obj 343 300 lop~ 0.2;
 #X obj 196 430 *~;
@@ -119,7 +119,7 @@
 #X connect 30 0 24 0;
 #X connect 31 0 25 0;
 #X restore 800 390 pd mosquito;
-#N canvas 0 22 632 558 rattler 0;
+#N canvas 0 50 632 558 rattler 0;
 #X obj 121 158 sig~ 1;
 #X obj 121 190 /~;
 #X obj 174 167 +~ 1;
@@ -162,7 +162,7 @@
 #X connect 17 0 19 0;
 #X connect 18 0 17 1;
 #X restore 723 288 pd rattler;
-#N canvas 0 22 519 413 critters2 0;
+#N canvas 0 50 519 413 critters2 0;
 #X obj 93 226 *~;
 #X obj 94 188 *~;
 #X obj 94 152 *~;
@@ -209,7 +209,7 @@
 #X connect 19 0 21 0;
 #X connect 20 0 19 1;
 #X restore 856 338 pd critters2;
-#N canvas 0 22 537 758 frog 0;
+#N canvas 0 50 537 758 frog 0;
 #X obj 95 461 *~ 1;
 #X obj 105 564 *~ 0.45;
 #X obj 208 153 vline~;
@@ -296,7 +296,7 @@
 #X connect 35 0 34 1;
 #X connect 36 0 34 0;
 #X restore 641 288 pd frog;
-#N canvas 0 22 543 733 frog2 0;
+#N canvas 0 50 543 733 frog2 0;
 #X obj 95 461 *~ 1;
 #X obj 105 564 *~ 0.45;
 #X obj 208 153 vline~;
@@ -397,7 +397,7 @@
 #X connect 41 0 40 1;
 #X connect 42 0 40 0;
 #X restore 643 340 pd frog2;
-#N canvas 0 22 532 508 frog 0;
+#N canvas 0 50 532 508 frog 0;
 #X obj 111 124 noise~;
 #X obj 112 159 *~;
 #X obj 161 75 *~;
@@ -464,7 +464,7 @@
 #X connect 26 0 24 0;
 #X connect 27 0 25 0;
 #X restore 642 389 pd frog reson;
-#N canvas 0 22 537 503 cricket 0;
+#N canvas 0 50 537 503 cricket 0;
 #X obj 141 220 cos~;
 #X obj 156 140 cos~;
 #X obj 141 197 +~;
@@ -489,7 +489,7 @@
 #X obj 262 13 lop~ 0.2;
 #X obj 263 35 lop~ 0.2;
 #X obj 263 82 clip~ 0 1;
-#X obj 263 58 *~ 1e+009;
+#X obj 263 58 *~ 1e+09;
 #X obj 119 311 *~;
 #X obj 263 108 *~ -2;
 #X obj 264 154 lop~ 8;
@@ -532,7 +532,7 @@
 #X connect 28 0 30 0;
 #X connect 29 0 28 1;
 #X restore 561 288 pd cricket;
-#N canvas 0 22 531 585 cricket 0;
+#N canvas 0 50 531 585 cricket 0;
 #X obj 141 220 cos~;
 #X obj 156 140 cos~;
 #X obj 141 197 +~;
@@ -556,7 +556,7 @@
 #X obj 262 13 lop~ 0.2;
 #X obj 263 35 lop~ 0.2;
 #X obj 263 82 clip~ 0 1;
-#X obj 263 58 *~ 1e+009;
+#X obj 263 58 *~ 1e+09;
 #X obj 119 311 *~;
 #X obj 264 154 lop~ 8;
 #X obj 129 57 phasor~ 21;
@@ -600,7 +600,7 @@
 #X connect 28 0 30 0;
 #X connect 29 0 28 1;
 #X restore 563 340 pd cricket;
-#N canvas 0 22 559 558 cricket 0;
+#N canvas 0 50 559 558 cricket 0;
 #X obj 141 220 cos~;
 #X obj 156 140 cos~;
 #X obj 141 197 +~;
@@ -622,7 +622,7 @@
 #X obj 264 131 phasor~ -2;
 #X obj 261 -9 noise~;
 #X obj 263 82 clip~ 0 1;
-#X obj 263 58 *~ 1e+009;
+#X obj 263 58 *~ 1e+09;
 #X obj 119 311 *~;
 #X obj 264 154 lop~ 8;
 #X obj 129 57 phasor~ 12;
@@ -668,7 +668,7 @@
 #X connect 28 0 30 0;
 #X connect 29 0 28 1;
 #X restore 565 388 pd cricket;
-#N canvas 0 22 586 454 cricket 0;
+#N canvas 0 50 586 454 cricket 0;
 #X obj 216 113 osc~ 3000;
 #X obj 151 119 *~;
 #X obj 152 42 osc~ 3.6;
@@ -682,7 +682,7 @@
 #X obj 217 40 osc~ 120;
 #X obj 296 25 noise~;
 #X obj 298 116 clip~ 0 1;
-#X obj 298 92 *~ 1e+009;
+#X obj 298 92 *~ 1e+09;
 #X obj 298 69 lop~ 0.1;
 #X obj 297 47 lop~ 0.1;
 #X obj 151 231 *~;
@@ -714,7 +714,7 @@
 #X connect 18 0 17 1;
 #X connect 19 0 17 0;
 #X restore 565 491 pd cricket japanese;
-#N canvas 0 22 724 521 bullcricket 0;
+#N canvas 0 50 724 521 bullcricket 0;
 #X obj 118 47 *~ 4;
 #X obj 73 86 clip~ 0 1;
 #X obj 153 87 clip~ 1 2;
@@ -733,7 +733,7 @@
 #X obj 240 85 phasor~ 20;
 #X obj 261 110 *~ 900;
 #X obj 322 208 clip~ 0 1;
-#X obj 322 184 *~ 1e+009;
+#X obj 322 184 *~ 1e+09;
 #X obj 293 261 *~;
 #X obj 302 152 osc~ 0.057;
 #X obj 378 152 osc~ 0.027;
@@ -777,7 +777,7 @@
 #X connect 26 0 27 0;
 #X connect 27 0 23 0;
 #X restore 565 441 pd bullcricket;
-#N canvas 0 22 494 370 critters 0;
+#N canvas 0 50 494 370 critters 0;
 #X obj 93 226 *~;
 #X obj 94 188 *~;
 #X obj 94 152 *~;
@@ -824,7 +824,7 @@
 #X connect 19 0 21 0;
 #X connect 20 0 19 1;
 #X restore 855 286 pd critters;
-#N canvas 0 22 772 704 bee 0;
+#N canvas 0 50 772 704 bee 0;
 #X obj 157 329 phasor~ 600;
 #X obj 247 329 phasor~ 600;
 #X obj 248 304 +~;
@@ -843,7 +843,7 @@
 #X obj 226 167 *~ 5000;
 #X obj 341 256 noise~;
 #X obj 343 347 clip~ 0 1;
-#X obj 343 323 *~ 1e+009;
+#X obj 343 323 *~ 1e+09;
 #X obj 342 278 lop~ 0.2;
 #X obj 343 300 lop~ 0.2;
 #X obj 196 430 *~;
@@ -897,7 +897,7 @@
 #X connect 31 0 12 0;
 #X connect 32 0 13 0;
 #X restore 800 340 pd bee;
-#N canvas 0 22 607 636 fly 0;
+#N canvas 0 50 607 636 fly 0;
 #X obj 110 164 +~ 284;
 #X obj 110 185 phasor~ 640;
 #X obj 96 395 /~;
@@ -966,7 +966,7 @@
 #X connect 28 0 27 1;
 #X connect 29 0 27 0;
 #X restore 800 289 pd fly;
-#N canvas 0 22 682 607 circada1 0;
+#N canvas 0 50 682 607 circada1 0;
 #X obj 17 7 noise~;
 #X obj 17 75 hip~ 5000;
 #X obj 17 96 hip~ 5000;
@@ -1080,7 +1080,7 @@
 1;
 #X obj 16 175 tgl 15 1 empty empty Circada1 0 -6 0 10 -262144 -1 -1
 0 1;
-#N canvas 0 22 548 524 circada2 0;
+#N canvas 0 50 548 524 circada2 0;
 #X obj 187 27 noise~;
 #X obj 139 106 +~ 1;
 #X obj 224 125 +~ 1;
@@ -1157,7 +1157,7 @@
 #X restore 938 337 pd circada2;
 #X obj 76 175 tgl 15 1 empty empty Circada2 0 -6 0 10 -262144 -1 -1
 0 1;
-#N canvas 0 22 590 525 flutter 0;
+#N canvas 0 50 590 525 flutter 0;
 #X obj 121 158 sig~ 1;
 #X obj 121 190 /~;
 #X obj 174 167 +~ 1;
@@ -1169,7 +1169,7 @@
 #X obj 175 112 *~ 14;
 #X obj 320 68 noise~;
 #X obj 322 159 clip~ 0 1;
-#X obj 322 135 *~ 1e+009;
+#X obj 322 135 *~ 1e+09;
 #X obj 121 309 *~;
 #X obj 121 241 bp~ 10000 15;
 #X obj 230 213 *~ 0.1;
@@ -1249,31 +1249,14 @@
 #X connect 40 0 39 0;
 #X connect 41 0 42 0;
 #X coords 0 1 100 -1 346 200 1 0 0;
-#X restore -264 -148 graph;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 0 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 23 1 nbx 3 20 0 16 0 0 empty empty Ch -20 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Ch%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore -264 54 graph;
+#X restore 3 1 graph;
+#X obj 3 240 *~;
+#X obj 3 262 dac~;
+#X obj 19 221 lop~ 10;
+#X obj 19 204 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 1 1;
+#X connect 4 0 3 0;

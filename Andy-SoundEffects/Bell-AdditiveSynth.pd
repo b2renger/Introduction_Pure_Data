@@ -1,5 +1,5 @@
-#N canvas 0 22 761 463 10;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 260 180 865 534 10;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X obj 317 477 *~ 0.9;
 #X obj 318 500 clip~ -0.9 0.9;
 #N canvas 441 148 370 212 envelopes 0;
@@ -66,7 +66,7 @@
 #X connect 13 0 4 0;
 #X connect 14 0 4 0;
 #X restore 9 400 pd part_fund+sub;
-#N canvas 0 22 351 489 part 0;
+#N canvas 0 50 351 489 part 0;
 #X obj 21 163 osc~;
 #X obj 154 165 osc~;
 #X obj 79 169 osc~;
@@ -113,7 +113,7 @@
 #X connect 22 0 21 1;
 #X connect 23 0 9 1;
 #X restore 125 399 pd part primaries;
-#N canvas 0 22 309 403 secondaries 0;
+#N canvas 0 50 309 403 secondaries 0;
 #X obj 80 104 osc~;
 #X text 19 142 12th overtone;
 #X obj 80 79 * 11;
@@ -165,7 +165,7 @@
 #X connect 23 0 24 1;
 #X connect 24 0 18 0;
 #X restore 284 401 pd secondaries;
-#N canvas 0 22 417 444 circulars 0;
+#N canvas 0 50 417 444 circulars 0;
 #X obj 145 106 osc~;
 #X obj 40 103 osc~;
 #X text 109 140 1st circular;
@@ -214,7 +214,7 @@
 #X connect 23 0 18 0;
 #X connect 24 0 23 1;
 #X restore 441 399 pd circulars;
-#N canvas 0 22 373 452 strike 0;
+#N canvas 0 50 373 452 strike 0;
 #X obj 67 129 osc~;
 #X obj 67 105 * 16;
 #X obj 108 129 osc~;
@@ -250,7 +250,7 @@
 #X connect 15 0 6 0;
 #X connect 16 0 15 1;
 #X restore 611 402 pd strike;
-#N canvas 0 22 520 343 bodyresonance 0;
+#N canvas 0 50 520 343 bodyresonance 0;
 #X obj 261 165 delwrite~ \$0-body 400;
 #X obj 96 50 clip~ -0.2 0.5;
 #X obj 10 87 bp~ 1243 12;
@@ -278,88 +278,88 @@
 #X restore 676 403 pd bodyresonance;
 #X obj 319 521 hip~ 10;
 #X obj 184 165 s \$0-fundamental1;
-#X obj 17 90 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0 10
+#X obj 17 90 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
 -262144 -1 -1 0 256;
 #X obj 20 74 hsl 128 15 20 20000 0 0 empty empty Fundamental_frq -2
 -6 1 12 -262144 -1 -1 0 1;
-#X obj 17 137 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -262144 -1 -1 0 256;
+#X obj 17 137 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-262144 -1 -1 0 256;
 #X obj 20 121 hsl 128 15 0 5000 0 0 empty empty Damping -2 -6 1 12
 -262144 -1 -1 0 1;
 #X obj 18 15 bng 40 250 50 0 empty empty Hit_me 0 -6 1 12 -131089 -1
 -1;
-#X obj 62 378 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -151949 -1 -1 0 256;
+#X obj 62 378 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-151949 -1 -1 0 256;
 #X obj 70 245 vsl 15 128 0 1 0 0 empty empty Fund 0 -8 1 10 -151949
 -1 -1 0 1;
-#X obj 121 379 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -169995 -1 -1 0 256;
+#X obj 121 379 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-169995 -1 -1 0 256;
 #X obj 132 245 vsl 15 128 0 1 0 0 empty empty Octave 0 -8 1 10 -169995
 -1 -1 0 1;
-#X obj 289 380 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -162892 -1 -1 0 256;
+#X obj 289 380 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-162892 -1 -1 0 256;
 #X obj 296 245 vsl 15 128 0 1 0 0 empty empty 12th 0 -8 1 10 -162892
 -1 -1 0 1;
-#X obj 461 381 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 1
-10 -96974 -1 -1 0 256;
+#X obj 461 381 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 1 10
+-96974 -1 -1 0 256;
 #X obj 461 247 vsl 15 128 0 1 0 0 empty empty Tierce 0 -8 1 10 -96974
 -1 -1 0 1;
-#X obj 627 382 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -2191 -1 -1 0 256;
+#X obj 627 382 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-2191 -1 -1 0 256;
 #X obj 627 249 vsl 15 128 0 1 0 0 empty empty Strikes 0 -8 1 10 -2191
 -1 -1 0 1;
-#X obj 686 383 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -2338 -1 -1 0 256;
+#X obj 686 383 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-2338 -1 -1 0 256;
 #X obj 686 250 vsl 15 128 0 0.8 0 0 empty empty BodyRes 0 -8 1 10 -2338
 -1 -1 0 1;
-#X obj 6 378 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0 10
+#X obj 6 378 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
 -151949 -1 -1 0 256;
 #X obj 15 245 vsl 15 128 0 1 0 0 empty empty SubO 0 -8 1 10 -151949
 -1 -1 0 1;
-#X obj 176 379 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -169995 -1 -1 0 256;
+#X obj 176 379 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-169995 -1 -1 0 256;
 #X obj 186 245 vsl 15 128 0 1 0 0 empty empty Quint 0 -8 1 10 -169995
 -1 -1 0 1;
-#X obj 230 379 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -169995 -1 -1 0 256;
+#X obj 230 379 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-169995 -1 -1 0 256;
 #X obj 239 245 vsl 15 128 0 1 0 0 empty empty Nominal 0 -8 1 10 -169995
 -1 -1 0 1;
-#X obj 345 380 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -162892 -1 -1 0 256;
+#X obj 345 380 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-162892 -1 -1 0 256;
 #X obj 344 247 vsl 15 128 0 1 0 0 empty empty Overtone 0 -8 1 10 -162892
 -1 -1 0 1;
-#X obj 401 380 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -162892 -1 -1 0 256;
+#X obj 401 380 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-162892 -1 -1 0 256;
 #X obj 401 246 vsl 15 128 0 1 0 0 empty empty 12/7 0 -8 1 10 -162892
 -1 -1 0 1;
-#X obj 512 381 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -96974 -1 -1 0 256;
+#X obj 512 381 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-96974 -1 -1 0 256;
 #X obj 512 247 vsl 15 128 0 1 0 0 empty empty FirstC 0 -8 1 10 -96974
 -1 -1 0 1;
-#X obj 569 381 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -96974 -1 -1 0 256;
+#X obj 569 381 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-96974 -1 -1 0 256;
 #X obj 569 247 vsl 15 128 0 1 0 0 empty empty Second_C 0 -8 1 10 -96974
 -1 -1 0 1;
 #X obj 271 16 vsl 15 128 0 2 0 0 empty empty Fund+Sub 0 -8 1 10 -1
 -262144 -1 0 1;
-#X obj 271 152 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -1 -262144 -1 0 256;
+#X obj 271 152 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-1 -262144 -1 0 256;
 #X obj 339 16 vsl 15 128 0 2 0 0 empty empty Primaries 0 -8 1 10 -1
 -262144 -1 0 1;
-#X obj 340 152 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -1 -262144 -1 0 256;
+#X obj 340 152 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-1 -262144 -1 0 256;
 #X obj 404 17 vsl 15 128 0 3 0 0 empty empty Secondaries 0 -8 1 10
 -1 -262144 -1 0 1;
-#X obj 405 152 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -1 -262144 -1 0 256;
+#X obj 405 152 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-1 -262144 -1 0 256;
 #X obj 478 17 vsl 15 128 0 10 0 0 empty empty Circulars 0 -8 1 10 -1
 -262144 -1 0 1;
-#X obj 479 152 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -1 -262144 -1 0 256;
+#X obj 479 152 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-1 -262144 -1 0 256;
 #X obj 547 17 vsl 15 128 0 2 0 0 empty empty Strike 0 -8 1 10 -1 -262144
 -1 0 1;
-#X obj 548 152 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -6 0
-10 -1 -262144 -1 0 256;
+#X obj 548 152 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
+-1 -262144 -1 0 256;
 #X obj 302 172 s \$0-Fund+Sub;
 #X obj 357 191 s \$0-Primaries;
 #X obj 413 210 s \$0-Secondaries;
@@ -407,8 +407,8 @@
 #X obj 687 22 stripnote;
 #X obj 704 62 mtof;
 #X obj 701 85 * 3;
-#X floatatom 1069 -54 5 0 0 0 - - -;
-#X floatatom 1128 -54 5 0 0 0 - - -;
+#X floatatom 1069 -54 5 0 0 0 - - -, f 5;
+#X floatatom 1128 -54 5 0 0 0 - - -, f 5;
 #X obj 332 537 outlet~;
 #X obj 737 -132 inlet;
 #X obj 801 -135 inlet;
@@ -467,7 +467,7 @@
 #X restore 18 37 pd catcher;
 #X obj 18 -2 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#N canvas 22 22 883 772 sender 0;
+#N canvas 22 50 883 772 sender 0;
 #X obj -35 704 s \$0-patchname;
 #X obj -59 263 symbol;
 #X obj 93 15 inlet;
@@ -562,7 +562,7 @@
 #X connect 11 0 2 0;
 #X restore 460 39 pd presets;
 #X obj 460 17 r \$0-patchselect;
-#X symbolatom 18 17 20 0 0 0 - - -;
+#X symbolatom 18 17 20 0 0 0 - - -, f 20;
 #X msg 17 95 symbol 1.2 0.9 0.5 0.14 0.11 0.1 1 0.2 0.5 0.1 0.1 0.2
 0.1 0.1 1 1 0.04 0.4 0 0 0 0;
 #X msg 18 60 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11 \$12
@@ -575,34 +575,34 @@
 #X connect 6 0 2 0;
 #X connect 7 0 6 0;
 #X restore 78 59 pd preset memory;
-#X symbolatom 78 39 20 0 0 0 - #0-patchname -;
+#X symbolatom 78 39 20 0 0 0 - #0-patchname -, f 20;
 #X obj 78 21 nbx 5 14 0 7 0 0 \$0-patchselect empty patch 0 -6 1 8
 -262144 -1 -1 0 256;
-#N canvas 0 22 897 523 radomMelody 0;
+#N canvas 0 50 897 523 radomMelody 0;
 #X text 579 119 comment;
 #X obj 795 138 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 795 162 5 0 0 0 - - -;
+#X floatatom 795 162 5 0 0 0 - - -, f 5;
 #X obj 792 194 s freq;
 #X obj 714 138 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 714 162 5 0 0 0 - - -;
+#X floatatom 714 162 5 0 0 0 - - -, f 5;
 #X obj 711 194 s freq;
 #X obj 646 143 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 646 167 5 0 0 0 - - -;
+#X floatatom 646 167 5 0 0 0 - - -, f 5;
 #X obj 643 199 s freq;
 #X obj 574 144 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 574 168 5 0 0 0 - - -;
+#X floatatom 574 168 5 0 0 0 - - -, f 5;
 #X obj 571 200 s freq;
 #X obj 498 138 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 498 162 5 0 0 0 - - -;
+#X floatatom 498 162 5 0 0 0 - - -, f 5;
 #X obj 495 194 s freq;
 #X obj 419 138 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X floatatom 419 162 5 0 0 0 - - -;
+#X floatatom 419 162 5 0 0 0 - - -, f 5;
 #X obj 416 194 s freq;
 #X obj 419 116 r S1;
 #X obj 498 116 r S2;
@@ -644,7 +644,7 @@
 #X obj 190 259 random 100;
 #X obj 190 280 moses 10;
 #X obj 246 280 moses 60;
-#X floatatom 131 184 3 0 0 0 - - -;
+#X floatatom 131 184 3 0 0 0 - - -, f 3;
 #X text 227 154 reset;
 #X obj 74 213 sel 1 2;
 #X obj 74 187 f -1;
@@ -851,33 +851,15 @@
 #X connect 117 0 27 0;
 #X connect 118 0 14 0;
 #X coords 0 1 100 -1 750 420 1 0 0;
-#X restore -24 -20 graph;
-#X obj -24 -35 cnv 15 750 15 empty empty Bells 0 8 0 12 -1 -257985
-0;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 0 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 23 1 nbx 3 20 0 16 0 0 empty empty Ch -20 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Ch%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore -24 400 graph;
+#X restore 22 16 graph;
+#X obj 22 2 cnv 15 750 15 empty empty Bells 0 8 0 12 -1 -257985 0;
+#X obj 23 478 *~;
+#X obj 23 500 dac~;
+#X obj 39 459 lop~ 10;
+#X obj 39 440 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 2 1;
+#X connect 5 0 4 0;
