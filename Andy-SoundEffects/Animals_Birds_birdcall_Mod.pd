@@ -1,7 +1,7 @@
-#N canvas 265 8 472 647 10;
+#N canvas 262 82 541 647 10;
 #X declare -path z_birdcall_abs;
 #N canvas 17 72 1349 696 (subpatch) 0;
-#X floatatom -253 599 5 1 5 0 - - -;
+#X floatatom -253 599 5 1 5 0 - - -, f 5;
 #X obj -144 9 vline~;
 #X obj -144 33 *~ 1024;
 #X obj -144 55 s~ stime;
@@ -52,7 +52,7 @@
 #X obj -297 680 outlet~;
 #X obj 1 53 cnv 15 450 140 empty empty Bronchus 2 8 0 12 -228856 -262144
 0;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array bp1 1024 float 3;
 #A 0 45.5258 44.5258 44.5258 44.5258 44.5258 44.5258 44.5258 44.5258
 44.5258 44.5258 44.5258 44.5258 44.5258 44.5258 44.5258 44.5258 44.5258
@@ -171,7 +171,7 @@
 44.0258 44.0258 44.0258 44.0258 44.0258 44.0258 44.0258;
 #X coords 0 50 1023 0 100 100 1;
 #X restore 9 83 graph;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array bw1 1024 float 3;
 #A 0 1.40755 1.40755 1.40755 1.40755 1.40755 1.40755 1.40755 1.40755
 1.40755 1.40755 1.40755 1.40755 1.40755 1.40755 1.40755 1.40755 1.40755
@@ -290,7 +290,7 @@
 1.04755 1.04755 1.04755 1.04755 1.04755 1.04755 1.08755;
 #X coords 0 4 1023 0 100 100 1;
 #X restore 120 83 graph;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array bp2 1024 float 3;
 #A 0 88.9933 88.9933 88.9933 88.9933 88.9933 88.9933 88.9933 88.9933
 88.9933 88.9933 88.9933 88.9933 88.9933 88.9933 88.9933 88.9933 88.9933
@@ -409,7 +409,7 @@
 91.4478 91.5387 91.6297 91.7206 91.8115 91.9024 91.9933;
 #X coords 0 100 1023 0 100 100 1;
 #X restore 234 83 graph;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array bw2 1024 float 3;
 #A 0 8.17049 8.17449 8.17849 8.18249 8.18649 8.19049 8.19448 8.19848
 8.20248 8.20648 8.21048 8.21448 8.21848 8.22248 8.22648 8.23048 8.23448
@@ -530,7 +530,7 @@
 #X restore 344 83 graph;
 #X obj 1 194 cnv 15 225 140 empty empty Syrinx 2 8 0 12 -191407 -262144
 0;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array rm 1024 float 3;
 #A 0 0.877957 0.875957 0.873957 0.871957 0.869957 0.867957 0.865957
 0.863957 0.861957 0.859957 0.857958 0.85763 0.857302 0.856974 0.856646
@@ -664,7 +664,7 @@
 0.837957;
 #X coords 0 1 1023 0 100 100 1;
 #X restore 7 224 graph;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array mod 1024 float 3;
 #A 0 868.166 868.166 868.166 868.166 868.166 868.166 868.166 868.166
 868.166 868.166 868.166 868.166 868.166 868.166 868.166 868.166 868.166
@@ -785,7 +785,7 @@
 #X restore 120 224 graph;
 #X obj 226 194 cnv 15 225 140 empty empty Pesulus 2 8 0 12 -162280
 -262144 0;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array bf 1027 float 3;
 #A 0 910.043 910.043 910.043 910.043 910.043 910.043 910.043 910.043
 910.043 910.043 910.043 910.043 910.043 910.043 910.043 910.043 910.043
@@ -905,7 +905,7 @@
 930.043;
 #X coords 0 1000 1027 0 100 100 1;
 #X restore 232 224 graph;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array pw 1024 float 3;
 #A 0 3.31179 3.31179 3.31179 3.31179 3.31179 3.31179 3.31179 3.31179
 3.31179 3.31179 3.31179 3.31179 3.31179 3.31179 3.31179 3.31179 3.31179
@@ -1026,7 +1026,7 @@
 #X restore 345 224 graph;
 #X obj 1 335 cnv 15 225 140 empty empty Tracheal_formants 2 8 0 12
 -228856 -262144 0;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array tf1 1024 float 3;
 #A 0 3573.92 3423.92 3423.92 3423.92 3423.92 3423.92 3418.92 3413.92
 3408.92 3403.92 3398.92 3393.92 3388.92 3383.92 3378.92 3373.92 3373.92
@@ -1145,7 +1145,7 @@
 3161.42 3161.42 3161.42 3161.42 3161.42 3161.42 3311.42;
 #X coords 0 5000 1023 0 100 100 1;
 #X restore 6 365 graph;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array tf2 1024 float 3;
 #A 0 4646.99 4646.99 4646.99 4646.99 4646.99 4646.99 4646.99 4646.99
 4646.99 4646.99 4646.99 4646.99 4646.99 4646.99 4646.99 4646.99 4646.99
@@ -1266,7 +1266,7 @@
 #X restore 120 365 graph;
 #X obj 1 474 cnv 15 225 140 empty empty Amp 2 8 0 12 -128992 -262144
 0;
-#N canvas 0 22 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array amp 1024 float 3;
 #A 0 0.930014 0.930014 0.930014 0.930014 0.930014 0.930014 0.930014
 0.930014 0.930014 0.930014 0.930014 0.930014 0.930014 0.930014 0.930014
@@ -1446,59 +1446,15 @@
 #X connect 66 0 43 1;
 #X connect 67 0 43 0;
 #X coords 0 1 100 -1 452 614 1 0 0;
-#X restore -214 -27 graph;
-#X obj 66 589 declare -path z_birdcall_abs;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 0 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 23 1 nbx 3 20 0 16 0 0 empty empty Ch -20 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Ch%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore -214 493 graph;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 0 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 23 1 nbx 3 20 0 16 0 0 empty empty Ch -20 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Ch%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore -215 590 graph;
+#X restore 19 2 graph;
+#X obj 244 628 declare -path z_birdcall_abs;
+#X obj 19 674 *~;
+#X obj 19 696 dac~;
+#X obj 35 655 lop~ 10;
+#X obj 35 638 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 2 0;
-#X connect 0 0 3 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 2 1;
+#X connect 5 0 4 0;

@@ -1,8 +1,8 @@
-#N canvas 474 61 304 346 10;
-#N canvas 0 0 1349 696 (subpatch) 0;
+#N canvas 471 82 348 426 10;
+#N canvas 0 50 1349 696 (subpatch) 0;
 #X obj 10 89 hsl 128 15 0 1 0 1 \$0-speed empty engine-speed 6 6 0
 10 -262144 -1 -1 5700 1;
-#N canvas 0 0 733 539 fourstroke 0;
+#N canvas 0 50 733 539 fourstroke 0;
 #X obj 51 336 outlet~;
 #X obj 168 336 outlet~;
 #X obj 287 338 outlet~;
@@ -134,7 +134,7 @@
 #X connect 60 0 30 1;
 #X connect 61 0 31 1;
 #X restore -569 138 pd fourstroke engine;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-diagnostic 2048 float 1;
 #A 0 0.192776 0.195151 0.200284 0.209214 0.218275 0.222485 0.221499
 0.217369 0.213688 0.215019 0.220293 0.228139 0.231736 0.227431 0.21752
@@ -423,10 +423,10 @@
 -0.15276 -0.161973 -0.176529 -0.172973 -0.162584 -0.151036;
 #X coords 0 1 2047 -1 133 80 1;
 #X restore 151 39 graph;
-#X obj 269 24 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+#X obj 269 24 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 571 166 metro 200;
-#N canvas 0 0 276 452 overtone 0;
+#N canvas 0 50 276 452 overtone 0;
 #X obj 73 65 max~;
 #X obj 73 87 -~;
 #X obj 103 96 sig~ 1;
@@ -487,7 +487,7 @@
 #X connect 26 0 16 1;
 #X connect 27 0 18 0;
 #X restore -207 530 pd overtone;
-#N canvas 0 0 1000 730 overtone 0;
+#N canvas 0 50 1000 730 overtone 0;
 #X obj 459 157 max~;
 #X obj 459 185 -~;
 #X obj 495 215 sig~ 1;
@@ -545,7 +545,7 @@
 #X connect 23 0 20 0;
 #X connect 24 0 18 0;
 #X restore -68 868 pd overtone;
-#N canvas 0 0 1000 730 overtone 0;
+#N canvas 0 50 1000 730 overtone 0;
 #X obj 459 157 max~;
 #X obj 459 185 -~;
 #X obj 495 215 sig~ 1;
@@ -603,7 +603,7 @@
 #X connect 23 0 20 0;
 #X connect 24 0 18 0;
 #X restore -138 700 pd overtone;
-#N canvas 0 0 450 300 parabola 0;
+#N canvas 0 50 450 300 parabola 0;
 #X obj 193 88 -~ 0.5;
 #X obj 192 112 *~;
 #X obj 191 135 *~ -4;
@@ -880,31 +880,14 @@
 #X connect 93 0 24 0;
 #X connect 94 0 22 0;
 #X coords 0 1 100 -1 290 315 1 0 0;
-#X restore -98 -4 graph;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 1 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 29 1 nbx 3 20 0 16 0 0 empty empty Bus -25 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Bus%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore -98 313 graph;
+#X restore 12 -2 graph;
+#X obj 16 353 *~;
+#X obj 16 375 dac~;
+#X obj 32 334 lop~ 10;
+#X obj 32 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 1 1;
+#X connect 4 0 3 0;

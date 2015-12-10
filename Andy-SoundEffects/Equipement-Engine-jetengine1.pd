@@ -1,11 +1,11 @@
-#N canvas 154 296 277 111 10;
-#N canvas 0 0 798 382 (subpatch) 0;
+#N canvas 151 329 284 187 10;
+#N canvas 0 50 798 382 (subpatch) 0;
 #X obj -279 83 r \$0-switch;
 #X obj -274 115 switch~;
 #X obj 0 1 cnv 15 260 15 empty empty Equipement-Jet_Engine 0 8 0 12
 -1 -215907 0;
 #X obj 201 1 tgl 15 0 \$0-switch \$0klmjele on/off 20 6 0 10 -262144
--1 -262144 0 1;
+-1 -262144 1 1;
 #X obj 66 141 lop~ 0.2;
 #X obj 67 118 sig~;
 #X obj 57 26 hsl 150 20 0.1 1 0 0 empty empty Speed 16 11 0 12 -262144
@@ -45,7 +45,7 @@
 #X connect 13 0 8 0;
 #X connect 14 0 5 0;
 #X restore 101 167 pd burn;
-#N canvas 0 0 212 234 turbine 0;
+#N canvas 0 50 212 234 turbine 0;
 #X msg 13 21 3097 4495 5588 7471 11000;
 #X obj 0 129 osc~;
 #X obj 39 128 osc~;
@@ -117,30 +117,13 @@
 #X connect 12 0 13 0;
 #X coords 0 1 100 -1 260 60 1 0 0;
 #X restore -172 4 graph;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 0 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 29 1 nbx 3 20 0 16 0 0 empty empty Bus -25 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Bus%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore -172 66 graph;
+#X obj -168 113 *~;
+#X obj -168 135 dac~;
+#X obj -152 94 lop~ 10;
+#X obj -152 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
 #X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 1 1;
+#X connect 4 0 3 0;

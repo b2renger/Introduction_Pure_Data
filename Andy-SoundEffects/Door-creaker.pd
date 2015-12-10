@@ -1,36 +1,10 @@
-#N canvas 230 268 275 120 10;
+#N canvas 227 301 280 241 10;
 #X declare -path z_door_abs;
-#X obj 95 50 declare -path z_door_abs;
+#X obj 2 -34 declare -path z_door_abs;
 #X obj -8 -9 cnv 15 200 15 empty empty Door-creacker 0 8 0 12 -1 -162280
 0;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 0 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 29 1 nbx 3 20 0 16 0 0 empty empty Bus -25 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Bus%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore -8 69 graph;
-#N canvas 0 0 450 300 door-creacker 0;
-#N canvas 102 47 470 102 wood 0;
+#N canvas 0 50 450 300 door-creacker 0;
+#N canvas 102 50 470 102 wood 0;
 #X obj 232 1 inlet~;
 #X obj 423 42 *~ 0.2;
 #X obj 232 83 outlet~;
@@ -55,7 +29,7 @@
 #X connect 7 0 2 0;
 #X connect 8 0 2 0;
 #X restore 79 116 pd wood;
-#N canvas 0 22 156 602 stickslip 0;
+#N canvas 0 50 156 602 stickslip 0;
 #X obj 8 344 timer;
 #X obj 8 537 vline~;
 #X obj 8 268 metro;
@@ -125,7 +99,7 @@
 #X connect 28 0 6 0;
 #X connect 29 0 8 0;
 #X restore 79 94 pd stickslip;
-#N canvas 32 22 176 325 squarepanel 0;
+#N canvas 32 50 176 325 squarepanel 0;
 #X obj 54 212 dfbef 16 0.05;
 #X obj 54 189 dfbef 10.12 0.05;
 #X obj 54 166 dfbef 7.14 0.05;
@@ -164,9 +138,18 @@
 #X connect 3 0 4 0;
 #X connect 5 0 1 0;
 #X restore -8 50 pd door-creacker;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X obj 32 8 hsl 128 24 0 1 0 0 \$0-door empty Door 20 13 0 12 -33289
 -162280 -191407 0 1;
 #X coords 0 1 100 -1 200 40 1 0 0;
 #X restore -8 7 graph;
-#X connect 3 0 2 0;
+#X obj -8 125 *~;
+#X obj -8 147 dac~;
+#X obj 8 106 lop~ 10;
+#X obj 8 89 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X connect 2 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;

@@ -1,12 +1,12 @@
-#N canvas 344 148 313 295 10;
+#N canvas 341 153 313 295 10;
 #X declare -path z_footsteps_abs;
-#N canvas 464 138 747 475 (subpatch) 0;
+#N canvas 461 143 747 475 (subpatch) 0;
 #X obj 15 66 hsl 128 15 0 1 0 1 walkspeed empty walkspeed 38 7 1 8
--262144 -1 -1 3000 1;
+-262144 -1 -1 200 1;
 #X obj 15 84 hsl 128 15 0 1 0 1 \$0-heel \$0-heelf heel 38 7 1 8 -262144
 -1 -1 6350 1;
-#X obj 15 102 hsl 128 15 0 1 0 1 \$0-roll empty roll 38 7 1 8 -262144
--1 -1 7100 1;
+#X obj 15 102 hsl 128 15 0 0.5 0 1 \$0-roll empty roll 38 7 1 8 -262144
+-1 -1 0 1;
 #X obj 15 121 hsl 128 15 0 1 0 1 \$0-ball \$0-ballf ball 38 7 1 8 -262144
 -1 -1 6350 1;
 #X obj 1 1 cnv 15 160 15 empty empty Animals-Walk 0 8 0 12 -1 -4034
@@ -1397,7 +1397,7 @@
 #X obj -13 183 *~;
 #X obj -13 205 dac~;
 #X obj 3 164 lop~ 10;
-#X obj 3 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 3 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj -13 -40 declare -path z_footsteps_abs;
 #X connect 1 0 2 0;

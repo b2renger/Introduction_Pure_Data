@@ -1,5 +1,5 @@
-#N canvas 1047 165 235 159 10;
-#N canvas 0 0 450 300 Fan-5 0;
+#N canvas 751 82 306 239 10;
+#N canvas 0 50 450 300 Fan-5 0;
 #X obj 176 276 noise~;
 #X obj 160 360 *~;
 #X obj 144 204 sig~ 1;
@@ -12,10 +12,10 @@
 #X obj 176 298 bp~ 700 1;
 #X obj 7 71 phasor~;
 #N canvas 295 74 292 361 rotor 0;
-#N canvas 0 0 450 300 grapha 0;
+#N canvas 0 50 450 300 grapha 0;
 #X obj 100 100 cnv 15 100 100 empty empty empty 20 12 0 14 -262144
 -66577 0;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-A 100 float 0;
 #X coords 0 1 99 -1 100 100 1;
 #X restore 100 100 graph;
@@ -40,10 +40,10 @@
 #X obj 117 22 bp~ 4000 1;
 #X obj 133 204 *~;
 #X obj 117 272 outlet~;
-#N canvas 0 0 450 300 grapha 0;
+#N canvas 0 50 450 300 grapha 0;
 #X obj 100 100 cnv 15 100 100 empty empty empty 20 12 0 14 -262144
 -66577 0;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-B 100 float 0;
 #X coords 0 1 99 -1 100 100 1;
 #X restore 100 100 graph;
@@ -73,16 +73,16 @@
 #X connect 13 0 4 0;
 #X connect 13 0 4 1;
 #X restore 7 204 pd rotor;
-#N canvas 541 10 203 345 stator 0;
+#N canvas 541 50 203 345 stator 0;
 #X obj -1 96 sig~ 1;
 #X obj 31 150 /~;
 #X obj 47 123 +~ 1;
 #X obj 47 96 *~;
 #X obj 47 68 cos~;
-#N canvas 0 0 450 300 grapha 0;
+#N canvas 0 50 450 300 grapha 0;
 #X obj 100 100 cnv 15 100 100 empty empty empty 20 12 0 14 -262144
 -66577 0;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-C 100 float 0;
 #X coords 0 1 99 -1 100 100 1;
 #X restore 100 100 graph;
@@ -184,33 +184,7 @@
 #X connect 35 0 22 0;
 #X connect 39 0 15 1;
 #X restore 2 97 pd Fan-5;
-#N canvas 0 22 839 439 (subpatch) 0;
-#X obj 88 90 change;
-#X msg 90 154 set \$1;
-#X obj 90 135 tosymbol;
-#X msg 135 203 Bus10;
-#X obj 94 2 tgl 18 0 empty empty DAC 23 10 0 11 -262144 -1 -1 0 1;
-#X obj 250 174 *~;
-#X obj 251 210 dac~;
-#X obj 29 1 nbx 3 20 0 16 0 0 empty empty Bus -25 10 0 12 -1 -191407
--1 0 256;
-#X obj 1 49 inlet~;
-#X obj -1 232 throw~ Bus0;
-#X obj 89 112 sprintf Bus%d;
-#X connect 0 0 10 0;
-#X connect 1 0 3 0;
-#X connect 1 0 9 0;
-#X connect 2 0 1 0;
-#X connect 4 0 5 1;
-#X connect 5 0 6 0;
-#X connect 5 0 6 1;
-#X connect 7 0 0 0;
-#X connect 8 0 5 0;
-#X connect 8 0 9 0;
-#X connect 10 0 2 0;
-#X coords 0 1 100 -1 140 22 1 0 0;
-#X restore 2 117 graph;
-#N canvas 0 0 966 593 \$0-presets 0;
+#N canvas 0 50 966 593 \$0-presets 0;
 #X obj 105 145 bng 25 250 50 0 empty empty Start 30 12 0 10 -262144
 -1 -1;
 #X obj 105 174 bng 25 250 50 0 empty empty Stop 30 12 0 10 -262144
@@ -219,14 +193,11 @@
 -204786 -1 -1;
 #X obj 100 101 cnv 15 200 15 empty empty Equipement-Fan-2 0 8 0 12
 -1 -215907 0;
-#N canvas 622 130 602 519 \$0-preset-pannel 0;
+#N canvas 398 140 820 588 \$0-preset-pannel 0;
 #X obj -70 12 inlet start;
-#X obj 19 12 inlet stop;
-#X obj 96 57 inlet select;
+#X obj 58 12 inlet stop;
+#X obj 135 57 inlet select;
 #X obj 18 106 route 0 1 2 3 4;
-#X obj 18 74 prepend;
-#X obj -70 36 prepend start;
-#X obj 19 35 prepend stop;
 #X obj -51 168 route start stop;
 #X obj -53 352 f \$0;
 #X msg -53 372 \; \$1-main-speed 0 \; \$1-motor-ratio 20 \; \$1-motor-level
@@ -238,17 +209,20 @@
 0.2 \; \$1-brush-level 0.05 \; \$1-rotor-level 0.1 \; \$1-stator-level
 0.3 \; \$1-fan-pulsewidth 4 \; \$1-fan-noise 0.2 \; \$1-fan-level 0.5
 ;
-#X connect 0 0 5 0;
-#X connect 1 0 6 0;
-#X connect 2 0 4 1;
-#X connect 3 0 7 0;
-#X connect 4 0 3 0;
-#X connect 5 0 4 0;
-#X connect 6 0 4 0;
-#X connect 7 0 10 0;
-#X connect 7 1 8 0;
-#X connect 8 0 9 0;
-#X connect 10 0 11 0;
+#X obj 18 74 list prepend;
+#X obj 58 35 list prepend stop;
+#X obj -70 36 list prepend start;
+#X connect 0 0 11 0;
+#X connect 1 0 10 0;
+#X connect 2 0 9 1;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 4 1 5 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 9 0 3 0;
+#X connect 10 0 9 0;
+#X connect 11 0 9 0;
 #X restore 101 273 pd \$0-preset-pannel;
 #X obj 175 181 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
@@ -261,4 +235,15 @@
 #X connect 7 0 6 0;
 #X coords 0 -1 1 1 200 105 1 100 100;
 #X restore -1 -11 pd \$0-presets;
-#X connect 0 0 1 0;
+#X obj 10 156 *~;
+#X obj 10 178 dac~;
+#X obj 26 137 lop~ 10;
+#X obj 26 120 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 98 113 only one preset - create your;
+#X text 100 128 only one preset - create your;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 2 1;
+#X connect 5 0 4 0;

@@ -1,5 +1,5 @@
-#N canvas 162 222 208 214 10;
-#X obj 31 171 dac~;
+#N canvas 159 255 208 214 10;
+#X obj 31 173 dac~;
 #X obj -34 58 bng 15 250 50 0 firebutton empty fire 0 -6 1 8 -262144
 -1 -1;
 #X obj 30 147 catch~ rlout;
@@ -7,7 +7,7 @@
 -1 -1;
 #N canvas 738 51 279 568 rocket 0;
 #X obj 52 220 noise~;
-#N canvas 0 0 237 320 comb 0;
+#N canvas 0 50 237 320 comb 0;
 #X obj 119 222 +~;
 #X obj 71 185 +~;
 #X obj 4 7 inlet~;
@@ -19,7 +19,7 @@
 #X obj 71 53 sig~ 1;
 #X obj 71 84 -~;
 #X obj 71 105 *~ 4;
-#X obj 71 126 +~ 1e-04;
+#X obj 71 126 +~ 0.0001;
 #X obj 119 53 sig~;
 #X obj 71 278 *~ 0.3;
 #X obj 119 248 vd~ zz;
@@ -100,11 +100,11 @@
 #X obj 200 239 * 800;
 #X obj 186 197 * 1;
 #X obj 186 175 pow 30;
-#N canvas 0 0 164 254 exhaust 0;
+#N canvas 0 50 164 254 exhaust 0;
 #X obj 33 59 noise~;
 #X obj 32 84 lop~ 9;
 #X obj 32 105 lop~ 9;
-#N canvas 0 0 450 300 xfade 0;
+#N canvas 0 50 450 300 xfade 0;
 #X obj 144 93 -~;
 #X obj 137 59 sig~ 1;
 #X obj 158 29 inlet~;
@@ -367,7 +367,7 @@
 #X connect 16 0 8 1;
 #X connect 17 0 7 0;
 #X restore 30 105 pd exit;
-#N canvas 54 23 144 250 backpressure 0;
+#N canvas 54 50 144 250 backpressure 0;
 #X obj 2 -7 noise~;
 #X obj 18 76 vline~;
 #X obj 2 162 *~;

@@ -1,6 +1,6 @@
-#N canvas 110 121 83 161 10;
-#X obj 2 -35 hip~ 200;
-#N canvas 231 301 272 275 tincan 1;
+#N canvas 107 182 121 200 10;
+#X obj 15 117 hip~ 200;
+#N canvas 228 334 272 275 tincan 0;
 #X obj 76 190 *~ 1000;
 #X obj 76 232 *~ 0.4;
 #X obj -2 0 inlet~;
@@ -43,12 +43,12 @@
 #X connect 14 0 0 0;
 #X connect 15 0 0 0;
 #X coords 0 0 1 1 240 160 0;
-#X restore 2 -12 pd tincan;
-#X obj 2 14 dac~;
-#X obj 2 -101 vline~;
-#X obj 2 -78 *~;
-#X msg 2 -124 1 \, 0 2;
-#X obj 2 -56 *~ 0.05;
+#X restore 15 140 pd tincan;
+#X obj 15 166 dac~;
+#X obj 15 51 vline~;
+#X obj 15 74 *~;
+#X msg 15 28 1 \, 0 2;
+#X obj 15 96 *~ 0.05;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 2 1;
