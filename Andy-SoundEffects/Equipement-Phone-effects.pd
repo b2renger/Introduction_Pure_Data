@@ -1,4 +1,4 @@
-#N canvas 497 94 462 271 10;
+#N canvas 494 99 462 271 10;
 #X declare -path z_phoneeffects_abs;
 #N canvas 69 121 744 561 phone-effects 0;
 #X obj 12 80 osc~ 480;
@@ -32,7 +32,7 @@
 #X obj 463 79 del 200;
 #X obj 433 21 r dialme;
 #X obj 433 45 t a b b;
-#N canvas 0 22 565 184 dial 0;
+#N canvas 0 50 565 184 dial 0;
 #X msg 7 32 1209 697;
 #X obj 7 8 r \$0-1;
 #X obj 73 8 r \$0-2;
@@ -180,7 +180,7 @@
 #X connect 21 0 1 0;
 #X connect 22 0 1 0;
 #X restore 390 236 pd decoder bank;
-#N canvas 0 22 302 380 matchnumber 0;
+#N canvas 0 50 302 380 matchnumber 0;
 #X obj 111 232 t l;
 #X obj 140 232 list prepend;
 #X obj 29 154 f;
@@ -222,7 +222,7 @@
 #X connect 16 0 15 1;
 #X connect 17 0 15 0;
 #X restore 390 307 pd matchnumber;
-#N canvas 0 22 519 560 matchnumber 0;
+#N canvas 0 50 519 560 matchnumber 0;
 #X obj 111 232 t l;
 #X obj 140 232 list prepend;
 #X obj 29 154 f;
@@ -264,7 +264,7 @@
 #X connect 16 0 15 1;
 #X connect 17 0 15 0;
 #X restore 424 353 pd matchnumber;
-#N canvas 0 22 519 560 matchnumber 0;
+#N canvas 0 50 519 560 matchnumber 0;
 #X obj 111 232 t l;
 #X obj 140 232 list prepend;
 #X obj 29 154 f;
@@ -311,12 +311,12 @@
 #X connect 19 0 16 0;
 #X restore 457 399 pd matchnumber;
 #X obj 483 258 loadbang;
-#N canvas 0 22 592 250 multi-tone-alarm 0;
+#N canvas 0 50 592 250 multi-tone-alarm 0;
 #X obj 293 229 dac~;
 #X obj 241 124 *~;
 #X obj 325 125 *~;
 #X obj 161 124 *~;
-#N canvas 0 22 218 139 oddeven 0;
+#N canvas 0 50 218 139 oddeven 0;
 #X obj 8 91 cos~;
 #X obj 8 71 +~;
 #X obj 103 28 * 0.25;
@@ -331,7 +331,7 @@
 #X connect 5 0 4 0;
 #X connect 6 0 2 0;
 #X restore 160 37 pd oddeven;
-#N canvas 0 22 255 294 timebase 0;
+#N canvas 0 50 255 294 timebase 0;
 #X msg 6 77 1 \$1;
 #X msg 49 77 0 0;
 #X obj 49 52 del;
@@ -355,7 +355,7 @@
 #X connect 9 0 5 0;
 #X restore 254 66 pd timebase;
 #X obj 293 157 *~ 0.25;
-#N canvas 0 22 253 185 oddeven 0;
+#N canvas 0 50 253 185 oddeven 0;
 #X obj 8 125 cos~;
 #X obj 8 105 +~;
 #X obj 103 54 * 0.25;
@@ -370,7 +370,7 @@
 #X connect 5 0 4 0;
 #X connect 6 0 2 0;
 #X restore 242 38 pd oddeven;
-#N canvas 0 22 253 185 oddeven 0;
+#N canvas 0 50 253 185 oddeven 0;
 #X obj 8 125 cos~;
 #X obj 8 105 +~;
 #X obj 103 54 * 0.25;
@@ -439,7 +439,7 @@
 #X connect 25 0 19 0;
 #X restore 255 93 pd 4phase-osc;
 #X obj 405 125 *~;
-#N canvas 0 22 253 185 oddeven 0;
+#N canvas 0 50 253 185 oddeven 0;
 #X obj 8 125 cos~;
 #X obj 8 105 +~;
 #X obj 103 54 * 0.25;
@@ -492,7 +492,7 @@
 #X connect 20 0 0 1;
 #X restore 53 409 pd multi-tone-alarm;
 #X obj 53 384 unpack f f f f f f f;
-#N canvas 0 22 450 300 toms 0;
+#N canvas 0 50 450 300 toms 0;
 #X msg 80 98 317 3 349 0 0 0 1;
 #X msg 159 144 317 7 300 125 0 0 1;
 #X msg 102 119 238 1 317.46 0 0 476 0;
@@ -511,7 +511,7 @@
 #X connect 5 2 4 0;
 #X connect 6 0 5 0;
 #X restore 19 359 pd toms ringtone;
-#N canvas 0 22 450 300 dicks 0;
+#N canvas 0 50 450 300 dicks 0;
 #X obj 80 46 t b b b;
 #X obj 80 206 outlet;
 #X msg 97 141 634 61 1000 476.19 158.73 0 1;
@@ -525,7 +525,7 @@
 #X connect 4 0 2 0;
 #X connect 5 0 1 0;
 #X restore 53 317 pd dicks ringtone;
-#N canvas 0 22 450 300 harrys 0;
+#N canvas 0 50 450 300 harrys 0;
 #X obj 80 46 t b b b;
 #X obj 80 206 outlet;
 #X msg 136 115 1031 9 360 238 174 158 1;
@@ -545,7 +545,7 @@
 #X obj 390 283 t f f f;
 #X obj 390 423 s ring;
 #X msg 550 361 1 2 3 4 5 6 7 8 9 0;
-#N canvas 0 22 450 300 sel 0;
+#N canvas 0 50 450 300 sel 0;
 #X obj 60 66 r ring;
 #X obj 111 65 r dialtone;
 #X obj 190 66 r silence;
@@ -697,7 +697,7 @@
 #X text 190 134 Harry 1 2 3 4 5 6 7 8 9 0;
 #X text 192 83 Dick 0 9 8 7 6 5 4 3 2 1;
 #X obj 186 232 declare -path z_phoneeffects_abs;
-#X obj 38 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 38 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X connect 21 0 18 0;
 #X connect 22 0 19 0;
