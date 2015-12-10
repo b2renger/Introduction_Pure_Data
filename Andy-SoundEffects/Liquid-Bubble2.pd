@@ -1,4 +1,4 @@
-#N canvas 29 259 723 509 10;
+#N canvas 488 231 723 509 10;
 #X obj 60 237 osc~;
 #X obj 61 291 dac~;
 #X obj 111 189 sig~ 1;
@@ -12,7 +12,7 @@
 #X obj 61 212 +~ 120;
 #X obj 60 47 random 120;
 #X obj 97 105 * 6;
-#N canvas 0 22 450 300 env-4pow-up 0;
+#N canvas 0 50 450 300 env-4pow-up 0;
 #X obj 220 167 vline~;
 #X obj 219 193 *~;
 #X obj 219 218 *~;
@@ -34,6 +34,7 @@
 #X connect 7 1 5 0;
 #X connect 8 0 7 0;
 #X restore 59 147 pd env-4pow-up;
+#X obj 88 7 loadbang;
 #X connect 0 0 4 0;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
@@ -49,3 +50,4 @@
 #X connect 11 0 5 1;
 #X connect 12 0 5 0;
 #X connect 12 0 3 1;
+#X connect 13 0 7 0;
