@@ -9,6 +9,8 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 
 ![image2](assets/image-02.png)
 
+
+
 ###Contenu des sous dossiers :
 
 * **/abs** : abstractions constuites pour le cours compatible vanilla. Necessaire pour 1-PD~.pd
@@ -18,6 +20,7 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 * **/list-abs** : abstractions permettant de gérer des listes de données comptatibles vanilla
 * **/rj** : collection d'abstractions de l'appli rjdj compatibles vanilla. Necessaire pour 2-Rjdj.pd
 * **/stats** : collection d'abstractions pour faire des statistiques (moyennes, variances, k-means etc.)
+
 
 
 ### Références artistiques et projets utilisant pure-data
@@ -43,6 +46,7 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 * ninja jam : http://ninjajamm.com/
 
 * album expr~ by 0xA : https://gosub10.org/GOSUB10-004.html
+
 
 
 ### Les différentes versions de Pure-Data
@@ -79,6 +83,7 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 	* mogees - https://www.youtube.com/watch?v=30xWm0fyqsc
 
 
+
 ### Ressources
 
 * Browser d'aide intégré à Pure Data (une mine d'informations) : Help->Browser et le livre Miller Puckette - The theory and technique of Electronic Music : http://msp.ucsd.edu/techniques.htm
@@ -105,6 +110,8 @@ https://flossmanuals.net/PureData/
 * rjdj : https://github.com/rjdj/rjlib
 
 * patchrepo = archives du forum : http://www.pdpatchrepo.info/
+
+* ableton link : an object to synchronize with ableton link protocol - https://github.com/libpd/abl_link
 
 * ancienne radio de musique générative : https://github.com/rumblesan/Radio-Patches
 
