@@ -79,6 +79,8 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 
 * webpd : un port partiel de pure-data pour le web, via la web audio api - https://github.com/sebpiq/WebPd
 
+* camomille : https://github.com/pierreguillot/Camomile
+
 * heavy : un compileur permettant d'obtenir du code C optimisé à partir de vos patchs pd
 
 	* bella - low latency plateform for audio projects (after the rpi prototype): http://bela.io/

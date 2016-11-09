@@ -1,4 +1,4 @@
-#N canvas 445 237 692 630 10;
+#N canvas 209 133 692 630 10;
 #X text 30 6 Pour que ce patch fonctionne vous avez besoin d'avoir
 dans un même dossier :;
 #X text 267 392 original gain \, original pitch \, start at 500 ms
@@ -27,13 +27,13 @@ is doen by resampling;
 qu'il lise le fichier audio.;
 #X text 36 193 Le message doit être composé comme suit :;
 #X text 44 288 EXEMPLE :;
-#X obj 53 514 sampler 232335__leifgreen__slow-drum-loop.wav;
 #X msg 118 312 stop;
-#X connect 6 0 19 0;
-#X connect 7 0 19 0;
-#X connect 8 0 19 0;
-#X connect 9 0 19 0;
-#X connect 10 0 19 0;
-#X connect 19 0 11 0;
-#X connect 19 0 11 1;
-#X connect 20 0 19 0;
+#X obj 53 514 s_sampler 232335__leifgreen__slow-drum-loop.wav;
+#X connect 6 0 20 0;
+#X connect 7 0 20 0;
+#X connect 8 0 20 0;
+#X connect 9 0 20 0;
+#X connect 10 0 20 0;
+#X connect 19 0 20 0;
+#X connect 20 0 11 0;
+#X connect 20 0 11 1;
