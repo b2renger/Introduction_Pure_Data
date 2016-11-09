@@ -1,4 +1,5 @@
 # Introduction_Pure_Data
+
 This repository is a french introduction to Pure-Data, a digital signal processing programming language 
 
 Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. Les patchs pure-data contiennent des commentaires et des explications sur comment procéder. Il suffit donc de disposer d'une version de pure-data vanilla d'installée, et d'ouvrir ces un de ces deux patches.
@@ -38,6 +39,8 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 * Cascada de Rubén D'Hers : https://www.youtube.com/watch?v=hGp0o7J0OCI
 
 * Nicolas Maigret - Pure Data read as pure data : https://vimeo.com/18656762
+
+* Open House - Music from contact mic : https://vimeo.com/13211298
 
 * netpd : http://www.netpd.org/About
 
