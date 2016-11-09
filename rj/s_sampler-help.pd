@@ -1,0 +1,39 @@
+#N canvas 445 237 692 630 10;
+#X text 30 6 Pour que ce patch fonctionne vous avez besoin d'avoir
+dans un même dossier :;
+#X text 267 392 original gain \, original pitch \, start at 500 ms
+;
+#X text 86 452 attenuated \, reversed \, starting at 8000ms \, playing
+for 8000ms;
+#X text 212 337 original gain \, original pitch \, start at 0 \, play
+for 8000ms;
+#X text 266 416 original gain \, original pitch \, start at 500 ms
+\, play for 250ms;
+#X text 214 360 attenuated \, transposed up an octave.Transposition
+is doen by resampling;
+#X msg 53 340 1 1 0 8000;
+#X msg 69 366 0.5 2;
+#X msg 78 395 1 1 500;
+#X msg 82 418 1 1 500 250;
+#X msg 88 476 0.8 -1 8000 8000;
+#X obj 53 601 dac~;
+#X text 36 219 <volume : (0/1)> <transposition : (-10/10)> <start location
+(ms)> <duration (ms)>;
+#X text 80 52 - de l'objet sampler.pd;
+#X text 81 73 - du dossier /rj;
+#X text 81 96 - d'un fichier audio au format wav;
+#X text 38 133 Il suffit alors de créer un objet [sampler nom_fichier.wav]
+\, de le relier à une sortie audio et de lui envoyer un message pour
+qu'il lise le fichier audio.;
+#X text 36 193 Le message doit être composé comme suit :;
+#X text 44 288 EXEMPLE :;
+#X obj 53 514 sampler 232335__leifgreen__slow-drum-loop.wav;
+#X msg 118 312 stop;
+#X connect 6 0 19 0;
+#X connect 7 0 19 0;
+#X connect 8 0 19 0;
+#X connect 9 0 19 0;
+#X connect 10 0 19 0;
+#X connect 19 0 11 0;
+#X connect 19 0 11 1;
+#X connect 20 0 19 0;
