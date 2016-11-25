@@ -76,6 +76,11 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 
 	* ppp (android) : http://ppp.mgsx.net
 
+* pd dans unity :
+	
+	* uPd : https://github.com/Magicolo/uPD
+
+	* UnityLibpd : https://github.com/Wilsonwaterfish/UnityLibpd
 
 * webpd : un port partiel de pure-data pour le web, via la web audio api - https://github.com/sebpiq/WebPd
 
