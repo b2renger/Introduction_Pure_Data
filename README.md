@@ -113,7 +113,7 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 * Floss manual : https://fr.flossmanuals.net/puredata/introduction/ ,
 https://flossmanuals.net/PureData/
 
-
+* Mgsx - émulateur sfxr : http://www.mgsx.net/articles/pd/bfxr-like-with-pd/bfxr-like-with-pd.html
 
 ### Des Patchs
 
