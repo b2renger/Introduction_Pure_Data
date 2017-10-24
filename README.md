@@ -12,7 +12,7 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 
 
 
-###Contenu des sous dossiers :
+### Contenu des sous dossiers :
 
 * **/abs** : abstractions constuites pour le cours compatible vanilla. Necessaire pour 1-PD~.pd
 * **/assets** : images ci-dessus.
