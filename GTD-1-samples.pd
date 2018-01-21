@@ -1,4 +1,4 @@
-#N canvas 4 23 1676 1005 10;
+#N canvas 4 23 1666 1005 10;
 #X declare -path rj;
 #X declare -path sons;
 #X obj 84 35 declare -path rj;
@@ -129,7 +129,7 @@ unique;
 #X obj 1516 648 * 24;
 #X obj 1516 670 - 12;
 #X msg 688 562 stop;
-#X text 648 -17 3-b- On peut aussi choisir de lire de petites portions
+#X text 649 -17 3-b- On peut aussi choisir de lire de petites portions
 de son (des grains) \, et les laissant se superposer les uns aux autres.
 ;
 #X text 1186 579 Se déplacer;
@@ -147,9 +147,9 @@ par exemples des enregistrements d'ambiances du jazz \, des chant gégoriens
 \, des musiques électroniques etc;
 #X msg 64 633 music-box;
 #X msg 1069 149 table music-box;
-#X msg 800 602 table ambiance;
 #X obj 18 227 u_samplebank music-box 338986__undead505__music-box-melody.wav
 , f 70;
+#X msg 800 602 table music-box;
 #X connect 3 0 2 0;
 #X connect 3 0 2 1;
 #X connect 5 0 7 0;
@@ -173,7 +173,7 @@ par exemples des enregistrements d'ambiances du jazz \, des chant gégoriens
 #X connect 36 0 10 1;
 #X connect 37 0 36 0;
 #X connect 37 0 11 0;
-#X connect 37 0 90 0;
+#X connect 37 0 91 0;
 #X connect 39 0 40 0;
 #X connect 45 0 17 1;
 #X connect 46 0 45 0;
@@ -202,4 +202,4 @@ par exemples des enregistrements d'ambiances du jazz \, des chant gégoriens
 #X connect 80 0 10 0;
 #X connect 88 0 3 0;
 #X connect 89 0 17 1;
-#X connect 90 0 10 1;
+#X connect 91 0 10 1;

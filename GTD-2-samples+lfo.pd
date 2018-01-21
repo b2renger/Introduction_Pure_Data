@@ -1,0 +1,153 @@
+#N canvas 4 23 1114 1005 10;
+#X declare -path rj;
+#X declare -path sons;
+#X declare -path rj;
+#X declare -path sons;
+#X obj 18 84 declare -path rj;
+#X obj 19 106 declare -path sons;
+#X obj 44 893 soundoutput;
+#X obj 220 784 g_nbx chunk-size;
+#X obj 220 811 g_nbx transposition;
+#X obj 45 786 pack 0 10;
+#X obj 45 808 vline~;
+#X obj 45 840 s_playolap MYSAMPLER;
+#X msg 198 741 sr 44100;
+#X obj 181 693 loadbang;
+#X obj 42 581 * 44.1;
+#X obj 112 496 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7790 1;
+#X obj 42 555 * 16000;
+#X msg 190 222 waveform sine;
+#X msg 190 268 waveform saw;
+#X msg 190 245 waveform tri;
+#X obj 41 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 92 348 5 0 0 0 - - -, f 5;
+#X obj 109 475 * 127;
+#X obj 20 140 u_samplebank music-box 338986__undead505__music-box-melody.wav
+;
+#X msg 182 719 table music-box;
+#X text 27 34 LFO signifie Low Frequency Oscillateur : il permet donc
+de controller des objets 'data' (par opposition à audio) avec des
+valeurs oscillant lentement.;
+#X text 154 88 On commence comme d'habitude pas préciser les chemins
+nécessaire pour charger les objets et les sons;
+#X text 306 139 On charge un son au format wav avec l'identifiant "music-box"
+;
+#X text 67 187 Activer / désactiver le LFO;
+#X text 302 221 Cliquer sur les messages pour changer le type de lfo
+;
+#X text 183 314 <- L'objet LFO qui va donc en fonction des paramètres
+sortir une valeur oscillant entre 0 et 1;
+#X text 215 347 - le premier argument (ici "MYLFO") est un identifiant
+unique à donner (vous pouvez choisir ce que vous voulez l'important
+est qu'il soit unique dans votre patch);
+#X text 217 393 - le deuxième argument est la vitesse d'oscillation
+en hertz;
+#X obj 42 317 c_lfo MYLFO 0.1 10;
+#X text 218 411 - le troisième argument est la vitesse d'actualisation
+des données (ici 10 est quasi continu à l'écoute : si vous choisissez
+une valeur plus grande les données sauteront);
+#X text 256 475 Ici on visualise le mouvement sur un slider \, on multiplie
+donc la valeur comprise entre 0 et 1 par 127 pour obtenir une valeur
+comprise entre 0 et 127;
+#X text 105 541 Ici pour controller la position de la tête de lecture
+sur notre fichier audio on doit multiplier par sa durée ici environ
+16 secondes \, soit 16000 millisecondes et par la fréqeunce d'échantillonage
+de notre fichier audio. (vous pouvez trouver ces infos dans les propriétés
+de votre fichier dans votre explorateur de fichier);
+#X text 103 666 Toute la partie ci-dessous est déjà connue (GTD1-samples.pd)
+;
+#X text 369 860 Il pourrait être intéressant d'ajouter un effet de
+'panning' avec l'objet [e_pan] et un lfo pour faire en sorte que le
+son se déplace de gauche à droite.;
+#N canvas 785 24 881 1004 lfo-pan 1;
+#X obj 18 84 declare -path rj;
+#X obj 19 106 declare -path sons;
+#X obj 43 443 pack 0 10;
+#X obj 43 465 vline~;
+#X obj 43 497 s_playolap MYSAMPLER;
+#X msg 196 398 sr 44100;
+#X obj 179 350 loadbang;
+#X obj 42 396 * 44.1;
+#X obj 42 370 * 16000;
+#X msg 190 222 waveform sine;
+#X msg 190 268 waveform saw;
+#X msg 190 245 waveform tri;
+#X obj 41 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 92 348 5 0 0 0 - - -, f 5;
+#X obj 20 140 u_samplebank music-box 338986__undead505__music-box-melody.wav
+;
+#X msg 180 376 table music-box;
+#X text 67 187 Activer / désactiver le LFO;
+#X obj 16 582 cnv 15 500 250 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 44 893 soundoutput;
+#X obj 46 791 e_pan;
+#X msg 365 680 waveform sine;
+#X msg 365 703 waveform tri;
+#X obj 220 627 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 246 627 Activer / désactiver le LFO;
+#X obj 234 771 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4391 1;
+#X obj 231 750 * 127;
+#X obj 221 725 c_lfo MYLFO 0.2 25;
+#X text 426 588 LFO et pan;
+#X obj 364 655 loadbang;
+#X msg 218 420 chunk-size 10 \, transposition 1;
+#X obj 42 317 c_lfo MYLFO 0.1 10;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 19 0;
+#X connect 5 0 4 1;
+#X connect 6 0 5 0;
+#X connect 6 0 15 0;
+#X connect 6 0 29 0;
+#X connect 7 0 2 0;
+#X connect 8 0 7 0;
+#X connect 9 0 30 1;
+#X connect 10 0 30 1;
+#X connect 11 0 30 1;
+#X connect 12 0 30 0;
+#X connect 15 0 4 1;
+#X connect 19 0 18 0;
+#X connect 19 1 18 1;
+#X connect 20 0 26 1;
+#X connect 21 0 26 1;
+#X connect 22 0 26 0;
+#X connect 25 0 24 0;
+#X connect 26 0 19 1;
+#X connect 26 0 25 0;
+#X connect 28 0 20 0;
+#X connect 29 0 4 1;
+#X connect 30 0 13 0;
+#X connect 30 0 8 0;
+#X restore 645 915 pd lfo-pan;
+#X text 371 915 Cliquez ici pour voir la correction ->;
+#X text 27 5 Cet exemple est lié à l'usage de samples et d'un LFO.
+Si vous n'entendez rien pensez à monter le volume (tout en bas);
+#X msg 220 763 chunk-size 10 \, transposition 1;
+#X connect 3 0 4 0;
+#X connect 4 0 7 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 2 0;
+#X connect 7 0 2 1;
+#X connect 8 0 7 1;
+#X connect 9 0 8 0;
+#X connect 9 0 20 0;
+#X connect 9 0 38 0;
+#X connect 10 0 5 0;
+#X connect 12 0 10 0;
+#X connect 13 0 29 1;
+#X connect 14 0 29 1;
+#X connect 15 0 29 1;
+#X connect 16 0 29 0;
+#X connect 18 0 11 0;
+#X connect 20 0 7 1;
+#X connect 29 0 17 0;
+#X connect 29 0 18 0;
+#X connect 29 0 12 0;
+#X connect 38 0 3 0;

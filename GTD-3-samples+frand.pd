@@ -1,0 +1,135 @@
+#N canvas 63 23 1473 991 10;
+#X declare -path rj;
+#X declare -path sons;
+#X obj 21 37 declare -path rj;
+#X obj 21 57 declare -path sons;
+#X obj 872 604 soundoutput;
+#X obj 22 83 u_samplebank music-box 338986__undead505__music-box-melody.wav
+, f 70;
+#X msg 145 500 sr 44100;
+#X obj 145 475 loadbang;
+#X obj 79 285 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 79 347 c_frand -12 12;
+#X floatatom 102 374 5 0 0 0 - - -, f 5;
+#X msg 162 522 table music-box;
+#X msg 79 443 transposition \$1;
+#X obj 79 397 i;
+#X floatatom 102 422 5 0 0 0 - - -, f 5;
+#X obj 43 606 s_loopsmooth mytable;
+#X msg 189 544 chunk-size 50;
+#X msg 229 568 loopstart 0 \, dur 125;
+#X msg 975 551 sr 44100;
+#X obj 872 576 s_playtable;
+#X obj 867 191 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 894 340 c_frand 0.5 1;
+#X obj 918 369 c_frand -2 2;
+#X obj 967 425 c_frand 500 1000;
+#X obj 867 270 t b b b b b;
+#X obj 868 310 symbol music-box;
+#X obj 871 454 pack s f f f f;
+#X obj 943 396 c_frand 0 15000;
+#X obj 44 640 soundoutput;
+#X msg 29 188 start;
+#X text 22 168 cliquer pour lancer la lecture;
+#X text 47 214 cliquer pour arreter la lecture;
+#X msg 53 235 stop;
+#X text 184 49 Tout ceci est déjà connu;
+#X obj 975 527 loadbang;
+#X text 30 2 Dans ces exemples on va découvrir comment générer des
+nombres aléatoires à l'aide de l'objet [frand];
+#X text 140 297 cliquer générer une nouvelle transposition aléatoire
+;
+#X text 187 346 on génère un nombre à virgule entre -12 et 12 \,
+les deux argument après le nom de l'objet sont donc les bornes supérieures
+et inférieures du nombre à générer.;
+#X text 127 397 on transforme cette valeur en une valeur entière;
+#X text 208 436 on l'applique à la transposition de notre fichier
+audio joué avec l'objet [s_loopsmooth];
+#X text 296 512 Ici on charge notre son "music-box" en appliquant le
+bon sample rate;
+#X text 382 568 On lit une boucle commençant à 0ms et durant 125ms
+;
+#X text 798 104 <table name> <gain> <transposition> <start location
+(ms)> <duration (ms)> <looping 0/1>;
+#X text 20 114 Ce premier exemple va permettre de changer la transposition
+(la hauteur) d'une boucle de son à l'aide de l'objet [loopsmooth]
+;
+#X text 795 12 Ce second exemple permet de lire une portion de son
+de manière aléatoire à l'aide de l'objet [s_playtable];
+#X text 796 47 Pour rappel cet objet permet de lire de manière souple
+un fichier audio et pour cela il faut lui fournir la liste de paramètres
+suivant (dans cet ordre) :;
+#X text 798 149 Ici c'est un peu technique :;
+#X text 925 206 cliquer ici pour générer un nouveau message;
+#X text 997 309 d'abord l'identifiant du son à lire;
+#X text 999 340 une valeur entre 0.5 et 1 pour le volume;
+#X text 1012 370 une valeur entre -2 et 2 pour la transposition;
+#X text 1057 390 une valeur entre 0 et 15000 pour la position du début
+de la lecture du son.;
+#X text 1088 423 on lit la portion de son entre 500ms et 1000ms;
+#X text 967 269 => ça c'est technique;
+#X text 987 457 et ça aussi c'est technique;
+#X text 987 479 en gros nos deux objets techniques permettent de décomposer
+le message en plusieurs bouts puis de le recomposer d'un seul tenant
+avant de l'envoyer à l'objet [s_playtable];
+#X text 812 675 On peut bien sur imaginer ne "randomiser" qu'une partie
+des messages de lecture;
+#X obj 842 976 soundoutput;
+#X msg 1015 921 sr 44100;
+#X obj 842 948 s_playtable;
+#X obj 837 717 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 837 796 t b b b b b;
+#X obj 838 820 symbol music-box;
+#X obj 1015 897 loadbang;
+#X text 895 732 cliquer ici pour générer un nouveau message;
+#X obj 888 840 c_frand 0 15000;
+#X obj 841 872 pack s 0.5 1 f 500;
+#X text 984 872 ici dans pack on fixe une partie des messages \, 0.5
+est le volume;
+#X connect 4 0 13 1;
+#X connect 5 0 4 0;
+#X connect 5 0 9 0;
+#X connect 5 0 14 0;
+#X connect 5 0 15 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 0 11 0;
+#X connect 9 0 13 1;
+#X connect 10 0 13 1;
+#X connect 11 0 10 0;
+#X connect 11 0 12 0;
+#X connect 13 0 26 0;
+#X connect 13 0 26 1;
+#X connect 14 0 13 1;
+#X connect 15 0 13 1;
+#X connect 16 0 17 1;
+#X connect 17 0 2 0;
+#X connect 17 0 2 1;
+#X connect 18 0 22 0;
+#X connect 19 0 24 1;
+#X connect 20 0 24 2;
+#X connect 21 0 24 4;
+#X connect 22 0 23 0;
+#X connect 22 1 19 0;
+#X connect 22 2 20 0;
+#X connect 22 3 25 0;
+#X connect 22 4 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 17 0;
+#X connect 25 0 24 3;
+#X connect 27 0 13 0;
+#X connect 30 0 13 0;
+#X connect 32 0 16 0;
+#X connect 56 0 57 1;
+#X connect 57 0 55 0;
+#X connect 57 0 55 1;
+#X connect 58 0 59 0;
+#X connect 59 0 60 0;
+#X connect 59 2 63 0;
+#X connect 60 0 64 0;
+#X connect 61 0 56 0;
+#X connect 63 0 64 3;
+#X connect 64 0 57 0;

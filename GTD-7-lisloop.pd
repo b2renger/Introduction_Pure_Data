@@ -1,0 +1,401 @@
+#N canvas 4 23 725 1005 10;
+#X declare -path rj;
+#X obj 26 73 declare -path rj;
+#X text 33 10 Pour créer des séquences de notes de manière plus
+simple mais surtout plus souple dans leur lecture on peut aussi utiliser
+les objets [u_lisloop] et [c_patternchange];
+#X obj 47 523 makenote 50 250;
+#X obj 47 548 pack 0 0;
+#X floatatom 63 469 5 0 0 0 - - -, f 5;
+#X obj 47 688 soundoutput;
+#X obj 48 444 u_listloop;
+#X obj 46 268 c_multimetro 8 250;
+#X obj 44 224 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 71 293 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 47 649 s_czz \$0-TAG;
+#X symbolatom 178 613 20 0 0 0 - - -, f 20;
+#X obj 178 565 hradio 15 1 0 9 empty empty empty 0 -8 0 10 -262144
+-1 -1 2;
+#N canvas 0 22 990 677 czz_presets 0;
+#X obj 91 26 inlet;
+#X obj 91 50 sel 0 1 2 3 4 5 6 7 8;
+#X obj 83 653 outlet name;
+#X obj 83 630 symbol;
+#X obj 166 652 outlet parms;
+#X obj 83 582 route name;
+#X msg 57 187 name FB-String-Brass1 \, mod3d 0.165354 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.299213 \, mod1c 0.125984
+\, mod1b 0.19685 \, mod1a 0.133858 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.377953 \, osc1c 0.307087
+\, osc1b 0.614173 \, osc1a 0.866142 \, env3r 0.133858 \, env3s 0.15748
+\, env3d 0.314961 \, env3a 0.259843 \, env2r 0.637795 \, env2s 0.401575
+\, env2d 0.338583 \, env2a 0.299213 \, env1r 0.149606 \, env1s 0.110236
+\, env1d 0.0551181 \, env1a 0.0551181 \,;
+#X msg 57 172 name Gentle-Sync \, mod3d 0.165354 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.574803 \, mod1c 0.669291
+\, mod1b 0.511811 \, mod1a 0.133858 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.503937 \, osc1c 0.905512
+\, osc1b 0.0629921 \, osc1a 0.401575 \, env3r 0.133858 \, env3s 0.15748
+\, env3d 0.314961 \, env3a 0.259843 \, env2r 0.0866142 \, env2s 0.0866142
+\, env2d 0.251969 \, env2a 0.141732 \, env1r 0.149606 \, env1s 0.110236
+\, env1d 0.952756 \, env1a 0 \,;
+#X msg 59 205 name RoughSync-Bass \, mod3d 0.165354 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.574803 \, mod1c 0.669291
+\, mod1b 0.511811 \, mod1a 0.133858 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.503937 \, osc1c 0.905512
+\, osc1b 0.0629921 \, osc1a 0.401575 \, env3r 0.0472441 \, env3s 0.0629921
+\, env3d 0.0551181 \, env3a 0.0015748 \, env2r 0.0866142 \, env2s 0.0866142
+\, env2d 0.181102 \, env2a 0.0472441 \, env1r 0.149606 \, env1s 0.110236
+\, env1d 0.11811 \, env1a 0 \,;
+#X msg 59 220 name Thin-Short-Bass \, mod3d 0.559055 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.574803 \, mod1c 0.669291
+\, mod1b 0.0708661 \, mod1a 0.409449 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.015748 \, osc1c 0 \,
+osc1b 0 \, osc1a 0 \, env3r 0.0472441 \, env3s 0.0393701 \, env3d 0.0551181
+\, env3a 0.0015748 \, env2r 0.0866142 \, env2s 0.0866142 \, env2d 0.0866142
+\, env2a 0.0472441 \, env1r 0.149606 \, env1s 0.0629921 \, env1d 0.0787402
+\, env1a 0 \,;
+#X msg 57 236 name Full-Square-Lead \, mod3d 0.251969 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b
+0 \, mod1a 1 \, osc3d 0.314961 \, osc3c 0.220472 \, osc3b 0.527559
+\, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669 \, osc2b 0.543307
+\, osc2a 0.377953 \, osc1d 0.440945 \, osc1c 0 \, osc1b 0 \, osc1a
+0 \, env3r 0.023622 \, env3s 0.527559 \, env3d 0.0551181 \, env3a 0.00944882
+\, env2r 0.0393701 \, env2s 0.637795 \, env2d 0.0866142 \, env2a 0.0472441
+\, env1r 0.0314961 \, env1s 0.708661 \, env1d 0.0787402 \, env1a 0.19685
+\,;
+#X msg 58 253 name Dull-Brass \, mod3d 0.251969 \, mod3c 0.181102 \,
+mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b
+0 \, mod1a 0.188976 \, osc3d 0.251969 \, osc3c 0.220472 \, osc3b 0.527559
+\, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669 \, osc2b 0.543307
+\, osc2a 0.377953 \, osc1d 0.952756 \, osc1c 0 \, osc1b 0 \, osc1a
+0.440945 \, env3r 0.00787402 \, env3s 0.0866142 \, env3d 0.0944882
+\, env3a 0.0330709 \, env2r 0.0393701 \, env2s 0.102362 \, env2d 0.23622
+\, env2a 0.645669 \, env1r 0.0708661 \, env1s 0.0866142 \, env1d 0.0472441
+\, env1a 0.0551181 \,;
+#X msg 59 268 name Slow-Hollow \, mod3d 0.212598 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.0314961 \, mod1c 0.0314961
+\, mod1b 0.220472 \, mod1a 0.866142 \, osc3d 0.251969 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.19685 \, osc2c 0.228346
+\, osc2b 0.165354 \, osc2a 0.0944882 \, osc1d 0.440945 \, osc1c 0.0629921
+\, osc1b 0.511811 \, osc1a 0.0866142 \, env3r 0.125984 \, env3s 0.244094
+\, env3d 0.354331 \, env3a 0.655118 \, env2r 0.0787402 \, env2s 0.692913
+\, env2d 0.291339 \, env2a 0.393701 \, env1r 0.133858 \, env1s 0.519685
+\, env1d 0.448819 \, env1a 0.771654 \,;
+#X msg 58 282 name Slow-Thin \, mod3d 0.212598 \, mod3c 0.181102 \,
+mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b
+0.748031 \, mod1a 0.716535 \, osc3d 0.251969 \, osc3c 0.220472 \, osc3b
+0.527559 \, osc3a 0.409449 \, osc2d 0.19685 \, osc2c 0.228346 \, osc2b
+0.165354 \, osc2a 0.0944882 \, osc1d 0.0708661 \, osc1c 0.125984 \,
+osc1b 0.346457 \, osc1a 0.0866142 \, env3r 0.125984 \, env3s 0.244094
+\, env3d 0.354331 \, env3a 0.749606 \, env2r 0.0393701 \, env2s 0.440945
+\, env2d 0.141732 \, env2a 0.0314961 \, env1r 0.133858 \, env1s 0.212598
+\, env1d 0.125984 \, env1a 0.0629921 \,;
+#X obj 483 146 loadbang;
+#X msg 483 175 env1a color 128 \, env1a label TONE-ATTACK \, env1d
+color 128 \, env1d label TONE-DECAY \, env1r color 128 \, env1r label
+TONE-REL \, env1s color 128 \, env1s label TONE-SUS \, env2a color
+128 \, env2a label WIDTH-ATTACK \, env2d color 128 \, env2d label WIDTH-DECAY
+\, env2r color 128 \, env2r label WIDTH-REL \, env2s color 128 \, env2s
+label WIDTH-SUS \, env3a color 128 \, env3a label AMP-ATTACK \, env3d
+color 128 \, env3d label AMP-DECAY \, env3r color 128 \, env3r label
+AMP-REL \, env3s color 128 \, env3s label AMP-SUS \, mod1a color 128
+\, mod1a label FILTER-AMT \, mod1b color 128 \, mod1b label DETUNE
+\, mod1c color 128 \, mod1c label SYNC-AMT \, mod1d color 2 \, mod2a
+color 2 \, mod2b color 2 \, mod2c color 2 \, mod2d color 2 \, mod3a
+color 2 \, mod3b color 2 \, mod3c color 2 \, mod3d color 128 \, mod3d
+label VOLME \, osc1a color 128 \, osc1a label OSC1-PW \, osc1b color
+128 \, osc1b label OSC2-PW \, osc1c color 128 \, osc1c label OSC1-PWM
+osc1d color 128 \, osc1d label OSC2-PWM \, osc2a color 2 \, osc2b color
+2 \, osc2c color 2 \, osc2d color 2 \, osc3a color 2 \, osc3b color
+2 \, osc3c color 2 \, osc3d color 2 \,;
+#X text 481 92 set up the interface to be human readable and show which
+controls are actually used;
+#X text 483 122 Requires modified [g-hsl];
+#X msg 60 299 name BASSIC \, mod3d 0.212598 \, mod3c 0.181102 \, mod3b
+0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701 \, mod2b
+0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b 0.0314961
+\, mod1a 0.0629921 \, osc3d 0.251969 \, osc3c 0.220472 \, osc3b 0.527559
+\, osc3a 0.409449 \, osc2d 0.19685 \, osc2c 0.228346 \, osc2b 0.165354
+\, osc2a 0.0944882 \, osc1d 0.566929 \, osc1c 0.0708661 \, osc1b 0.92126
+\, osc1a 0.0551181 \, env3r 0.00787402 \, env3s 0 \, env3d 0.133858
+\, env3a 0.00023622 \, env2r 0.0393701 \, env2s 0.440945 \, env2d 0.661417
+\, env2a 0.314961 \, env1r 0.133858 \, env1s 0.724409 \, env1d 0.015748
+\, env1a 0.669291 \,;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 1 3 9 0;
+#X connect 1 4 10 0;
+#X connect 1 5 11 0;
+#X connect 1 6 12 0;
+#X connect 1 7 13 0;
+#X connect 1 8 18 0;
+#X connect 3 0 2 0;
+#X connect 5 0 3 0;
+#X connect 5 1 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 12 0 5 0;
+#X connect 13 0 5 0;
+#X connect 14 0 15 0;
+#X connect 15 0 4 0;
+#X connect 18 0 5 0;
+#X restore 178 588 pd czz_presets;
+#X msg 237 360 60 65 63 72 90;
+#X msg 297 397 60 72 60 72 90;
+#X obj 178 517 loadbang;
+#X msg 178 541 3;
+#X obj 235 321 loadbang;
+#X text 34 115 [lisloop] prend en entrée gauche un bang ou un index
+: dans tous les cas il peut-être branché directement à la sortie
+de [c_multimetro];
+#X text 38 166 L'entrée de droite prend une liste de note midi que
+listloop va lire de manière séquentielle.;
+#X text 352 357 Cliquez sur les messages pour changer la "mélodie"
+;
+#X text 43 759 Combiné à patternchange on peut transposer cette liste
+\, la lire à l'envers \, ou la faire-tourner (faire passer la première
+note à la fin de la séquence).;
+#N canvas 4 23 1059 941 exemple-patternchange 1;
+#X obj 61 536 makenote 50 250;
+#X obj 61 561 pack 0 0;
+#X floatatom 77 482 5 0 0 0 - - -, f 5;
+#X obj 61 701 soundoutput;
+#X obj 62 457 u_listloop;
+#X obj 59 92 c_multimetro 8 250;
+#X obj 57 48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 84 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 61 662 s_czz \$0-TAG;
+#X symbolatom 192 626 20 0 0 0 - - -, f 20;
+#X obj 192 578 hradio 15 1 0 9 empty empty empty 0 -8 0 10 -262144
+-1 -1 3;
+#N canvas 0 22 990 677 czz_presets 0;
+#X obj 91 26 inlet;
+#X obj 91 50 sel 0 1 2 3 4 5 6 7 8;
+#X obj 83 653 outlet name;
+#X obj 83 630 symbol;
+#X obj 166 652 outlet parms;
+#X obj 83 582 route name;
+#X msg 57 187 name FB-String-Brass1 \, mod3d 0.165354 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.299213 \, mod1c 0.125984
+\, mod1b 0.19685 \, mod1a 0.133858 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.377953 \, osc1c 0.307087
+\, osc1b 0.614173 \, osc1a 0.866142 \, env3r 0.133858 \, env3s 0.15748
+\, env3d 0.314961 \, env3a 0.259843 \, env2r 0.637795 \, env2s 0.401575
+\, env2d 0.338583 \, env2a 0.299213 \, env1r 0.149606 \, env1s 0.110236
+\, env1d 0.0551181 \, env1a 0.0551181 \,;
+#X msg 57 172 name Gentle-Sync \, mod3d 0.165354 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.574803 \, mod1c 0.669291
+\, mod1b 0.511811 \, mod1a 0.133858 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.503937 \, osc1c 0.905512
+\, osc1b 0.0629921 \, osc1a 0.401575 \, env3r 0.133858 \, env3s 0.15748
+\, env3d 0.314961 \, env3a 0.259843 \, env2r 0.0866142 \, env2s 0.0866142
+\, env2d 0.251969 \, env2a 0.141732 \, env1r 0.149606 \, env1s 0.110236
+\, env1d 0.952756 \, env1a 0 \,;
+#X msg 59 205 name RoughSync-Bass \, mod3d 0.165354 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.574803 \, mod1c 0.669291
+\, mod1b 0.511811 \, mod1a 0.133858 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.503937 \, osc1c 0.905512
+\, osc1b 0.0629921 \, osc1a 0.401575 \, env3r 0.0472441 \, env3s 0.0629921
+\, env3d 0.0551181 \, env3a 0.0015748 \, env2r 0.0866142 \, env2s 0.0866142
+\, env2d 0.181102 \, env2a 0.0472441 \, env1r 0.149606 \, env1s 0.110236
+\, env1d 0.11811 \, env1a 0 \,;
+#X msg 59 220 name Thin-Short-Bass \, mod3d 0.559055 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.574803 \, mod1c 0.669291
+\, mod1b 0.0708661 \, mod1a 0.409449 \, osc3d 0.314961 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669
+\, osc2b 0.543307 \, osc2a 0.377953 \, osc1d 0.015748 \, osc1c 0 \,
+osc1b 0 \, osc1a 0 \, env3r 0.0472441 \, env3s 0.0393701 \, env3d 0.0551181
+\, env3a 0.0015748 \, env2r 0.0866142 \, env2s 0.0866142 \, env2d 0.0866142
+\, env2a 0.0472441 \, env1r 0.149606 \, env1s 0.0629921 \, env1d 0.0787402
+\, env1a 0 \,;
+#X msg 57 236 name Full-Square-Lead \, mod3d 0.251969 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b
+0 \, mod1a 1 \, osc3d 0.314961 \, osc3c 0.220472 \, osc3b 0.527559
+\, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669 \, osc2b 0.543307
+\, osc2a 0.377953 \, osc1d 0.440945 \, osc1c 0 \, osc1b 0 \, osc1a
+0 \, env3r 0.023622 \, env3s 0.527559 \, env3d 0.0551181 \, env3a 0.00944882
+\, env2r 0.0393701 \, env2s 0.637795 \, env2d 0.0866142 \, env2a 0.0472441
+\, env1r 0.0314961 \, env1s 0.708661 \, env1d 0.0787402 \, env1a 0.19685
+\,;
+#X msg 58 253 name Dull-Brass \, mod3d 0.251969 \, mod3c 0.181102 \,
+mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b
+0 \, mod1a 0.188976 \, osc3d 0.251969 \, osc3c 0.220472 \, osc3b 0.527559
+\, osc3a 0.409449 \, osc2d 0.559055 \, osc2c 0.645669 \, osc2b 0.543307
+\, osc2a 0.377953 \, osc1d 0.952756 \, osc1c 0 \, osc1b 0 \, osc1a
+0.440945 \, env3r 0.00787402 \, env3s 0.0866142 \, env3d 0.0944882
+\, env3a 0.0330709 \, env2r 0.0393701 \, env2s 0.102362 \, env2d 0.23622
+\, env2a 0.645669 \, env1r 0.0708661 \, env1s 0.0866142 \, env1d 0.0472441
+\, env1a 0.0551181 \,;
+#X msg 59 268 name Slow-Hollow \, mod3d 0.212598 \, mod3c 0.181102
+\, mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0.0314961 \, mod1c 0.0314961
+\, mod1b 0.220472 \, mod1a 0.866142 \, osc3d 0.251969 \, osc3c 0.220472
+\, osc3b 0.527559 \, osc3a 0.409449 \, osc2d 0.19685 \, osc2c 0.228346
+\, osc2b 0.165354 \, osc2a 0.0944882 \, osc1d 0.440945 \, osc1c 0.0629921
+\, osc1b 0.511811 \, osc1a 0.0866142 \, env3r 0.125984 \, env3s 0.244094
+\, env3d 0.354331 \, env3a 0.655118 \, env2r 0.0787402 \, env2s 0.692913
+\, env2d 0.291339 \, env2a 0.393701 \, env1r 0.133858 \, env1s 0.519685
+\, env1d 0.448819 \, env1a 0.771654 \,;
+#X msg 58 282 name Slow-Thin \, mod3d 0.212598 \, mod3c 0.181102 \,
+mod3b 0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701
+\, mod2b 0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b
+0.748031 \, mod1a 0.716535 \, osc3d 0.251969 \, osc3c 0.220472 \, osc3b
+0.527559 \, osc3a 0.409449 \, osc2d 0.19685 \, osc2c 0.228346 \, osc2b
+0.165354 \, osc2a 0.0944882 \, osc1d 0.0708661 \, osc1c 0.125984 \,
+osc1b 0.346457 \, osc1a 0.0866142 \, env3r 0.125984 \, env3s 0.244094
+\, env3d 0.354331 \, env3a 0.749606 \, env2r 0.0393701 \, env2s 0.440945
+\, env2d 0.141732 \, env2a 0.0314961 \, env1r 0.133858 \, env1s 0.212598
+\, env1d 0.125984 \, env1a 0.0629921 \,;
+#X obj 483 146 loadbang;
+#X msg 483 175 env1a color 128 \, env1a label TONE-ATTACK \, env1d
+color 128 \, env1d label TONE-DECAY \, env1r color 128 \, env1r label
+TONE-REL \, env1s color 128 \, env1s label TONE-SUS \, env2a color
+128 \, env2a label WIDTH-ATTACK \, env2d color 128 \, env2d label WIDTH-DECAY
+\, env2r color 128 \, env2r label WIDTH-REL \, env2s color 128 \, env2s
+label WIDTH-SUS \, env3a color 128 \, env3a label AMP-ATTACK \, env3d
+color 128 \, env3d label AMP-DECAY \, env3r color 128 \, env3r label
+AMP-REL \, env3s color 128 \, env3s label AMP-SUS \, mod1a color 128
+\, mod1a label FILTER-AMT \, mod1b color 128 \, mod1b label DETUNE
+\, mod1c color 128 \, mod1c label SYNC-AMT \, mod1d color 2 \, mod2a
+color 2 \, mod2b color 2 \, mod2c color 2 \, mod2d color 2 \, mod3a
+color 2 \, mod3b color 2 \, mod3c color 2 \, mod3d color 128 \, mod3d
+label VOLME \, osc1a color 128 \, osc1a label OSC1-PW \, osc1b color
+128 \, osc1b label OSC2-PW \, osc1c color 128 \, osc1c label OSC1-PWM
+osc1d color 128 \, osc1d label OSC2-PWM \, osc2a color 2 \, osc2b color
+2 \, osc2c color 2 \, osc2d color 2 \, osc3a color 2 \, osc3b color
+2 \, osc3c color 2 \, osc3d color 2 \,;
+#X text 481 92 set up the interface to be human readable and show which
+controls are actually used;
+#X text 483 122 Requires modified [g-hsl];
+#X msg 60 299 name BASSIC \, mod3d 0.212598 \, mod3c 0.181102 \, mod3b
+0.173228 \, mod3a 0.275591 \, mod2d 0.141732 \, mod2c 0.393701 \, mod2b
+0.220472 \, mod2a 0.472441 \, mod1d 0 \, mod1c 0 \, mod1b 0.0314961
+\, mod1a 0.0629921 \, osc3d 0.251969 \, osc3c 0.220472 \, osc3b 0.527559
+\, osc3a 0.409449 \, osc2d 0.19685 \, osc2c 0.228346 \, osc2b 0.165354
+\, osc2a 0.0944882 \, osc1d 0.566929 \, osc1c 0.0708661 \, osc1b 0.92126
+\, osc1a 0.0551181 \, env3r 0.00787402 \, env3s 0 \, env3d 0.133858
+\, env3a 0.00023622 \, env2r 0.0393701 \, env2s 0.440945 \, env2d 0.661417
+\, env2a 0.314961 \, env1r 0.133858 \, env1s 0.724409 \, env1d 0.015748
+\, env1a 0.669291 \,;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 1 3 9 0;
+#X connect 1 4 10 0;
+#X connect 1 5 11 0;
+#X connect 1 6 12 0;
+#X connect 1 7 13 0;
+#X connect 1 8 18 0;
+#X connect 3 0 2 0;
+#X connect 5 0 3 0;
+#X connect 5 1 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 12 0 5 0;
+#X connect 13 0 5 0;
+#X connect 14 0 15 0;
+#X connect 15 0 4 0;
+#X connect 18 0 5 0;
+#X restore 192 601 pd czz_presets;
+#X obj 192 530 loadbang;
+#X msg 192 554 3;
+#X msg 248 219 retrograde;
+#X floatatom 267 246 5 0 0 0 - - -, f 5;
+#X msg 247 267 transpose \$1;
+#X msg 249 312 rotate \$1;
+#X floatatom 259 292 5 0 0 0 - - -, f 5;
+#X obj 248 407 c_patternchange;
+#X msg 371 349 60 65 63 72 90;
+#X msg 431 386 60 72 60 72 90;
+#X msg 249 186 bang;
+#X obj 248 126 loadbang;
+#X obj 249 152 t b b;
+#X text 321 197 Cliquer pour lire à l'endroit (par défaut);
+#X text 333 221 Cliquer pour lire à l'envers;
+#X text 352 254 Changer la valeur pour transposer les notes d'autant
+(valeurs midi);
+#X text 366 305 Changer pour faire tourner le pattern les notes (valeurs
+midi);
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 1 0 8 0;
+#X connect 4 0 2 0;
+#X connect 4 0 0 0;
+#X connect 5 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 8 0 3 0;
+#X connect 8 0 3 1;
+#X connect 10 0 11 0;
+#X connect 11 0 9 0;
+#X connect 11 1 8 1;
+#X connect 12 0 13 0;
+#X connect 13 0 10 0;
+#X connect 14 0 19 0;
+#X connect 15 0 16 0;
+#X connect 16 0 19 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 0;
+#X connect 19 0 4 1;
+#X connect 20 0 19 1;
+#X connect 21 0 19 1;
+#X connect 22 0 19 0;
+#X connect 23 0 24 0;
+#X connect 24 0 22 0;
+#X connect 24 1 20 0;
+#X restore 50 810 pd exemple-patternchange;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 3 0 10 0;
+#X connect 6 0 4 0;
+#X connect 6 0 2 0;
+#X connect 7 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 10 0 5 0;
+#X connect 10 0 5 1;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 13 1 10 1;
+#X connect 14 0 6 1;
+#X connect 15 0 6 1;
+#X connect 16 0 17 0;
+#X connect 17 0 12 0;
+#X connect 18 0 14 0;

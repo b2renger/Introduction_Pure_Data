@@ -1,0 +1,504 @@
+#N canvas 4 23 975 1005 10;
+#X declare -path rj;
+#X declare -path sons;
+#X declare -path sons;
+#X obj 16 91 declare -path rj;
+#X obj 18 203 c_multimetro 8 250;
+#X obj 18 176 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 18 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 46 230 5 0 0 0 - - -, f 5;
+#X text 18 9 Nous allons voir maintenant comment utiliser un metronome
+avec l'objet [c_mulimetro] provenant de la bibliothèque rj;
+#X text 51 174 Activer le métronome;
+#X text 11 116 Le métronome prend 2 arguments;
+#X text 30 130 - le nombre jsq auquel il doit compter en boucle;
+#X text 31 148 - le temps en millisecondes entre chaque itération
+;
+#X text 20 43 Cet objet permet de compter à intervalles réguliers
+;
+#X text 168 206 Il compte jusqu'à 8 à 250ms d'intervalle;
+#X text 15 297 On peut donc l'utiliser pour créer des séquenceurs
+!;
+#X obj 29 329 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 57 398 5 0 0 0 - - -, f 5;
+#X text 62 327 Activer le métronome;
+#X obj 31 455 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 52 457 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 74 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 95 457 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 31 420 select 0 1 2 3;
+#X text 147 418 Select envoi un évenement à la sortie correspondant
+au numéro qui entre.;
+#X obj 29 362 c_multimetro 4 500;
+#X text 20 516 Avec des synthés :;
+#N canvas 4 23 962 823 sequenceur-synthés 0;
+#X symbolatom 98 610 20 0 0 0 - - -, f 20;
+#N canvas 4 23 1108 693 ejun_presets 0;
+#X obj 91 26 inlet;
+#X obj 83 653 outlet name;
+#X obj 83 630 symbol;
+#X obj 166 652 outlet parms;
+#X obj 83 582 route name;
+#X obj 90 52 sel 0 1 2 3 4 5 6 7 8 9 10;
+#X msg 73 125 name raveybrass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.23622 \, mod3a 0.0393701 \, mod2d 0.102362 \, mod2c 0.19685
+\, mod2b 0.0130709 \, mod2a 0.0393701 \, mod1d 0.173228 \, mod1c 0
+\, mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.425354 \, osc2d 0.362205 \, osc2c 0.0866142
+\, osc2b 0.503937 \, osc2a 0.247008 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.464567 \, osc1a 0 \, env3r 0 \, env3s 0 \, env3d 0.0393701
+\, env3a 0 \, env2r 0.00787402 \, env2s 0.0629921 \, env2d 0.015748
+\, env2a 0.023622 \, env1r 0.00417323 \, env1s 0.401575 \, env1d 0.0708661
+\, env1a 0.012126 \,;
+#X msg 92 134 name shortbass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.220472 \, mod3a 0.0124409 \, mod2d 0.102362 \, mod2c 0.181102
+\, mod2b 0.107559 \, mod2a 0.00787402 \, mod1d 0.173228 \, mod1c 0
+\, mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0 \, osc2d 0.362205 \, osc2c 0.204724 \,
+osc2b 0.409449 \, osc2a 0.247008 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0 \, osc1a 0 \, env3r 0.00787402 \, env3s 0 \, env3d 0.023622
+\, env3a 0.000629921 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d
+0.0340945 \, env2a 0.00787402 \, env1r 0.00417323 \, env1s 0.401575
+\, env1d 0.0708661 \, env1a 0.000708661 \,;
+#X msg 117 158 name pwmchorus \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.11811 \, mod3a 0.0124409 \, mod2d 0 \, mod2c 0 \, mod2b
+0.107559 \, mod2a 0.377953 \, mod1d 0.472441 \, mod1c 0 \, mod1b 0
+\, mod1a 0.480315 \, osc3d 0.023622 \, osc3c 0.00787402 \, osc3b 0.015748
+\, osc3a 0.425197 \, osc2d 0.362205 \, osc2c 0 \, osc2b 0.440945 \,
+osc2a 0.239134 \, osc1d 0.574803 \, osc1c 0.181102 \, osc1b 1 \, osc1a
+0 \, env3r 0.00787402 \, env3s 0.409449 \, env3d 0.0314961 \, env3a
+0.000629921 \, env2r 0.00787402 \, env2s 0.023622 \, env2d 0.0262205
+\, env2a 0 \, env1r 0.0011811 \, env1s 0.858268 \, env1d 0 \, env1a
+0.00173228 \,;
+#X msg 137 174 name screamerpad \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.141732 \, mod3a 0.11811 \, mod2d 0.291339 \, mod2c 0 \,
+mod2b 0.0314961 \, mod2a 0.322835 \, mod1d 0.0944882 \, mod1c 0.19685
+\, mod1b 0.606299 \, mod1a 0.622047 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.669291 \, osc2d 0.401575 \, osc2c 0.102362
+\, osc2b 0.330709 \, osc2a 0.501102 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.401575 \, osc1a 1 \, env3r 0.00787402 \, env3s 0.409449
+\, env3d 0.110236 \, env3a 0.000629921 \, env2r 0.00787402 \, env2s
+0.023622 \, env2d 0.0262205 \, env2a 0 \, env1r 0.0011811 \, env1s
+0.858268 \, env1d 0 \, env1a 0.00173228 \,;
+#X msg 157 184 name moogybass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.606299 \, mod3a 0.00456693 \, mod2d 0.811024 \, mod2c 0.181102
+\, mod2b 0.54063 \, mod2a 0.0314961 \, mod1d 0.0787402 \, mod1c 0 \,
+mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402 \,
+osc3b 0.015748 \, osc3a 0.00102362 \, osc2d 0.669291 \, osc2c 0.425197
+\, osc2b 0.409449 \, osc2a 0.239134 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0 \, osc1a 0 \, env3r 0.00787402 \, env3s 0 \, env3d 0.0393701
+\, env3a 0 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d 0.0498425
+\, env2a 0.00787402 \, env1r 0.00417323 \, env1s 0.401575 \, env1d
+0.354331 \, env1a 0.000708661 \,;
+#X msg 170 195 name drybass \, mod3d 0.00787402 \, mod3c 0.015748 \,
+mod3b 0.377953 \, mod3a 0.00787402 \, mod2d 0.370079 \, mod2c 0.181102
+\, mod2b 0 \, mod2a 0.00787402 \, mod1d 0.0551181 \, mod1c 0 \, mod1b
+0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402 \, osc3b
+0.015748 \, osc3a 0.166378 \, osc2d 0.023622 \, osc2c 0.0472441 \,
+osc2b 0.551181 \, osc2a 0.396614 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.322835 \, osc1a 0 \, env3r 0 \, env3s 0.0314961 \, env3d
+0.606299 \, env3a 0 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d
+0.0498425 \, env2a 0 \, env1r 0.00417323 \, env1s 0 \, env1d 0.125984
+\, env1a 0 \,;
+#X msg 179 200 name dullstring \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.401575 \, mod3a 0.015748 \, mod2d 0.740157 \, mod2c 0.015748
+\, mod2b 0.0314961 \, mod2a 0.0393701 \, mod1d 0.0787402 \, mod1c 0.110236
+\, mod1b 0.322835 \, mod1a 0.448819 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.167323 \, osc2d 0.0314961 \, osc2c 0 \,
+osc2b 0.645669 \, osc2a 0.750945 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.0314961 \, osc1a 0.472441 \, env3r 0.110236 \, env3s 0.0314961
+\, env3d 0.606299 \, env3a 0.307087 \, env2r 0.322835 \, env2s 0.377953
+\, env2d 0.419921 \, env2a 0.543307 \, env1r 0.0356693 \, env1s 0.472441
+\, env1d 0.307087 \, env1a 0.338583 \,;
+#X msg 193 219 name orchy \, mod3d 0.00787402 \, mod3c 0.015748 \,
+mod3b 0.401575 \, mod3a 0.015748 \, mod2d 0.740157 \, mod2c 0.015748
+\, mod2b 0.0314961 \, mod2a 0.0393701 \, mod1d 0 \, mod1c 0.102362
+\, mod1b 0.322835 \, mod1a 0.496063 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.238189 \, osc2d 0 \, osc2c 0 \, osc2b
+0.0866142 \, osc2a 0.747717 \, osc1d 0.574803 \, osc1c 0.181102 \,
+osc1b 0.80315 \, osc1a 0.913386 \, env3r 0.110236 \, env3s 0.0314961
+\, env3d 0.606299 \, env3a 0.307087 \, env2r 0.322835 \, env2s 0.692913
+\, env2d 0.278189 \, env2a 0.173228 \, env1r 0.0356693 \, env1s 0.472441
+\, env1d 0.23622 \, env1a 0.133858 \,;
+#X connect 0 0 5 0;
+#X connect 2 0 1 0;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 5 3 9 0;
+#X connect 5 4 10 0;
+#X connect 5 5 11 0;
+#X connect 5 6 12 0;
+#X connect 5 7 13 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X restore 98 586 pd ejun_presets;
+#X obj 97 539 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
+-1 -1 2;
+#X obj 45 647 s_ejun id-unique;
+#X obj 44 732 soundoutput;
+#X obj 31 307 makenote 100 500;
+#X obj 42 419 pack f f;
+#X floatatom 43 345 5 0 0 0 - - -, f 5;
+#X floatatom 136 345 5 0 0 0 - - -, f 5;
+#X obj 98 559 nbx 3 20 0 256 0 0 empty empty empty 0 -8 0 16 -260097
+-262144 -1 2 256;
+#X obj 99 466 loadbang;
+#X obj 36 37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X floatatom 64 106 5 0 0 0 - - -, f 5;
+#X text 74 27 Activer le métronome;
+#X msg 17 206 60;
+#X obj 38 128 select 0 1 2 3 4 5 6 7;
+#X msg 106 210 72;
+#X msg 182 220 65;
+#X msg 101 498 2;
+#X obj 36 70 c_multimetro 8 250;
+#X text 479 34 On peut aussi envoyer des messages plus complexes en
+variant note / vélocité et durée.;
+#X symbolatom 617 594 20 0 0 0 - - -, f 20;
+#N canvas 4 23 1108 693 ejun_presets 0;
+#X obj 91 26 inlet;
+#X obj 83 653 outlet name;
+#X obj 83 630 symbol;
+#X obj 166 652 outlet parms;
+#X obj 83 582 route name;
+#X obj 90 52 sel 0 1 2 3 4 5 6 7 8 9 10;
+#X msg 73 125 name raveybrass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.23622 \, mod3a 0.0393701 \, mod2d 0.102362 \, mod2c 0.19685
+\, mod2b 0.0130709 \, mod2a 0.0393701 \, mod1d 0.173228 \, mod1c 0
+\, mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.425354 \, osc2d 0.362205 \, osc2c 0.0866142
+\, osc2b 0.503937 \, osc2a 0.247008 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.464567 \, osc1a 0 \, env3r 0 \, env3s 0 \, env3d 0.0393701
+\, env3a 0 \, env2r 0.00787402 \, env2s 0.0629921 \, env2d 0.015748
+\, env2a 0.023622 \, env1r 0.00417323 \, env1s 0.401575 \, env1d 0.0708661
+\, env1a 0.012126 \,;
+#X msg 92 134 name shortbass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.220472 \, mod3a 0.0124409 \, mod2d 0.102362 \, mod2c 0.181102
+\, mod2b 0.107559 \, mod2a 0.00787402 \, mod1d 0.173228 \, mod1c 0
+\, mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0 \, osc2d 0.362205 \, osc2c 0.204724 \,
+osc2b 0.409449 \, osc2a 0.247008 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0 \, osc1a 0 \, env3r 0.00787402 \, env3s 0 \, env3d 0.023622
+\, env3a 0.000629921 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d
+0.0340945 \, env2a 0.00787402 \, env1r 0.00417323 \, env1s 0.401575
+\, env1d 0.0708661 \, env1a 0.000708661 \,;
+#X msg 117 158 name pwmchorus \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.11811 \, mod3a 0.0124409 \, mod2d 0 \, mod2c 0 \, mod2b
+0.107559 \, mod2a 0.377953 \, mod1d 0.472441 \, mod1c 0 \, mod1b 0
+\, mod1a 0.480315 \, osc3d 0.023622 \, osc3c 0.00787402 \, osc3b 0.015748
+\, osc3a 0.425197 \, osc2d 0.362205 \, osc2c 0 \, osc2b 0.440945 \,
+osc2a 0.239134 \, osc1d 0.574803 \, osc1c 0.181102 \, osc1b 1 \, osc1a
+0 \, env3r 0.00787402 \, env3s 0.409449 \, env3d 0.0314961 \, env3a
+0.000629921 \, env2r 0.00787402 \, env2s 0.023622 \, env2d 0.0262205
+\, env2a 0 \, env1r 0.0011811 \, env1s 0.858268 \, env1d 0 \, env1a
+0.00173228 \,;
+#X msg 137 174 name screamerpad \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.141732 \, mod3a 0.11811 \, mod2d 0.291339 \, mod2c 0 \,
+mod2b 0.0314961 \, mod2a 0.322835 \, mod1d 0.0944882 \, mod1c 0.19685
+\, mod1b 0.606299 \, mod1a 0.622047 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.669291 \, osc2d 0.401575 \, osc2c 0.102362
+\, osc2b 0.330709 \, osc2a 0.501102 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.401575 \, osc1a 1 \, env3r 0.00787402 \, env3s 0.409449
+\, env3d 0.110236 \, env3a 0.000629921 \, env2r 0.00787402 \, env2s
+0.023622 \, env2d 0.0262205 \, env2a 0 \, env1r 0.0011811 \, env1s
+0.858268 \, env1d 0 \, env1a 0.00173228 \,;
+#X msg 157 184 name moogybass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.606299 \, mod3a 0.00456693 \, mod2d 0.811024 \, mod2c 0.181102
+\, mod2b 0.54063 \, mod2a 0.0314961 \, mod1d 0.0787402 \, mod1c 0 \,
+mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402 \,
+osc3b 0.015748 \, osc3a 0.00102362 \, osc2d 0.669291 \, osc2c 0.425197
+\, osc2b 0.409449 \, osc2a 0.239134 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0 \, osc1a 0 \, env3r 0.00787402 \, env3s 0 \, env3d 0.0393701
+\, env3a 0 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d 0.0498425
+\, env2a 0.00787402 \, env1r 0.00417323 \, env1s 0.401575 \, env1d
+0.354331 \, env1a 0.000708661 \,;
+#X msg 170 195 name drybass \, mod3d 0.00787402 \, mod3c 0.015748 \,
+mod3b 0.377953 \, mod3a 0.00787402 \, mod2d 0.370079 \, mod2c 0.181102
+\, mod2b 0 \, mod2a 0.00787402 \, mod1d 0.0551181 \, mod1c 0 \, mod1b
+0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402 \, osc3b
+0.015748 \, osc3a 0.166378 \, osc2d 0.023622 \, osc2c 0.0472441 \,
+osc2b 0.551181 \, osc2a 0.396614 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.322835 \, osc1a 0 \, env3r 0 \, env3s 0.0314961 \, env3d
+0.606299 \, env3a 0 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d
+0.0498425 \, env2a 0 \, env1r 0.00417323 \, env1s 0 \, env1d 0.125984
+\, env1a 0 \,;
+#X msg 179 200 name dullstring \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.401575 \, mod3a 0.015748 \, mod2d 0.740157 \, mod2c 0.015748
+\, mod2b 0.0314961 \, mod2a 0.0393701 \, mod1d 0.0787402 \, mod1c 0.110236
+\, mod1b 0.322835 \, mod1a 0.448819 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.167323 \, osc2d 0.0314961 \, osc2c 0 \,
+osc2b 0.645669 \, osc2a 0.750945 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.0314961 \, osc1a 0.472441 \, env3r 0.110236 \, env3s 0.0314961
+\, env3d 0.606299 \, env3a 0.307087 \, env2r 0.322835 \, env2s 0.377953
+\, env2d 0.419921 \, env2a 0.543307 \, env1r 0.0356693 \, env1s 0.472441
+\, env1d 0.307087 \, env1a 0.338583 \,;
+#X msg 193 219 name orchy \, mod3d 0.00787402 \, mod3c 0.015748 \,
+mod3b 0.401575 \, mod3a 0.015748 \, mod2d 0.740157 \, mod2c 0.015748
+\, mod2b 0.0314961 \, mod2a 0.0393701 \, mod1d 0 \, mod1c 0.102362
+\, mod1b 0.322835 \, mod1a 0.496063 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.238189 \, osc2d 0 \, osc2c 0 \, osc2b
+0.0866142 \, osc2a 0.747717 \, osc1d 0.574803 \, osc1c 0.181102 \,
+osc1b 0.80315 \, osc1a 0.913386 \, env3r 0.110236 \, env3s 0.0314961
+\, env3d 0.606299 \, env3a 0.307087 \, env2r 0.322835 \, env2s 0.692913
+\, env2d 0.278189 \, env2a 0.173228 \, env1r 0.0356693 \, env1s 0.472441
+\, env1d 0.23622 \, env1a 0.133858 \,;
+#X connect 0 0 5 0;
+#X connect 2 0 1 0;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 5 3 9 0;
+#X connect 5 4 10 0;
+#X connect 5 5 11 0;
+#X connect 5 6 12 0;
+#X connect 5 7 13 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X restore 617 570 pd ejun_presets;
+#X obj 616 523 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
+-1 -1 5;
+#X obj 564 631 s_ejun id-unique;
+#X obj 563 716 soundoutput;
+#X obj 617 543 nbx 3 20 0 256 0 0 empty empty empty 0 -8 0 16 -260097
+-262144 -1 5 256;
+#X obj 618 450 loadbang;
+#X obj 537 98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 565 167 5 0 0 0 - - -, f 5;
+#X text 575 88 Activer le métronome;
+#X obj 539 189 select 0 1 2 3 4 5 6 7;
+#X obj 537 131 c_multimetro 8 250;
+#X obj 511 461 pack f f;
+#X floatatom 512 387 5 0 0 0 - - -, f 5;
+#X floatatom 605 387 5 0 0 0 - - -, f 5;
+#X obj 500 349 makenote;
+#X msg 518 267 60 120 500;
+#X msg 607 271 72 80 50;
+#X msg 683 281 65 100 250;
+#X msg 620 482 5;
+#X connect 1 0 0 0;
+#X connect 1 1 3 1;
+#X connect 2 0 9 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 7 0;
+#X connect 5 0 6 0;
+#X connect 5 1 8 0;
+#X connect 5 1 6 1;
+#X connect 6 0 3 0;
+#X connect 9 0 1 0;
+#X connect 10 0 18 0;
+#X connect 11 0 19 0;
+#X connect 14 0 5 0;
+#X connect 15 0 14 0;
+#X connect 15 2 16 0;
+#X connect 15 5 17 0;
+#X connect 16 0 5 0;
+#X connect 17 0 5 0;
+#X connect 18 0 2 0;
+#X connect 19 0 12 0;
+#X connect 19 0 15 0;
+#X connect 22 0 21 0;
+#X connect 22 1 24 1;
+#X connect 23 0 26 0;
+#X connect 24 0 25 0;
+#X connect 24 0 25 1;
+#X connect 26 0 22 0;
+#X connect 27 0 40 0;
+#X connect 28 0 32 0;
+#X connect 31 0 37 0;
+#X connect 31 2 38 0;
+#X connect 31 5 39 0;
+#X connect 32 0 29 0;
+#X connect 32 0 31 0;
+#X connect 33 0 24 0;
+#X connect 36 0 34 0;
+#X connect 36 0 33 0;
+#X connect 36 1 35 0;
+#X connect 36 1 33 1;
+#X connect 37 0 36 0;
+#X connect 38 0 36 0;
+#X connect 39 0 36 0;
+#X connect 40 0 23 0;
+#X restore 173 515 pd sequenceur-synthés;
+#X text 152 455 Le nombre de sorties de select dépend du nombre d'arguments
+que vous lui fournissez (cf exemples ci-dessous);
+#X text 21 542 Avec des samples :;
+#N canvas 350 90 1243 969 sequenceur-samples 0;
+#X obj 40 145 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 67 226 5 0 0 0 - - -, f 5;
+#X text 77 147 Activer le métronome;
+#X obj 41 248 select 0 1 2 3 4 5 6 7;
+#X obj 39 190 c_multimetro 8 250;
+#X obj 121 655 soundoutput;
+#X obj 27 596 s_playtable;
+#X msg 44 303 music-box;
+#X obj 51 13 declare -path sons;
+#X obj 45 89 u_samplebank snare 26246__bitsmart__snare.wav, f 70;
+#X obj 45 66 u_samplebank pen 19301__starrock__pen6.wav, f 70;
+#X msg 456 550 sr 44100;
+#X obj 456 506 loadbang;
+#X obj 45 44 u_samplebank music-box 338986__undead505__music-box-melody.wav
+, f 70;
+#X obj 290 594 s_playtable;
+#X msg 170 391 pen;
+#X msg 318 462 snare;
+#X text 196 187 on compte jusqu'à 8 par intervalle de 250 millisecondes
+;
+#X text 568 39 on charge trois sons avec trois identifiants;
+#X text 432 596 on veut de la polyphonique entre notre son de boite
+à musique et notre rythmique composée de plusieurs sont cours;
+#X text 433 640 on utlilise donc un objet monophonique pour la boite
+à musique pour qu'elle ne soit pas interompue par d'autres instructions
+;
+#X text 431 699 nos deux sons percussifs sont suffisament cours pour
+ne pas se couper l'un l'autre même avec des instructions rapprochées.
+;
+#X text 291 273 on joue le son de la boite à musique sur le temps
+0;
+#X text 294 316 on joue le son "snare" sur les temps 2 et 7;
+#X text 294 294 on joue le son "pen" sur les temps 0 \, 4 et 6;
+#X connect 0 0 4 0;
+#X connect 3 0 7 0;
+#X connect 3 0 15 0;
+#X connect 3 2 16 0;
+#X connect 3 4 15 0;
+#X connect 3 6 15 0;
+#X connect 3 7 16 0;
+#X connect 4 0 1 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 11 0 6 1;
+#X connect 11 0 14 1;
+#X connect 12 0 11 0;
+#X connect 14 0 5 0;
+#X connect 14 0 5 1;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X restore 174 541 pd sequenceur-samples;
+#X text 15 590 Intéressons nous donc maintenant aux probablités avec
+l'objet [c_pass];
+#X obj 34 780 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 34 666 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 44 708 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 34 750 c_pass 100;
+#X obj 113 839 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 113 809 c_pass 50;
+#X obj 34 687 c_multimetro 8 500;
+#X text 18 625 On fournit en argument une probabilité en pourcentage
+que l'info qui entre ressorte;
+#X text 117 747 L'info passe à chaque fois;
+#X text 193 810 L'info passe 50% du temps mais de manière aléatoire
+(ça n'est pas une fois sur deux !);
+#X text 13 882 On peut alors revoir notre séquenceur avec des samples
+mais cette fois avec un peu de génératif;
+#N canvas 350 59 1243 969 sequenceur-samples 0;
+#X obj 40 145 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 67 226 5 0 0 0 - - -, f 5;
+#X text 77 147 Activer le métronome;
+#X obj 41 248 select 0 1 2 3 4 5 6 7;
+#X obj 39 190 c_multimetro 8 250;
+#X obj 121 655 soundoutput;
+#X obj 27 596 s_playtable;
+#X obj 51 13 declare -path sons;
+#X msg 456 550 sr 44100;
+#X obj 456 506 loadbang;
+#X obj 290 594 s_playtable;
+#X text 196 187 on compte jusqu'à 8 par intervalle de 250 millisecondes
+;
+#X text 568 39 on charge trois sons avec trois identifiants;
+#X obj 45 44 u_samplebank music-box2 338986__undead505__music-box-melody.wav
+, f 70;
+#X obj 45 66 u_samplebank pen2 19301__starrock__pen6.wav, f 70;
+#X obj 45 89 u_samplebank snare2 26246__bitsmart__snare.wav, f 70
+;
+#X msg 27 420 music-box2;
+#X obj 126 388 c_pass 100;
+#X msg 128 418 pen2;
+#X msg 329 416 pen2;
+#X obj 327 386 c_pass 90;
+#X msg 421 413 pen2;
+#X obj 419 383 c_pass 50;
+#X obj 228 387 c_pass 90;
+#X msg 228 418 snare2;
+#X msg 511 420 snare2;
+#X obj 511 389 c_pass 95;
+#X obj 28 391 c_pass 33;
+#X connect 0 0 4 0;
+#X connect 3 0 17 0;
+#X connect 3 0 27 0;
+#X connect 3 2 23 0;
+#X connect 3 4 20 0;
+#X connect 3 6 22 0;
+#X connect 3 7 26 0;
+#X connect 4 0 1 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 6 0 5 1;
+#X connect 8 0 6 1;
+#X connect 8 0 10 1;
+#X connect 9 0 8 0;
+#X connect 10 0 5 0;
+#X connect 10 0 5 1;
+#X connect 16 0 6 0;
+#X connect 17 0 18 0;
+#X connect 18 0 10 0;
+#X connect 19 0 10 0;
+#X connect 20 0 19 0;
+#X connect 21 0 10 0;
+#X connect 22 0 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 10 0;
+#X connect 25 0 10 0;
+#X connect 26 0 25 0;
+#X connect 27 0 16 0;
+#X restore 87 926 pd sequenceur-samples;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 13 0 22 0;
+#X connect 20 0 16 0;
+#X connect 20 1 17 0;
+#X connect 20 2 18 0;
+#X connect 20 3 19 0;
+#X connect 22 0 14 0;
+#X connect 22 0 20 0;
+#X connect 30 0 35 0;
+#X connect 32 0 29 0;
+#X connect 34 0 33 0;
+#X connect 35 0 31 0;
+#X connect 35 0 32 0;
+#X connect 35 0 34 0;
