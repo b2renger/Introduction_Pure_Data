@@ -8,6 +8,8 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 
 2-Rjdj.pd : une présentation de l'excellente collection d'abstraction rjdj.
 
+3-Les patchs préfixés par "GTD" (Getting Things Done) : proposent des techniques déjà pré-assemblées pour démarrer rapidement sur l'utilisation des samplers (granulaires ou non), des synthés (mono ou polyphoniques) etc.
+
 ![image2](assets/image-02.png)
 
 
