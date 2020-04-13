@@ -20,7 +20,7 @@
 #X obj 679 294 vline~;
 #X obj 679 326 s_playolap MYSAMPLER;
 #X obj 60 458 key;
-#X floatatom 79 485 5 0 0 0 - - -, f 5;
+#X floatatom 79 485 5 0 0 0 - - -;
 #X obj 61 526 select 97;
 #X obj 103 583 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -89,7 +89,7 @@ sous l'identifiant "ambiance";
 #X obj 679 176 * 44.1;
 #X msg 1137 219 chunk-size 100 \, transposition -1;
 #X obj 682 81 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 5900 1;
 #X obj 679 104 / 127;
 #X obj 679 156 * 16000;
 #X text 34 299 Pour charger plusieurs sons il peut-être intéressant
