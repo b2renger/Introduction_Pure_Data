@@ -1,18 +1,22 @@
 # Introduction_Pure_Data
 
-This repository is a french introduction to Pure-Data, a digital signal processing programming language 
+This repository is a french introduction to Pure-Data, a digital signal processing programming language.
 
-Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. Les patchs pure-data contiennent des commentaires et des explications sur comment procéder. Il suffit donc de disposer d'une version de pure-data vanilla d'installée, et d'ouvrir ces un de ces deux patches.
+Cette contient des ressources pour un cours d'initiation à Pure-Data. Les patchs pure-data contiennent des commentaires et des explications sur comment procéder. Il suffit donc de disposer d'une version de pure-data vanilla d'installée, et d'ouvrir ces un de ces deux patches.
+
+Le code est les fichiers sont disponibles sur ce dépôt [github](https://github.com/b2renger/Introduction_Pure_Data)
 
 1-Pd~.pd : une introduction à Pure-Data.
 
 2-Rjdj.pd : une présentation de l'excellente collection d'abstraction rjdj.
 
+3-GTD-xx : des patchs d'exemples reprenant des fonctionalités classiques à copier / coller allégrement.
+
 ![image2](assets/image-02.png)
 
 
 
-### Contenu des sous dossiers :
+## Contenu des sous dossiers :
 
 * **/abs** : abstractions constuites pour le cours compatible vanilla. Necessaire pour 1-PD~.pd
 * **/assets** : images ci-dessus.
@@ -24,7 +28,7 @@ Ce repositotry contient des ressources pour un cours d'initiation à Pure-Data. 
 
 
 
-### Références artistiques et projets utilisant pure-data
+## Références artistiques et projets utilisant pure-data
 
 * chdh - Egregore : http://www.chdh.net/egregore.php
 
