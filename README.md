@@ -86,9 +86,13 @@ Le code est les fichiers sont disponibles sur ce dépôt [github](https://github
 
 	* UnityLibpd : https://github.com/Wilsonwaterfish/UnityLibpd
 
-* webpd : un port partiel de pure-data pour le web, via la web audio api - https://github.com/sebpiq/WebPd
+* pd sur le web :
+	
+	* webpd un port partiel de pure-data pour le web, via la web audio api - https://github.com/sebpiq/WebPd
 
-* camomille : https://github.com/pierreguillot/Camomile
+	* pdwebparty : https://github.com/cuinjune/PdWebParty
+
+* camomille to build plugins (vst / AU)! : https://github.com/pierreguillot/Camomile
 
 * heavy : un compileur permettant d'obtenir du code C optimisé à partir de vos patchs pd
 
@@ -121,7 +125,7 @@ https://flossmanuals.net/PureData/
 
 ### Des Patchs
 
-* rjdj : https://github.com/rjdj/rjlib
+
 
 * patchrepo = archives du forum : http://www.pdpatchrepo.info/
 
@@ -130,3 +134,18 @@ https://flossmanuals.net/PureData/
 * ancienne radio de musique générative : https://github.com/rumblesan/Radio-Patches
 
 * la malinette : http://codelab.fr/5933#p31646
+
+
+### Des librairies
+
+* rjdj : https://github.com/rjdj/rjlib
+
+* else : https://github.com/porres/pd-else
+
+* orac : https://github.com/TheTechnobear/Orac
+
+* malinette : http://malinette.info/en/#downloads
+
+* automatism : https://www.automatonism.com/
+
+* mmb : http://www.martin-brinkmann.de/pd-patches.html
