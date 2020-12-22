@@ -56,7 +56,7 @@ Le code est les fichiers sont disponibles sur ce dépôt [github](https://github
 
 
 
-### Les différentes versions de Pure-Data
+## Les différentes versions de Pure-Data
 
 * pd-vanilla : la version developpée et maintenue par Miller Puckette - disponnible pour windows, osx, linux, et une version arm pour raspberry pi.
 
@@ -102,7 +102,7 @@ Le code est les fichiers sont disponibles sur ce dépôt [github](https://github
 
 
 
-### Ressources
+## Ressources
 
 * Browser d'aide intégré à Pure Data (une mine d'informations) : Help->Browser et le livre Miller Puckette - The theory and technique of Electronic Music : http://msp.ucsd.edu/techniques.htm
 
@@ -123,8 +123,8 @@ https://flossmanuals.net/PureData/
 
 * Mgsx - émulateur sfxr : http://www.mgsx.net/articles/pd/bfxr-like-with-pd/bfxr-like-with-pd.html
 
-### Des Patchs
 
+## Des Patchs
 
 
 * patchrepo = archives du forum : http://www.pdpatchrepo.info/
@@ -136,7 +136,7 @@ https://flossmanuals.net/PureData/
 * la malinette : http://codelab.fr/5933#p31646
 
 
-### Des librairies
+## Des librairies
 
 * rjdj : https://github.com/rjdj/rjlib
 
